@@ -385,16 +385,26 @@ img {
     0 0 42px rgba(210, 166, 79, 0.34);
 }
 
+.phrase-window {
+  min-height: clamp(54px, 7vw, 86px);
+  color: var(--ivory);
+  font-family: var(--display);
+  font-size: clamp(2rem, 7vw, 5.8rem);
+  font-weight: 900;
+  line-height: 0.98;
+  text-shadow:
+    0 4px 0 #000,
+    0 0 42px rgba(210, 166, 79, 0.34);
+}
+
 .phrase-window span {
   display: inline-block;
+  opacity: 0;
 }
 
 .phrase-window span.phrase-live {
+  opacity: 1;
   animation: phraseAwaken 620ms ease both;
-}
-
-.phrase-window span:not(.phrase-live) {
-  display: none;
 }
 
 .hero-actions {
