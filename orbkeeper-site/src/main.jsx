@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
-import flyer from "./assets/orbkeeper-flyer2.jpg";
+import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
