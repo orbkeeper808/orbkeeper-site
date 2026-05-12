@@ -13,7 +13,7 @@ import "./styles.css";
 
 function Lore() {
   return (
-    <Section id="lore" eyebrow="Illuminated Lore" title="The Orb Before The First Flame" className="lore-section">
+    <Section id="lore" eyebrow="Lore" title="The Chronicle" className="lore-section">
       <div className="lore-grid">
         {lore.map((item, i) => (
           <motion.article className="lore-card" key={item.title} custom={i} variants={slowReveal} whileHover={{ y: -8, scale: 1.015 }}>
@@ -103,7 +103,7 @@ function Gatherings() {
 
 function Band() {
   return (
-    <Section id="keepers" eyebrow="The Keepers" title="Summoned As Mythic Figures">
+    <Section id="keepers" eyebrow="The Keepers" title="Guarduans of the Orb">
       <div className="member-grid">
         {members.map(([name, role, text], i) => (
           <motion.article className="member-card" key={name} custom={i} variants={slowReveal} whileHover={{ y: -10 }}>
@@ -120,7 +120,7 @@ function Band() {
 
 function Relics() {
   return (
-    <Section id="relics" eyebrow="Recovered Visions" title="Media And Relics From The Rite" className="media-section">
+    <Section id="relics" eyebrow="Recovered Visions" title="Media And Relics From The Gathering" className="media-section">
       <div className="relic-grid">
         {relics.map(([title, text], i) => (
           <motion.article className={`vision-card vision-${i + 1}`} key={title} custom={i} variants={slowReveal} whileHover={{ scale: 1.025 }}>
@@ -135,7 +135,7 @@ function Relics() {
         <div>
           <p className="section-eyebrow">Video Relic</p>
           <h3>Live Invocation Placeholder</h3>
-          <p>Swap this frame for a YouTube or Vimeo embed when the first gathering footage is ready.</p>
+          <p>Swap this frame for a YouTube or Vimeo embed when the first gathering footage is ready. Test</p>
         </div>
       </div>
     </Section>
@@ -144,7 +144,7 @@ function Relics() {
 
 function Merch() {
   return (
-    <Section id="artifacts" eyebrow="Artifacts" title="Inventory From Another Realm">
+    <Section id="artifacts" eyebrow="Artifacts" title="The Orbkeeper Vault">
       <div className="artifact-grid">
         {merch.map(([title, text], i) => (
           <motion.article className="artifact-card" key={title} custom={i} variants={slowReveal} whileHover={{ y: -8 }}>
