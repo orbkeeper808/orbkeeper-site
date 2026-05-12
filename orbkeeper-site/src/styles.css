@@ -6,11 +6,13 @@
   src: url("./assets/fonts/UnifrakturCook-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+}
   @font-face {
   font-family: "Cinzel";
   src: url("./assets/fonts/Cinzel-Black.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  }
   @font-face {
   font-family: "IMFellEnglishSC";
   src: url("./assets/fonts/IMFellEnglishSC-Regular.ttf") format("truetype");
