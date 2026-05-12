@@ -7,6 +7,7 @@ import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
 import flyer from "./assets/orbkeeper-flyer2.jpg";
+import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
@@ -123,7 +124,7 @@ function Relics() {
       <div className="relic-grid">
         {relics.map(([title, text], i) => (
           <motion.article className={`vision-card vision-${i + 1}`} key={title} custom={i} variants={slowReveal} whileHover={{ scale: 1.025 }}>
-            <div className="vision-image">{i === 0 && <img src={flyer} alt="ORBKEEPER fantasy flyer" />}</div>
+            <div className="vision-image">{i === 0 && <img src={flyer1} alt="ORBKEEPER fantasy flyer" />}</div>
             <h3>{title}</h3>
             <p>{text}</p>
           </motion.article>
