@@ -19,7 +19,7 @@ export const lore = [
   },
   {
     title: "False Orbs",
-    text: "A giant Orbweaver familiar of Mun Dane spins convincing lights in the dark. These false orbs may be bait, meant to lure the Keepers from the true gate.",
+    text: "A giant Orbweaver familiar of Mün Dane spins convincing lights in the dark. These false orbs may be bait, meant to lure the Keepers from the true gate.",
   },
   {
     title: "The Rite",
@@ -47,11 +47,11 @@ export const gatherings = [
 ];
 
 export const members = [
-  ["Archanis", "Warden of the Primordial Light", "Bearer of the first glow, watching the threshold where melody becomes omen."],
-  ["Lord Morgolvandt", "The Deathsiren", "Summons low strings from the deep stone chambers beneath the rite."],
-  ["Ghristöpf", "Of Lührl", "Turns dust, voltage, and old smoke into riffs that move like weather."],
-  ["Sir Thalric", "Silverstrike", "Holds the circle steady when the false orbs begin to multiply."],
-  ["Reikhart", "The Summoner", "Reads the candlelight, the crowd, and the living silence between notes."],
+  ["Archanis", "Warden of the Primordial Light", "A scholar of forgotten realms whose mastery of ancient light magicks guides the Keepers through the veil."],
+  ["Lord Morgolvandt", "The Deathsiren", "A masked necromancer whose voice carries such ruinous power that it must remain forever bound behind iron and shadow."],
+  ["Ghristöpf", "Of Lührl", "A relentless barbarian warrior whose unmatched skill with the axe has shattered countless foes across the realms."],
+  ["Sir Thalric", "Silverstrike", "A righteous paladin sworn to shield the gathering and stand unwavering against the darkness beyond the veil."],
+  ["Reikhart", "The Summoner", "A mystic druid deeply attuned to the forces of nature, channeling the wild energies that stir beneath the ancient world."],
 ];
 
 export const relics = [
