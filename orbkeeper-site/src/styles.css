@@ -387,11 +387,14 @@ img {
 
 .phrase-window span {
   display: inline-block;
+}
+
+.phrase-window span.phrase-live {
   animation: phraseAwaken 620ms ease both;
 }
 
 .phrase-window span:not(.phrase-live) {
-  animation-name: phraseFade;
+  display: none;
 }
 
 .hero-actions {
