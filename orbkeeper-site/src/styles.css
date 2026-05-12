@@ -198,7 +198,7 @@ img {
   color: rgba(244, 234, 215, 0.82);
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 0;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -351,7 +351,7 @@ img {
   font-family: var(--display);
   font-size: clamp(0.78rem, 1.5vw, 1rem);
   font-weight: 900;
-  letter-spacing: 0;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   text-shadow: 0 0 18px rgba(210, 166, 79, 0.28);
 }
@@ -402,7 +402,7 @@ img {
   cursor: none;
   font-size: 0.78rem;
   font-weight: 900;
-  letter-spacing: 0;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition:
     transform 220ms ease,
@@ -510,7 +510,7 @@ h3 {
 h4 {
   color: var(--gold-lit);
   font-size: 0.8rem;
-  letter-spacing: 0;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
