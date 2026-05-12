@@ -1,8 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap');
-
+@font-face {
+  font-family: "UnifrakturCook";
+  src: url("./assets/fonts/UnifrakturCook-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 :root {
   color-scheme: dark;
   --ink: #070604;
@@ -20,7 +24,7 @@
   --moss: #5b6443;
   --line: rgba(244, 234, 215, 0.22);
   --shadow: rgba(0, 0, 0, 0.58);
-  --display: "Cinzel", serif;
+  --display: "UnifrakturCook", serif;
   --body: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
 
