@@ -31,7 +31,7 @@ function Music() {
   const [playing, setPlaying] = useState(null);
 
   return (
-    <Section id="music" eyebrow="Resonances" title="Heavy Relics For The Threshold">
+    <Section id="music" eyebrow="Resonances" title="Tsöngs of the Rite">
       <div className="music-grid">
         {releases.map((release, i) => (
           <motion.article className={`release-card ${playing === i ? "is-playing" : ""}`} key={release.title} custom={i} variants={slowReveal}>
