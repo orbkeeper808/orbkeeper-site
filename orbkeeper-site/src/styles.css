@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap');
 
 :root {
   color-scheme: dark;
@@ -19,7 +20,7 @@
   --moss: #5b6443;
   --line: rgba(244, 234, 215, 0.22);
   --shadow: rgba(0, 0, 0, 0.58);
-  --display: "Old English Text MT", "Blackadder ITC", "Copperplate Gothic Bold", "Palatino Linotype", Georgia, serif;
+  --display: "Cinzel", serif;
   --body: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
 
