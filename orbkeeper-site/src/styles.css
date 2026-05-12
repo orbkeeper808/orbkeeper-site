@@ -263,7 +263,7 @@ img {
   background:
     linear-gradient(to bottom, rgba(7, 6, 4, 0.1), rgba(7, 6, 4, 0.72) 72%, #070604),
     radial-gradient(circle at 54% 34%, rgba(244, 234, 215, 0.38), transparent 18rem),
-    url("./assets/orbkeeper-flyer.jpg") center 43% / min(92vw, 860px) auto no-repeat;
+    url("./assets/orbkeeper-flyer2.jpg") center 43% / min(92vw, 860px) auto no-repeat;
   filter: saturate(0.82) contrast(1.08) brightness(0.54);
   opacity: 0.58;
 }
