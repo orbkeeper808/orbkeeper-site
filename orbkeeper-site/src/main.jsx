@@ -118,9 +118,9 @@ function Band() {
   );
 }
 
-function Visions() {
+function Relics() {
   return (
-    <Section id="visions" eyebrow="Recovered Visions" title="Media And Relics From The Gathering" className="media-section">
+    <Section id="relics" eyebrow="Recovered Visions" title="Media And Relics From The Gathering" className="media-section">
       <div className="relic-grid">
         {relics.map(([title, text], i) => (
           <motion.article className={`vision-card vision-${i + 1}`} key={title} custom={i} variants={slowReveal} whileHover={{ scale: 1.025 }}>
