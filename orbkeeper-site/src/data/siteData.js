@@ -1,4 +1,4 @@
-export const phrases = ["The Veil Stirs", "The Circle Gathers", "The Rite Begins"];
+export const phrases = ["The Circle Gathers", "The Veil Stirs", "The Rite Begins"];
 
 export const lore = [
   {
