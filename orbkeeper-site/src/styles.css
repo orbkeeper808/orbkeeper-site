@@ -330,6 +330,7 @@ img {
   border: 1px solid rgba(210, 166, 79, 0.34);
   border-radius: 999px;
   opacity: 0.68;
+  transform-origin: center center;
   animation: ringBreathe 7s ease-in-out infinite;
 }
 
@@ -1016,14 +1017,14 @@ p {
 }
 
 @keyframes ringBreathe {
-  0%,
-  100% {
-    opacity: 0.46;
-    transform: scale(0.98) rotate(0deg);
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.52;
   }
+
   50% {
-    opacity: 0.9;
-    transform: scale(1.03) rotate(1.5deg);
+    transform: scale(1.045);
+    opacity: 0.82;
   }
 }
 
