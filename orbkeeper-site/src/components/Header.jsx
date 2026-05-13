@@ -7,7 +7,7 @@ export function Header() {
         <img src={logo} alt="ORBKEEPER logo" />
       </a>
       <nav className="nav-links" aria-label="Primary">
-        {["Lore", "Music", "Gatherings", "Keepers", "Relics", "Artifacts"].map((item) => (
+        {["Lore", "Music", "Gatherings", "Keepers", "Visions", "Artifacts"].map((item) => (
           <a key={item} href={`#${item.toLowerCase()}`}>
             {item}
           </a>
