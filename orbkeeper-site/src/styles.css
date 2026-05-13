@@ -116,17 +116,14 @@ img {
 
 .smoke {
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   pointer-events: none;
-  width: 62vw;
-  height: 62vw;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  filter: blur(48px);
-  opacity: 0.32;
-  background:
-    radial-gradient(circle, rgba(244, 234, 215, 0.18), transparent 58%),
-    radial-gradient(circle at 34% 60%, rgba(49, 39, 132, 0.34), transparent 48%);
-  animation: smokeDrift 18s ease-in-out infinite alternate;
+  filter: none;
+  opacity: 1;
+  background: red;
 }
 
 .smoke-a {
