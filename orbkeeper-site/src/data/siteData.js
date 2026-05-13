@@ -2,28 +2,28 @@ export const phrases = ["The Circle Gathers", "The Rite Begins", "The Veil Stirs
 
 export const lore = [
   {
-    title: "Before Creation",
-    text: "The Orb exists before the first flame, older than firmament and sea, a living relic that remembers every plane before it has a name.",
+    title: "The Primordial Orb",
+    text: "The Orb existed before creation itself, drifting silently between planes long before kingdoms, stars, or memory. Ancient civilizations spoke of its presence only in fragments and forbidden texts, hinting at a power that transcended time and space.",
   },
   {
-    title: "Between Planes",
-    text: "It slips through thresholds, appearing where the veil thins: beneath volcanic moonlight, inside ruined halls, and in the hush before the first chord.",
+    title: "The Veil of Mün Dane",
+    text: "Chosen by the Orb, the Keepers were summoned from distant realms to resist the influence of Mün Dane. Bound together, each carries a different power into the gathering.",
   },
   {
     title: "The Keepers",
-    text: "ORBKEEPER is not formed so much as summoned. The Keepers gather when the Orb calls, translating its glow into fuzz, thunder, and ceremony.",
+    text: "The veil is a great shroud cast over this world by Mün Dane, dulling the senses and burying wonder beneath routine, fear, and distraction. Most pass through life beneath it unknowingly, never seeing beyond the familiar world around them.",
   },
   {
-    title: "The Maui Arc",
-    text: "The current path bends through Maui, where salt wind and old stone carry the signal. Here, the veil shivers and the next portal begins to wake.",
+    title: "The Gathering",
+    text: "Whenever the Circle gathers, the veil begins to weaken. Through Tsöng, ritual, and acts beyond the familiar, the Keepers tear openings in the shroud and awaken those willing to see beyond it.",
   },
   {
-    title: "False Orbs",
-    text: "A giant Orbweaver familiar of Mün Dane spins convincing lights in the dark. These false orbs may be bait, meant to lure the Keepers from the true gate.",
+    title: "The Tsöng",
+    text: "Tsöng is more than sound — it is resonance capable of lifting the veil itself. The greater the gathering becomes, the higher the veil rises, revealing echoes of the hidden world beyond.",
   },
   {
     title: "The Rite",
-    text: "The Rite is the gathering itself: amplifiers glowing, voices raised, and the circle assembled. Only the real Orb can open the portal completely.",
+    text: "The Rite is the gathering itself: It is both invocation and resistance, pushing back against the silence imposed by Mün Dane. Through the Rite, the Keepers remind this world that something greater still stirs beyond the veil.",
   },
 ];
 
