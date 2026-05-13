@@ -116,16 +116,17 @@ img {
 
 .smoke {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   width: 62vw;
   height: 62vw;
   border-radius: 50%;
-  filter: blur(48px);
-  opacity: 0.32;
+  filter: blur(42px);
+  opacity: 0.45;
+  mix-blend-mode: screen;
   background:
-    radial-gradient(circle, rgba(244, 234, 215, 0.18), transparent 58%),
-    radial-gradient(circle at 34% 60%, rgba(49, 39, 132, 0.34), transparent 48%);
+    radial-gradient(circle, rgba(244, 234, 215, 0.42), transparent 58%),
+    radial-gradient(circle at 34% 60%, rgba(49, 39, 132, 0.6), transparent 48%);
   animation: smokeDrift 18s ease-in-out infinite alternate;
 }
 
