@@ -41,9 +41,8 @@ export const releases = [
 ];
 
 export const gatherings = [
-  { date: "2026-06-14T20:30:00-10:00", day: "Jun 14", place: "The Black Lantern", city: "Honolulu, HI" },
-  { date: "2026-07-02T21:00:00-07:00", day: "Jul 02", place: "Basement Chapel", city: "Portland, OR" },
-  { date: "2026-07-19T20:00:00-07:00", day: "Jul 19", place: "Saint Voltage", city: "Seattle, WA" },
+  { date: "2026-05-30T19:30:00-10:00", day: "May 30", place: "Paia Bay Coffee & Bar", city: "Paia, HI" },
+
 ];
 
 export const members = [
