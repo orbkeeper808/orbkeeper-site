@@ -6,11 +6,11 @@ export const lore = [
     text: "The Orb existed before creation itself, drifting silently between planes long before kingdoms, stars, or memory. Ancient civilizations spoke of its presence only in fragments and forbidden texts, hinting at a power that transcended time and space.",
   },
   {
-    title: "The Veil of Mün Dane",
+    title: "The Keepers",
     text: "Chosen by the Orb, the Keepers were summoned from distant realms to resist the influence of Mün Dane. Bound together, each carries a different power into the gathering.",
   },
   {
-    title: "The Keepers",
+    title: "The Veil of Mün Dane",
     text: "The veil is a great shroud cast over this world by Mün Dane, dulling the senses and burying wonder beneath routine, fear, and distraction. Most pass through life beneath it unknowingly, never seeing beyond the familiar world around them.",
   },
   {
