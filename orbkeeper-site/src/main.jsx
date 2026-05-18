@@ -146,12 +146,26 @@ function Merch() {
   return (
     <Section id="artifacts" eyebrow="Artifacts" title="The Orbkeeper Vault">
       <div className="artifact-grid">
-        {merch.map(([title, text], i) => (
-          <motion.article className="artifact-card" key={title} custom={i} variants={slowReveal} whileHover={{ y: -8 }}>
-            <div className={`artifact-mark mark-${i}`} />
-            <h3>{title}</h3>
-            <p>{text}</p>
-            <button className="ledger-button" type="button">Reserve</button>
+        {merch.map((item, i) => (
+          <motion.article
+            className="artifact-card"
+            key={item.title}
+            custom={i}
+            variants={slowReveal}
+            whileHover={{ y: -8 }}
+          >
+            {item.image ? (
+              <img className="artifact-image" src={item.image} alt={item.title} />
+            ) : (
+              <div className={`artifact-mark mark-${i}`} />
+            )}
+
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+
+            <button className="ledger-button" type="button">
+              Reserve
+            </button>
           </motion.article>
         ))}
       </div>
