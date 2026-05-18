@@ -77,12 +77,4 @@ export const merch = [
     title: "Orbweaver Patch",
     description: "Woven ward for denim, cases, and field jackets.",
   },
-  {
-    title: "Rite Cassette",
-    description: "Hand-numbered demo with parchment insert.",
-  },
-  {
-    title: "Portal Ledger",
-    description: "Show poster printed in aged sepia and royal dusk.",
-  },
 ];
