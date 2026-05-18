@@ -5,7 +5,7 @@ import { Atmosphere, CursorOrb } from "./components/Atmosphere";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
-import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
+import { gatherings, lore, members, merch, releases, relics } from "./data/siteDataTEST";
 import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
@@ -160,9 +160,8 @@ function Merch() {
               <div className={`artifact-mark mark-${i}`} />
             )}
 
-            <pre style={{ color: "white", fontSize: "12px", whiteSpace: "pre-wrap" }}>
-  {JSON.stringify(item, null, 2)}
-</pre>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
 
             <button className="ledger-button" type="button">
               Reserve
