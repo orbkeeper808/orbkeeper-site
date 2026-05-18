@@ -160,8 +160,9 @@ function Merch() {
               <div className={`artifact-mark mark-${i}`} />
             )}
 
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <pre style={{ color: "white", fontSize: "12px", whiteSpace: "pre-wrap" }}>
+  {JSON.stringify(item, null, 2)}
+</pre>
 
             <button className="ledger-button" type="button">
               Reserve
