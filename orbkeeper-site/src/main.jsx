@@ -11,6 +11,26 @@ import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
+const merch = [
+  {
+    title: "The Fabrean Vestment",
+    description: "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil.",
+    image: fabreanShirt,
+  },
+  {
+    title: "Orbweaver Patch",
+    description: "Woven ward for denim, cases, and field jackets.",
+  },
+  {
+    title: "Rite Cassette",
+    description: "Hand-numbered demo with parchment insert.",
+  },
+  {
+    title: "Portal Ledger",
+    description: "Show poster printed in aged sepia and royal dusk.",
+  },
+];
+
 function Lore() {
   return (
     <Section id="lore" eyebrow="Lore" title="The Chronicle" className="lore-section">
