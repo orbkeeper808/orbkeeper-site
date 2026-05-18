@@ -37,7 +37,7 @@ export function CursorOrb() {
     <motion.div
       className="cursor-orb"
       animate={{ x: pos.x - 18, y: pos.y - 18 }}
-      transition={{ type: "spring", stiffness: 900, damping: 48, mass: 0.18 }}
+      transition={{ type: "spring", stiffness: 900, damping: 34, mass: 0.15 }}
       aria-hidden="true"
     />
   );
