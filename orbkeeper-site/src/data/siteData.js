@@ -1,3 +1,11 @@
+import fabreanShirt from "../assets/merch/Fabrean T-Shirt.png";
+
+
+
+
+
+
+
 export const phrases = ["The Circle Gathers", "The Rite Begins", "The Veil Lifts"];
 
 export const lore = [
@@ -59,10 +67,9 @@ export const relics = [
   ["The Cloaked Witness", "A still from the road into the black ruin."],
   ["Candle Smoke Archive", "Faint light, warm tubes, and a room listening as one body."],
 ];
-
 export const merch = [
-  ["Logo Vestment", "Black cotton, bone ink, gold-leaf aura."],
-  ["Orbweaver Patch", "Woven ward for denim, cases, and field jackets."],
-  ["Rite Cassette", "Hand-numbered demo with parchment insert."],
-  ["Portal Ledger", "Show poster printed in aged sepia and royal dusk."],
+  {
+    title: "TEST TEST TEST",
+    description: "If you see this, siteData is working.",
+  },
 ];
