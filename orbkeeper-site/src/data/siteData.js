@@ -69,7 +69,20 @@ export const relics = [
 ];
 export const merch = [
   {
-    title: "TEST TEST TEST",
-    description: "If you see this, siteData is working.",
+    title: "The Fabrean Vestment",
+    description: "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil.",
+    image: fabreanShirt,
+  },
+  {
+    title: "Orbweaver Patch",
+    description: "Woven ward for denim, cases, and field jackets.",
+  },
+  {
+    title: "Rite Cassette",
+    description: "Hand-numbered demo with parchment insert.",
+  },
+  {
+    title: "Portal Ledger",
+    description: "Show poster printed in aged sepia and royal dusk.",
   },
 ];
