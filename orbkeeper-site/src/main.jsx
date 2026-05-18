@@ -5,31 +5,12 @@ import { Atmosphere, CursorOrb } from "./components/Atmosphere";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
-import { gatherings, lore, members, releases, relics } from "./data/siteData";
+import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
 import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
-const merch = [
-  {
-    title: "The Fabrean Vestment",
-    description: "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil.",
-    image: fabreanShirt,
-  },
-  {
-    title: "Orbweaver Patch",
-    description: "Woven ward for denim, cases, and field jackets.",
-  },
-  {
-    title: "Rite Cassette",
-    description: "Hand-numbered demo with parchment insert.",
-  },
-  {
-    title: "Portal Ledger",
-    description: "Show poster printed in aged sepia and royal dusk.",
-  },
-];
 
 function Lore() {
   return (
