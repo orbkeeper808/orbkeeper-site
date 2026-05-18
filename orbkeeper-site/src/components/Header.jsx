@@ -7,12 +7,15 @@ export function Header() {
         <img src={logo} alt="ORBKEEPER logo" />
       </a>
       <nav className="nav-links" aria-label="Primary">
-        {["Lore", "Music", "Gatherings", "Keepers", "Visions", "Artifacts"].map((item) => (
-          <a key={item} href={`#${item.toLowerCase()}`}>
-            {item}
-          </a>
-        ))}
-      </nav>
-    </header>
-  );
-}
+      {[
+  ["Lore", "#lore"],
+  ["Music", "#music"],
+  ["Gatherings", "#gatherings"],
+  ["Keepers", "#keepers"],
+  ["Visions", "#relics"],
+  ["Artifacts", "#artifacts"],
+].map(([label, href]) => (
+  <a key={label} href={href}>
+    {label}
+  </a>
+))}
