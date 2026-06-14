@@ -50,8 +50,36 @@ export const releases = [
 ];
 
 export const gatherings = [
-  { date: "2026-05-30T19:30:00-10:00", day: "May 30", place: "Paia Bay Coffee & Bar", city: "Paia, HI" },
-
+  {
+    date: "2026-02-21T19:30:00-10:00",
+    day: "Feb 21",
+    place: "Request Music",
+    city: "Wailuku, HI",
+  },
+  {
+    date: "2026-04-17T19:30:00-10:00",
+    day: "Apr 17",
+    place: "Aumakua Kava Lounge",
+    city: "Paia, HI",
+  },
+  {
+    date: "2026-04-25T19:30:00-10:00",
+    day: "Apr 25",
+    place: "Request Music",
+    city: "Wailuku, HI",
+  },
+  {
+    date: "2026-05-07T19:30:00-10:00",
+    day: "May 7",
+    place: "Maui Brewing Company",
+    city: "Kihei, HI",
+  },
+  {
+    date: "2026-05-30T19:30:00-10:00",
+    day: "May 30",
+    place: "Paia Bay Coffee & Bar",
+    city: "Paia, HI",
+  },
 ];
 
 export const members = [
