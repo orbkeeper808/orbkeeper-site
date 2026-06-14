@@ -1187,12 +1187,11 @@ p {
 }
 
 @media (max-width: 620px) {
-  
-    .site-header img,
-  .brand img,
+
+  .brand,
   .site-logo {
-    max-width: 140px;
-    height: auto;
+    display: none;
+  }
   }
   .relic-section,
   .site-footer {
