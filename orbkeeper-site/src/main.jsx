@@ -90,12 +90,12 @@ function Gatherings() {
         title="Gatherings Where The Veil Thins"
         className="gatherings-section"
       >
-        <div className="gathering-card">
+        <div className="gathering-empty">
           <h3>No Gatherings Announced</h3>
           <p>
             The Orb remains watchful. Future Rites will be revealed when the
             Veil permits.
-          </p>
+            </p>
         </div>
       </Section>
     );
@@ -200,28 +200,26 @@ function Relics() {
       </div>
 
       <div className="video-relics">
-        {videoRelics.map((video) => (
-          <div className="video-relic" key={video.title}>
-            <div className="video-container">
-              <iframe
-                width="100%"
-                height="315"
-                src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            <div>
-              <p className="section-eyebrow">Video Relic</p>
-              <h3>{video.title}</h3>
-              <p>{video.description}</p>
-            </div>
-          </div>
-        ))}
+  {videoRelics.map((video) => (
+    <div className="video-relic" key={video.title}>
+      <div className="video-header">
+        <p className="section-eyebrow">Recovered Vision</p>
+        <h3>{video.title}</h3>
+        <p>{video.description}</p>
       </div>
+
+      <div className="video-container">
+        <iframe
+          src={`https://www.youtube.com/embed/${video.youtubeId}`}
+          title={video.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  ))}
+</div>
     </Section>
   );
 }
