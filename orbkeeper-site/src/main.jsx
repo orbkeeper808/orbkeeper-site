@@ -8,6 +8,8 @@ import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
 import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
+import flyer3 from "./assets/Heavy Happening Flyer.jpg";
+import flyer4 from "./assets/Psychadelic Doom!.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
@@ -159,25 +161,66 @@ function Band() {
   );
 }
 
+const relicImages = [flyer1, flyer4, flyer3];
+
+const videoRelics = [
+  {
+    title: "The First Rite",
+    description:
+      "A recovered vision from the Circle's first gathering.",
+    youtubeId: "bRNYl8g2BA0",
+  },
+];
+
 function Relics() {
   return (
-    <Section id="relics" eyebrow="Recovered Visions" title="Media And Relics From The Gathering" className="media-section">
+    <Section
+      id="relics"
+      eyebrow="Recovered Visions"
+      title="Media And Relics From The Gathering"
+      className="media-section"
+    >
       <div className="relic-grid">
         {relics.map(([title, text], i) => (
-          <motion.article className={`vision-card vision-${i + 1}`} key={title} custom={i} variants={slowReveal} whileHover={{ scale: 1.025 }}>
-            <div className="vision-image">{i === 0 && <img src={flyer1} alt="ORBKEEPER fantasy flyer" />}</div>
+          <motion.article
+            className={`vision-card vision-${i + 1}`}
+            key={title}
+            custom={i}
+            variants={slowReveal}
+            whileHover={{ scale: 1.025 }}
+          >
+            <div className="vision-image">
+              {relicImages[i] && <img src={relicImages[i]} alt={title} />}
+            </div>
+
             <h3>{title}</h3>
             <p>{text}</p>
           </motion.article>
         ))}
       </div>
-      <div className="video-relic">
-        <div className="play-sigil">▶</div>
-        <div>
-          <p className="section-eyebrow">Video Relic</p>
-          <h3>Live Invocation Placeholder</h3>
-          <p>Swap this frame for a YouTube or Vimeo embed when the first gathering footage is ready. Test</p>
-        </div>
+
+      <div className="video-relics">
+        {videoRelics.map((video) => (
+          <div className="video-relic" key={video.title}>
+            <div className="video-container">
+              <iframe
+                width="100%"
+                height="315"
+                src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            <div>
+              <p className="section-eyebrow">Video Relic</p>
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
   );
