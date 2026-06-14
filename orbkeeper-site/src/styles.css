@@ -863,10 +863,12 @@ p {
 }
 
 .video-header {
+  order:1 ;
   max-width: 900px;
 }
 
 .video-container {
+  order:2 ;
   width: 100%;
 }
 
