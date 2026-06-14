@@ -847,9 +847,8 @@ p {
 }
 .video-relic {
   display: grid;
-  grid-template-columns: minmax(600px, 800px) minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 18px;
   padding: 22px;
 }
 
