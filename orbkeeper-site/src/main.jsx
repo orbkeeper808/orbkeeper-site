@@ -8,8 +8,8 @@ import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
 import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
-import flyer3 from "./assets/Heavy Happening Flyer.jpg";
-import flyer4 from "./assets/Psychadelic Doom!.jpg";
+import flyer3 from "./assets/Heavy Happening Flyer.JPG";
+import flyer4 from "./assets/Psychadelic Doom!.JPG";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
