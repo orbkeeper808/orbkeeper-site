@@ -1197,13 +1197,14 @@ p {
 
   .lore-grid,
   .member-grid,
+  .release-grid,
   .relic-grid,
   .artifact-grid,
   .countdown,
   .gathering-card,
   .site-footer form {
     grid-template-columns: 1fr;
-  }
+}
 
   .lore-card,
   .member-card,
@@ -1212,6 +1213,19 @@ p {
     min-height: auto;
   }
 
+  .release-card {
+  grid-template-columns: 1fr;
+  min-height: auto;
+}
+
+  .release-art,
+  .release-image,
+  .record-visual,
+  .vinyl-visual {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 24px;
+}
   .gathering-card {
     justify-items: start;
   }
