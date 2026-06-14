@@ -1156,9 +1156,7 @@ p {
 
   .music-grid,
   .release-card,
-  .video-relic {
-    grid-template-columns: 1fr;
-  }
+ 
 
   .vinyl-relic {
     width: min(220px, 70vw);
