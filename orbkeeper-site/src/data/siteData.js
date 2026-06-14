@@ -49,38 +49,7 @@ export const releases = [
   },
 ];
 
-export const gatherings = [
-  {
-    date: "2026-02-21T19:30:00-10:00",
-    day: "Feb 21",
-    place: "Request Music",
-    city: "Wailuku, HI",
-  },
-  {
-    date: "2026-04-17T19:30:00-10:00",
-    day: "Apr 17",
-    place: "Aumakua Kava Lounge",
-    city: "Paia, HI",
-  },
-  {
-    date: "2026-04-25T19:30:00-10:00",
-    day: "Apr 25",
-    place: "Request Music",
-    city: "Wailuku, HI",
-  },
-  {
-    date: "2026-05-07T19:30:00-10:00",
-    day: "May 7",
-    place: "Maui Brewing Company",
-    city: "Kihei, HI",
-  },
-  {
-    date: "2026-05-30T19:30:00-10:00",
-    day: "May 30",
-    place: "Paia Bay Coffee & Bar",
-    city: "Paia, HI",
-  },
-];
+export const gatherings = [];
 
 export const members = [
   ["Archanis", "Warden of the Primordial Light", "A scholar of forgotten realms whose mastery of ancient light magicks guides the Keepers through the veil."],
@@ -91,10 +60,18 @@ export const members = [
 ];
 
 export const relics = [
-  ["Vision From The Tasting Room", "A recovered print fragment from a night when the veil was thin."],
-  ["Orb Study No. 20", "A diagram found in the margin of an amplifier manual."],
-  ["The Cloaked Witness", "A still from the road into the black ruin."],
-
+  [
+    "Vision From The Tasting Room",
+    "A recovered print fragment from a night when the veil was thin."
+  ],
+  [
+    "Vision From The Kava Lounge",
+    "A recovered print fragment from a night when the veil shimmered with strange colors."
+  ],
+  [
+    "Vision From Request Hall",
+    "A recovered print fragment from a gathering where the Circle answered the call."
+  ]
 ];
 export const merch = [
   {
