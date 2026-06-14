@@ -78,10 +78,10 @@ export const merch = [
   },
 
   {
-    title: "The Fabrean Vestment",
+    title: "The Febrean Vestment",
     description:
       "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil. ",
     image: fabreanShirt,
-    link: "https://orbkeeper-shop.fourthwall.com/products/the-fabrean-vestment",
+    link: "https://orbkeeper-shop.fourthwall.com/products/the-febrean-vestment",
   },
 ];
