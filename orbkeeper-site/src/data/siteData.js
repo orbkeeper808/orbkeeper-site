@@ -65,24 +65,22 @@ export const relics = [
   ["Vision From The Tasting Room", "A recovered print fragment from a night when the veil was thin."],
   ["Orb Study No. 20", "A diagram found in the margin of an amplifier manual."],
   ["The Cloaked Witness", "A still from the road into the black ruin."],
-  ["Candle Smoke Archive", "Faint light, warm tubes, and a room listening as one body."],
+
 ];
-export const merch = [
+const merch = [
+  {
+    title: "The Ustovian Reliquary",
+    description:
+      "A reliquary bearing the image of the Orb held between mortal hands. Whether it symbolizes protection or temptation remains a matter of debate among the Circle.",
+    image: "/images/ustovian-reliquary.png",
+    link: "https://orbkeeper-shop.fourthwall.com/products/the-ustovian-reliquary",
+  },
+
   {
     title: "The Fabrean Vestment",
-    description: "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil.",
-    image: fabreanShirt,
-  },
-  {
-    title: "Orbweaver Patch",
-    description: "Woven ward for denim, cases, and field jackets.",
-  },
-  {
-    title: "Rite Cassette",
-    description: "Hand-numbered demo with parchment insert.",
-  },
-  {
-    title: "Portal Ledger",
-    description: "Show poster printed in aged sepia and royal dusk.",
+    description:
+      "A ceremonial vestment recovered from the archives of House Fabrea.",
+    image: "/images/fabrean-vestment.png",
+    link: "https://orbkeeper-shop.fourthwall.com/products/the-fabrean-vestment",
   },
 ];
