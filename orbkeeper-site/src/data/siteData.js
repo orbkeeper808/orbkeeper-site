@@ -70,11 +70,11 @@ export const relics = [
 ];
 export const merch = [
   {
-    title: "The Ustovian Reliquary",
+    title: "The Ustovian Vestment",
     description:
       "A relic depicting the sacred act of bearing the Orb. Passed between Keepers for generations, it serves as a reminder that the Orb is not owned, only guarded.",
     image: ustovianShirt,
-    link: "https://orbkeeper-shop.fourthwall.com/products/the-ustovian-vestement",
+    link: "https://orbkeeper-shop.fourthwall.com/products/the-ustovian-vestment",
   },
 
   {
