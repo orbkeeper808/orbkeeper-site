@@ -80,21 +80,61 @@ function useCountdown(date) {
 }
 
 function Gatherings() {
+  if (gatherings.length === 0) {
+    return (
+      <Section
+        id="gatherings"
+        eyebrow="The Rite"
+        title="Gatherings Where The Veil Thins"
+        className="gatherings-section"
+      >
+        <div className="gathering-card">
+          <h3>No Gatherings Announced</h3>
+          <p>
+            The Orb remains watchful. Future Rites will be revealed when the
+            Veil permits.
+          </p>
+        </div>
+      </Section>
+    );
+  }
+
   const countdown = useCountdown(gatherings[0].date);
 
   return (
-    <Section id="gatherings" eyebrow="The Rite" title="Gatherings Where The Veil Thins" className="gatherings-section">
+    <Section
+      id="gatherings"
+      eyebrow="The Rite"
+      title="Gatherings Where The Veil Thins"
+      className="gatherings-section"
+    >
       <div className="countdown">
         {Object.entries(countdown).map(([label, value]) => (
-          <div key={label}><strong>{String(value).padStart(2, "0")}</strong><span>{label}</span></div>
+          <div key={label}>
+            <strong>{String(value).padStart(2, "0")}</strong>
+            <span>{label}</span>
+          </div>
         ))}
       </div>
+
       <div className="gathering-list">
         {gatherings.map((event, i) => (
-          <motion.article className="gathering-card" key={event.place} custom={i} variants={slowReveal} whileHover={{ x: 8 }}>
+          <motion.article
+            className="gathering-card"
+            key={event.place}
+            custom={i}
+            variants={slowReveal}
+            whileHover={{ x: 8 }}
+          >
             <time dateTime={event.date}>{event.day}</time>
-            <div><h3>{event.place}</h3><p>{event.city}</p></div>
-            <a className="rite-button small" href="#contact">Tickets</a>
+            <div>
+              <h3>{event.place}</h3>
+              <p>{event.city}</p>
+            </div>
+
+            <a className="rite-button small" href="#contact">
+              Tickets
+            </a>
           </motion.article>
         ))}
       </div>
