@@ -1,4 +1,5 @@
-import fabreanShirt from "../assets/merch/Fabrean T-Shirt.png";
+import fabreanShirt from "../assets/merch/The Fabrean Vestment.png";
+import ustovianShirt from "../assets/merch/The Ustovian Vestment.png";
 
 
 
@@ -71,16 +72,16 @@ export const merch = [
   {
     title: "The Ustovian Reliquary",
     description:
-      "A reliquary bearing the image of the Orb held between mortal hands. Whether it symbolizes protection or temptation remains a matter of debate among the Circle.",
-    image: "/images/ustovian-reliquary.png",
+      "A relic depicting the sacred act of bearing the Orb. Passed between Keepers for generations, it serves as a reminder that the Orb is not owned, only guarded.",
+    image: ustovianShirt,
     link: "https://orbkeeper-shop.fourthwall.com/products/the-ustovian-reliquary",
   },
 
   {
     title: "The Fabrean Vestment",
     description:
-      "A ceremonial vestment recovered from the archives of House Fabrea.",
-    image: "/images/fabrean-vestment.png",
+      "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil. ",
+    image: fabreanShirt,
     link: "https://orbkeeper-shop.fourthwall.com/products/the-fabrean-vestment",
   },
 ];
