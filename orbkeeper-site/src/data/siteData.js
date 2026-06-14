@@ -77,9 +77,9 @@ export const merch = [
   {
     title: "The Ustovian Vestment",
     description:
-      "A relic depicting the sacred act of bearing the Orb. Passed between Keepers for generations, it serves as a reminder that the Orb is not owned, only guarded.",
+      "A vestment bearing the sacred act of bearing the Orb.  Some claim the hands depicted are those of the First Keeper, though no record survives to confirm it.",
     image: ustovianShirt,
-    link: "https://orbkeeper-shop.fourthwall.com/products/the-ustovian-vestment",
+    link: "https://vault.orbkeeper.com/products/the-ustovian-vestment",
   },
 
   {
@@ -87,6 +87,6 @@ export const merch = [
     description:
       "A ceremonial garment depicting the rising Orb and the first invocation beyond the veil. ",
     image: fabreanShirt,
-    link: "https://orbkeeper-shop.fourthwall.com/products/the-febrean-vestment",
+    link: "https://vault.orbkeeper.com/products/the-febrean-vestment",
   },
 ];

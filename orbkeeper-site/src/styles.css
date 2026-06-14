@@ -822,6 +822,12 @@ p {
   gap: 24px;
 }
 
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .vision-card,
 .artifact-card {
   min-height: 360px;
