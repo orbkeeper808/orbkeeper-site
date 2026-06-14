@@ -841,15 +841,18 @@ p {
 }
 
 .video-relics {
-  display: grid;
-  gap: 24px;
-  margin-top: 32px;
+  margin-top: 48px;
 }
+
 .video-relic {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.video-header {
+  max-width: 900px;
 }
 
 .video-container {
