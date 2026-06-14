@@ -145,7 +145,7 @@ function Relics() {
 
 function Merch() {
   return (
-    <Section id="artifacts" eyebrow="Artifacts" title="The TEST TEST TEST">
+    <Section id="artifacts" eyebrow="Artifacts" title="The Orbkeeper Vault">
       <div className="artifact-grid">
         {merch.map((item, i) => (
           <motion.article
