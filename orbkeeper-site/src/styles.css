@@ -1187,11 +1187,8 @@ p {
 }
 
 @media (max-width: 620px) {
-
-  .brand,
-  .site-logo {
+  .header-crest img {
     display: none;
-  }
   }
   .relic-section,
   .site-footer {
