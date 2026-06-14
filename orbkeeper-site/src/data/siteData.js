@@ -49,12 +49,7 @@ export const releases = [
   },
 ];
 
-export const gatherings = [  {
-    date: "2026-10-31T19:30:00-10:00",
-    day: "Oct 31",
-    place: "Venue Name",
-    city: "Maui, HI",
-  },];
+export const gatherings = [];
 
 export const members = [
   ["Archanis", "Warden of the Primordial Light", "A scholar of forgotten realms whose mastery of ancient light magicks guides the Keepers through the veil."],
