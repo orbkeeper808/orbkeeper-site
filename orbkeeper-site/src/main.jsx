@@ -145,7 +145,7 @@ function Relics() {
 
 function Merch() {
   return (
-    <Section id="artifacts" eyebrow="Artifacts" title="The Orbkeeper Vault">
+    <Section id="artifacts" eyebrow="Artifacts" title="The TEST TEST TEST">
       <div className="artifact-grid">
         {merch.map((item, i) => (
           <motion.article
@@ -156,7 +156,11 @@ function Merch() {
             whileHover={{ y: -8 }}
           >
             {item.image ? (
-              <img className="artifact-image" src={item.image} alt={item.title} />
+              <img
+                className="artifact-image"
+                src={item.image}
+                alt={item.title}
+              />
             ) : (
               <div className={`artifact-mark mark-${i}`} />
             )}
@@ -164,9 +168,14 @@ function Merch() {
             <h3>{item.title}</h3>
             <p>{item.description}</p>
 
-            <button className="ledger-button" type="button">
-              Reserve
-            </button>
+            <a
+              className="ledger-button"
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Acquire Artifact
+            </a>
           </motion.article>
         ))}
       </div>
