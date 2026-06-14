@@ -67,7 +67,7 @@ export const relics = [
   ["The Cloaked Witness", "A still from the road into the black ruin."],
 
 ];
-const merch = [
+export const merch = [
   {
     title: "The Ustovian Reliquary",
     description:
