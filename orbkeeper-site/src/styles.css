@@ -816,11 +816,10 @@ p {
   min-height: 42px;
 }
 
-.relic-grid,
-.artifact-grid {
+.relic-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .vision-card,
