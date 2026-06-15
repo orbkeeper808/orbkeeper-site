@@ -90,7 +90,7 @@ function Gatherings() {
           <h3>No Gatherings Announced</h3>
           <p>
             The Orb remains watchful. Future Rites will be revealed when the
-            Veil permits.
+          need arises.
             </p>
         </div>
       </Section>
