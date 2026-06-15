@@ -31,17 +31,28 @@ function Lore() {
 }
 
 function Music() {
+  const release = releases[0];
+
   return (
     <Section id="music" eyebrow="Resonances" title="Tsöngs of the Rite">
-      <div className="spotify-embed">
-        <iframe
-          src="https://open.spotify.com/embed/album/12DAfDvouh39Z4pBlpH8eR?utm_source=generator&theme=0"
-          width="100%"
-          height="352"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        />
+      <div className="spotify-section">
+        <div className="music-copy">
+          <p className="section-eyebrow">{release.type}</p>
+          <h3>{release.title}</h3>
+          {release.description && <p>{release.description}</p>}
+        </div>
+
+        <div className="spotify-embed">
+          <iframe
+            src={release.spotifyEmbed}
+            width="100%"
+            height="352"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title={`${release.title} Spotify Player`}
+          />
+        </div>
       </div>
     </Section>
   );
