@@ -727,6 +727,18 @@ p {
   animation-delay: calc(var(--bar) * -0.012s);
 }
 
+.spotify-embed {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(210, 166, 79, 0.24);
+  background: rgba(7, 6, 4, 0.48);
+}
+
+.spotify-embed iframe {
+  display: block;
+  border: 0;
+  border-radius: 12px;
+}
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
