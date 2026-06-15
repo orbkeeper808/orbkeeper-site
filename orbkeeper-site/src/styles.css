@@ -918,9 +918,17 @@ p {
 }
 
 .artifact-card {
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.artifact-card p {
+  flex-grow: 1;
+}
+
+.artifact-card .ledger-button {
+  margin-top: auto;
 }
 
 .artifact-mark {
