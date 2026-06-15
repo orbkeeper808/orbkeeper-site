@@ -267,9 +267,9 @@ function Footer() {
       <p>The Veil Remains Thin</p>
       <form onSubmit={(event) => event.preventDefault()}>
         <input type="email" placeholder="keeper@example.com" aria-label="Email address" />
-        <button type="submit">Send Signal</button>
+        <button type="submit">Join the Circle</button>
       </form>
-      <small>The Orb Watches</small>
+      <small>The Circle will send word.</small>
     </footer>
   );
 }
