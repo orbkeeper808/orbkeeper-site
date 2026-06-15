@@ -38,14 +38,9 @@ export const lore = [
 
 export const releases = [
   {
-    title: "Glass Funeral",
-    type: "Single",
-    tracks: ["I. The Veil Stirs", "II. Glass Funeral", "III. Orb in the Smoke"],
-  },
-  {
-    title: "Relics of the Rite",
-    type: "Demo",
-    tracks: ["Primordial Light", "Mun Dane's Familiar", "Portal Without Dawn"],
+    title: "Orbkeeper",
+    type: "EP",
+    spotifyEmbed: "https://open.spotify.com/embed/album/12DAfDvouh39Z4pBlpH",
   },
 ];
 
