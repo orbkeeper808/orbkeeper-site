@@ -731,7 +731,7 @@ p {
   margin-top: 18px;
   overflow: hidden;
   border: none;
-  background: rgba(127, 57, 255, 0.48);
+  background: transparent;
 }
 
 .spotify-embed iframe {
