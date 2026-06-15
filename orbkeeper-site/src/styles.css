@@ -730,8 +730,8 @@ p {
 .spotify-embed {
   margin-top: 18px;
   overflow: hidden;
-  border: 1px solid rgba(210, 166, 79, 0.24);
-  background: rgba(7, 6, 4, 0.48);
+  border: none;
+  background: rgba(127, 57, 255, 0.48);
 }
 
 .spotify-embed iframe {
