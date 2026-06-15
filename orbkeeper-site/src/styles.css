@@ -845,6 +845,11 @@ p {
   box-shadow: 0 0 38px rgba(210, 166, 79, 0.16);
 }
 
+.member-card h3 {
+  overflow-wrap: anywhere;
+  line-height: 0.95;
+}
+
 .member-card h4 {
   min-height: 42px;
 }
