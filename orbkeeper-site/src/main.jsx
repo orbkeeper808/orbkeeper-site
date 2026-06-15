@@ -46,7 +46,7 @@ function Music() {
           <iframe
             src={release.spotifyEmbed}
             width="100%"
-            height="352"
+            height="552"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
