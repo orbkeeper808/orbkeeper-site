@@ -270,7 +270,6 @@ img {
   content: "";
   border: 1px solid rgba(244, 234, 215, 0.15);
   border-radius: 26px;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 48px), calc(100% - 48px) 100%, 0 100%);
 }
 
 .hero-landscape {
@@ -703,28 +702,6 @@ p {
     radial-gradient(circle at 42% 30%, rgba(255, 248, 223, 0.94), transparent 18%),
     radial-gradient(circle, rgba(210, 166, 79, 0.48), rgba(49, 39, 132, 0.28) 56%, #070604 74%);
   box-shadow: 0 0 22px rgba(210, 166, 79, 0.2);
-}
-
-.frequency-bars {
-  display: flex;
-  height: 42px;
-  align-items: end;
-  gap: 4px;
-}
-
-.frequency-bars i {
-  display: block;
-  width: 100%;
-  height: var(--bar);
-  min-height: 8px;
-  background: linear-gradient(to top, var(--gold), var(--ivory));
-  opacity: 0.62;
-  transform-origin: bottom;
-}
-
-.release-card.is-playing .frequency-bars i {
-  animation: barPulse 820ms ease-in-out infinite alternate;
-  animation-delay: calc(var(--bar) * -0.012s);
 }
 
 .spotify-embed {
