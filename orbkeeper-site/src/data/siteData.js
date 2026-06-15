@@ -43,6 +43,8 @@ export const releases = [
     description:
       "The debut EP from the Keepers, featuring the soundtrack of the first invocation beyond the veil. A sonic tapestry of ritualistic soundscapes and haunting melodies, it serves as both a call to the gathering and a glimpse into the mysteries that lie beyond.",
     link: "https://open.spotify.com/album/12DAfDvouh39Z4pBlpH8eR?si=DUn4rL2PQsKcLrTZy2-ygw",
+    spotifyEmbed:
+      "https://open.spotify.com/embed/album/12DAfDvouh39Z4pBlpH8eR?utm_source=generator&theme=0",
   },
 ];
 
