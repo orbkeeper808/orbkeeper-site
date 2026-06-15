@@ -34,35 +34,14 @@ function Music() {
   return (
     <Section id="music" eyebrow="Resonances" title="Tsöngs of the Rite">
       <div className="music-grid">
-        {releases.map((release, i) => (
-          <motion.article
-            className="release-card"
-            key={release.title}
-            custom={i}
-            variants={slowReveal}
-          >
-            <div className="vinyl-relic">
-              <span />
-            </div>
-
-            <div className="release-copy">
-              <p className="section-eyebrow">{release.type}</p>
-              <h3>{release.title}</h3>
-
-              <div className="spotify-embed">
-                <iframe
-                  src={release.spotifyEmbed}
-                  width="100%"
-                  height="352"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  title={`${release.title} Spotify player`}
-                />
-              </div>
-            </div>
-          </motion.article>
-        ))}
+        <iframe data-testid="embed-iframe"
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/album/12DAfDvouh39Z4pBlpH8eR?utm_source=generator&theme=0&si=36c877e5698d4b8f"
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
       </div>
     </Section>
   );
