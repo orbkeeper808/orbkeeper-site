@@ -31,29 +31,35 @@ function Lore() {
 }
 
 function Music() {
-  const [playing, setPlaying] = useState(null);
-
   return (
     <Section id="music" eyebrow="Resonances" title="Tsöngs of the Rite">
       <div className="music-grid">
         {releases.map((release, i) => (
-          <motion.article className={`release-card ${playing === i ? "is-playing" : ""}`} key={release.title} custom={i} variants={slowReveal}>
-            <div className="vinyl-relic"><span /></div>
+          <motion.article
+            className="release-card"
+            key={release.title}
+            custom={i}
+            variants={slowReveal}
+          >
+            <div className="vinyl-relic">
+              <span />
+            </div>
+
             <div className="release-copy">
               <p className="section-eyebrow">{release.type}</p>
               <h3>{release.title}</h3>
-              <ol>{release.tracks.map((track) => <li key={track}>{track}</li>)}</ol>
-              <div className="embedded-player" aria-label={`${release.title} music player`}>
-                <span className="player-orb" />
-                <div className="frequency-bars" aria-hidden="true">
-                  {Array.from({ length: 18 }).map((_, bar) => (
-                    <i key={bar} style={{ "--bar": `${22 + ((bar * 17) % 58)}%` }} />
-                  ))}
-                </div>
+
+              <div className="spotify-embed">
+                <iframe
+                  src={release.spotifyEmbed}
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title={`${release.title} Spotify player`}
+                />
               </div>
-              <button className="rite-button small" type="button" onClick={() => setPlaying(playing === i ? null : i)}>
-                {playing === i ? "Let It Fade" : "Awaken Preview"}
-              </button>
             </div>
           </motion.article>
         ))}
