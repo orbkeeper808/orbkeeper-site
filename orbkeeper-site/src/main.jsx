@@ -89,8 +89,7 @@ function Gatherings() {
         <div className="gathering-empty">
           <h3>No Gatherings Announced</h3>
           <p>
-            The Orb remains watchful. Future Rites will be revealed when the
-          need arises.
+            The Orb remains watchful. The path to the next Rite is still unfolding. Stay vigilant, for when the time comes, the call will echo across realms, and the Circle will gather once more.
             </p>
         </div>
       </Section>
