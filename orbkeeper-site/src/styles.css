@@ -1200,6 +1200,18 @@ p {
     border-radius: 18px;
   }
 
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-actions a {
+    min-width: 120px;
+    text-align: center;
+  }
+
   .lore-grid,
   .member-grid,
   .release-grid,
