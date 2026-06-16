@@ -1248,17 +1248,21 @@ p {
   }
 
   .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    width: 100%;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  width: min(100%, 320px);
+  margin-inline: auto;
+}
 
-  .hero-actions .rite-button {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+.hero-actions .rite-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  text-align: center;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -76,7 +76,7 @@ export const merch = [
   {
     title: "The Ustovian Vestment",
     description:
-      "A vestment bearing the sacred act of bearing the Orb.  Some claim the hands depicted are those of the First Keeper, though no record survives to confirm it.",
+      "A vestment depicting the sacred act of bearing the Orb.  Some claim the hands depicted are those of the First Keeper, though no record survives to confirm it.",
     image: ustovianShirt,
     link: "https://vault.orbkeeper.com/products/the-ustovian-vestment",
   },
