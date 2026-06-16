@@ -1247,21 +1247,24 @@ p {
     overflow: hidden;
   }
 
-  .hero-actions {
+  .hero-copy {
+  width: 100%;
+  max-width: 340px;
+  margin-inline: auto;
+}
+
+.hero-actions {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  width: min(100%, 320px);
-  margin-inline: auto;
+  width: 100%;
 }
 
 .hero-actions .rite-button {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 320px;
   box-sizing: border-box;
-  text-align: center;
 }
 }
 
