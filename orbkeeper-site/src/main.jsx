@@ -167,12 +167,12 @@ const videoRelics = [
   },
 ];
 
-function Relics() {
+function Media() {
   return (
     <Section
-      id="relics"
+      id="artifacts"
       eyebrow="Recovered Visions"
-      title="Media And Relics From The Gathering"
+      title="Artifacts From The Gatherings"
       className="media-section"
     >
       <div className="relic-grid">
@@ -221,7 +221,7 @@ function Relics() {
 
 function Merch() {
   return (
-    <Section id="artifacts" eyebrow="Artifacts" title="The Orbkeeper Vault">
+    <Section id="relics" eyebrow="Relics" title="The Orbkeeper Vault">
       <div className="artifact-grid">
         {merch.map((item, i) => (
           <motion.article
@@ -250,7 +250,7 @@ function Merch() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Acquire Artifact
+              Acquire Relic
             </a>
           </motion.article>
         ))}
@@ -285,7 +285,7 @@ function App() {
         <Music />
         <Gatherings />
         <Band />
-        <Relics />
+        <Media />
         <Merch />
       </main>
       <Footer />
