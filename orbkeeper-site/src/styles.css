@@ -1208,7 +1208,7 @@ p {
   }
 
   .hero-actions a {
-    min-width: 120px;
+    width: 120px;
     text-align: center;
   }
 
