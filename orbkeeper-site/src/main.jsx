@@ -171,7 +171,7 @@ function Media() {
   return (
     <Section
       id="artifacts"
-      eyebrow="Recovered Visions"
+      eyebrow="Recovered Artifacts"
       title="Artifacts From The Gatherings"
       className="media-section"
     >
