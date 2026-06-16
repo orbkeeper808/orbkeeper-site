@@ -171,8 +171,8 @@ function Media() {
   return (
     <Section
       id="artifacts"
-      eyebrow="Recovered Artifacts"
-      title="Artifacts From The Gatherings"
+      eyebrow="Recovered Fragments"
+      title="Artifacts From Past Rites"
       className="media-section"
     >
       <div className="relic-grid">
