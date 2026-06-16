@@ -13,8 +13,8 @@ export function Header() {
           ["Music", "#music"],
           ["Gatherings", "#gatherings"],
           ["Keepers", "#keepers"],
-          ["Visions", "#relics"],
-          ["Artifacts", "#artifacts"],
+          ["Media", "#artifacts"],
+          ["Relics", "#relics"],
         ].map(([label, href]) => (
           <a key={label} href={href}>
             {label}
