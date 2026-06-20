@@ -254,6 +254,7 @@ function Merch() {
             )}
 
             <h3>{item.title}</h3>
+            <div className="keeper-divider" />
             <p>{item.description}</p>
 
             <a
