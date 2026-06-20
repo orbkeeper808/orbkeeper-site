@@ -600,7 +600,7 @@ p {
 
 .lore-divider {
   position: relative;
-  width: 220px;
+  width: 250px;
   height: 2px;
   margin: 14px auto 22px;
 }
@@ -648,7 +648,9 @@ p {
   font-weight: 900;
 }
 
-.lore-card h3,
+.lore-card h3,{
+  text-align: center;
+}
 .release-card h3,
 .member-card h3,
 .vision-card h3,
