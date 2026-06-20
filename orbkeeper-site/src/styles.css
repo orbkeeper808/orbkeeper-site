@@ -1366,29 +1366,18 @@ p {
   }
 
   .lore-card,
-  .member-card {
-  min-height: 650px;
-  }
-
-  .member-card p {
-  max-width: 24ch;
-  line-height: 1.8;
-  }
   .vision-card,
   .artifact-card {
     min-height: auto;
   }
-  .release-card {
-    grid-template-columns: 1fr;
+
+  .member-card {
     min-height: auto;
   }
-  .release-art,
-  .release-image,
-  .record-visual,
-  .vinyl-visual {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto 24px;
+
+  .member-card p {
+    max-width: 24ch;
+    line-height: 1.8;
   }
 
   .gathering-card {
