@@ -823,10 +823,13 @@ p {
 }
 
 .keeper-divider {
+  position: relative;
+  display: block;
   width: 100px;
-  height: 3px;
-  background: red !important;
-  margin: 15px auto;
+  height: 1px;
+  margin: 14px auto 22px;
+  background: rgba(210, 166, 79, 0.65);
+  flex-shrink: 0;
 }
 
 .keeper-divider::after {
