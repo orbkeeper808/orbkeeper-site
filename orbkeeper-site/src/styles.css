@@ -1018,6 +1018,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: center;
 }
 
 .artifact-card p {
