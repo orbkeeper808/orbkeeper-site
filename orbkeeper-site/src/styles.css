@@ -604,7 +604,7 @@ p {
   position: relative;
   width: 250px;
   height: 2px;
-  margin: 14px auto 22px;
+  margin: 4px auto 22px;
 }
 
 .lore-divider::before {
