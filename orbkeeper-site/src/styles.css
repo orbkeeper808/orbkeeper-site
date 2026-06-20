@@ -582,7 +582,7 @@ p {
 }
 
 .lore-card {
-  min-height: 470px;
+  min-height: 400px;
   padding: 28px;
   display: flex;
   flex-direction: column;
