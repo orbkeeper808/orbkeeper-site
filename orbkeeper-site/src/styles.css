@@ -835,7 +835,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 8px;
-  background: #080604;
+  background: var(--gold);
   color: var(--gold);
   font-size: 0.65rem;
 }
