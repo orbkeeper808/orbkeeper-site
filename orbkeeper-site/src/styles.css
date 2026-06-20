@@ -803,6 +803,8 @@ p {
   text-align: center;
   min-width: 0;
   overflow-wrap: break-word;
+  overflow: hidden;
+  
 }
 
 .member-card h3 {
@@ -821,12 +823,10 @@ p {
 }
 
 .keeper-divider {
-  position: relative;
-  width: 90px;
-  height: 1px;
-  margin: 14px auto 22px;
-  background: rgba(210, 166, 79, 0.45);
-  flex-shrink: 0;
+  width: 100px;
+  height: 3px;
+  background: red !important;
+  margin: 15px auto;
 }
 
 .keeper-divider::after {
@@ -836,9 +836,10 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 8px;
-  background: #080604;
+  background: #100d0b;
   color: var(--gold);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
+  line-height: 1;
 }
 
 .member-card p {
