@@ -234,10 +234,10 @@ function Media() {
 function Merch() {
   return (
     <Section id="relics" eyebrow="Relics" title="The Orbkeeper Vault">
-      <div className="artifact-grid">
+      <div className="relic-grid">
         {merch.map((item, i) => (
           <motion.article
-            className="artifact-card"
+            className="relic-card"
             key={item.title}
             custom={i}
             variants={slowReveal}
@@ -245,12 +245,12 @@ function Merch() {
           >
             {item.image ? (
               <img
-                className="artifact-image"
+                className="relic-image"
                 src={item.image}
                 alt={item.title}
               />
             ) : (
-              <div className={`artifact-mark mark-${i}`} />
+              <div className={`relic-mark mark-${i}`} />
             )}
 
             <h3>{item.title}</h3>
