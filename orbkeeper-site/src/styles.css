@@ -1366,9 +1366,7 @@ p {
   }
 
   .lore-card,
-  .member-card {
-    min-height: 650px;
-  }
+  .member-card,
   .vision-card,
   .artifact-card {
     min-height: auto;
