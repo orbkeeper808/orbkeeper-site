@@ -201,6 +201,7 @@ function Media() {
             </div>
 
             <h3>{title}</h3>
+            <div className="lore-divider" />
             <p>{text}</p>
           </motion.article>
         ))}
