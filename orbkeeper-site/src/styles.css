@@ -797,35 +797,40 @@ p {
 }
 
 .member-card {
-  display: grid;
-  min-height: 360px;
-  align-content: start;
-  gap: 12px;
-  padding: 22px;
-}
-
-.member-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-name-slot {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .member-card h3 {
-  min-height: 78px;
-  margin-bottom: 12px;
+  margin: 0;
+}
+
+.member-role-slot {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .member-card h4 {
-  min-height: 52px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .keeper-divider {
   position: relative;
-  width: 90px;
+  width: 110px;
   height: 1px;
-  margin: 18px auto 22px;
+  margin: 12px auto 28px;
   background: rgba(210, 166, 79, 0.45);
-  flex-shrink: 0;
 }
 
 .keeper-divider::after {
@@ -835,9 +840,14 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 8px;
-  background: var(--gold);
+  background: #080604;
   color: var(--gold);
   font-size: 0.65rem;
+}
+
+.member-card p {
+  text-align: left;
+  width: 100%;
 }
 
 .portrait-orb {
