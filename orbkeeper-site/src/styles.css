@@ -990,6 +990,15 @@ p {
 
 .vision-card h3 {
   margin-top: 0;
+  margin-bottom: 6px;
+  text-align: center;
+}
+v
+.vision-card p {
+  text-align: center;
+  max-width: 32ch;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .video-relics {
