@@ -837,14 +837,15 @@ p {
     linear-gradient(
       to right,
       rgba(210,166,79,0),
-      rgba(210,166,79,.8) 20%,
-      rgba(210,166,79,.8) 42%,
+      rgba(210,166,79,.25) 20%,
+      rgba(210,166,79,1) 40%,
       transparent 42%,
       transparent 58%,
-      rgba(210,166,79,.8) 58%,
-      rgba(210,166,79,.8) 80%,
+      rgba(210,166,79,1) 60%,
+      rgba(210,166,79,.25) 80%,
       rgba(210,166,79,0)
     );
+  filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
 }
 
 .keeper-divider::after {
