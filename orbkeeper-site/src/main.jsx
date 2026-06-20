@@ -237,7 +237,7 @@ function Merch() {
       <div className="artifact-grid">
         {merch.map((item, i) => (
           <motion.article
-            className="relic-card"
+            className="artifact-card"
             key={item.title}
             custom={i}
             variants={slowReveal}
@@ -245,7 +245,7 @@ function Merch() {
           >
             {item.image ? (
               <img
-                className="relic-image"
+                className="artifact-image"
                 src={item.image}
                 alt={item.title}
               />
