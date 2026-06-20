@@ -801,36 +801,32 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.member-name-slot {
-  min-height: 92px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .member-card h3 {
-  margin: 0;
-}
-
-.member-role-slot {
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 64px;
+  margin: 18px 0 8px;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 0.95;
 }
 
 .member-card h4 {
+  min-height: 44px;
   margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
 }
 
 .keeper-divider {
   position: relative;
-  width: 110px;
+  width: 90px;
   height: 1px;
-  margin: 12px auto 28px;
+  margin: 14px auto 22px;
   background: rgba(210, 166, 79, 0.45);
+  flex-shrink: 0;
 }
 
 .keeper-divider::after {
@@ -842,12 +838,16 @@ p {
   padding: 0 8px;
   background: #080604;
   color: var(--gold);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
 }
 
 .member-card p {
-  text-align: left;
   width: 100%;
+  max-width: 18ch;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.86rem;
+  line-height: 1.75;
 }
 
 .portrait-orb {
