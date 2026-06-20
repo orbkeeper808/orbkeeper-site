@@ -1371,14 +1371,25 @@ p {
     min-height: auto;
   }
 
+  @media (max-width: 620px) {
   .member-card {
     min-height: auto;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 48px;
   }
 
   .member-card p {
-    max-width: 24ch;
-    line-height: 1.8;
+    max-width: 26ch;
+    width: 100%;
+    line-height: 1.7;
+    margin-bottom: 0;
   }
+
+  .member-card::before {
+    bottom: 10px;
+  }
+}
 
   .gathering-card {
     justify-items: start;
