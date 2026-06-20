@@ -804,7 +804,7 @@ p {
   min-width: 0;
   overflow-wrap: break-word;
   overflow: hidden;
-  min-height: 540px;
+  min-height: 520px;
 }
 
 .member-card h3 {
@@ -855,7 +855,7 @@ p {
   transform: translate(-50%, -50%);
 
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 
   text-shadow:
     0 0 4px rgba(210, 166, 79, 0.5),
