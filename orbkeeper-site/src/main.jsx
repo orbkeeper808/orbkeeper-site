@@ -144,10 +144,28 @@ function Band() {
     <Section id="keepers" eyebrow="The Keepers" title="Guardians of the Orb">
       <div className="member-grid">
         {members.map(([name, role, text], i) => (
-          <motion.article className="member-card" key={name} custom={i} variants={slowReveal} whileHover={{ y: -10 }}>
+          <motion.article
+            className="member-card"
+            key={name}
+            custom={i}
+            variants={slowReveal}
+            whileHover={{ y: -10 }}
+          >
             <div className="portrait-orb">{name.slice(0, 1)}</div>
+
             <h3>{name}</h3>
+
             <h4>{role}</h4>
+
+            <div
+  style={{
+    width: "100px",
+    height: "4px",
+    background: "red",
+    margin: "15px auto",
+  }}
+/>
+
             <p>{text}</p>
           </motion.article>
         ))}
