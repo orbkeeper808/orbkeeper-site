@@ -582,7 +582,7 @@ p {
 }
 
 .lore-card {
-  min-height: 380px;
+  min-height: 420px;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -604,7 +604,7 @@ p {
   position: relative;
   width: 250px;
   height: 2px;
-  margin: 4px auto 32px;
+  margin: 4px auto 40px;
 }
 
 .lore-divider::before {
@@ -666,6 +666,7 @@ p {
 .lore-card p {
   flex-grow: 1;
   margin: 0;
+  padding-top: 8px;
 }
 .release-card li,
 .gathering-card p,
