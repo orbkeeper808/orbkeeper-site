@@ -582,8 +582,10 @@ p {
 }
 
 .lore-card {
-  min-height: 310px;
+  min-height: 380px;
   padding: 28px;
+  display: flex;
+  flex-direction: column;
 }
 
 .lore-card::after {
@@ -650,6 +652,7 @@ p {
 }
 
 .lore-card h3 {
+  min-height: 90px;
   margin-bottom: 14px;
   text-align: center;
 }
@@ -660,7 +663,10 @@ p {
   margin-bottom: 14px;
 }
 
-.lore-card p,
+.lore-card p {
+  flex-grow: 1;
+  margin: 0;
+}
 .release-card li,
 .gathering-card p,
 .member-card p,
