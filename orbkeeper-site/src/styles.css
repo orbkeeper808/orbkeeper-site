@@ -827,14 +827,24 @@ p {
   width: 120px;
   height: 2px;
   margin: 14px auto 22px;
-  background: linear-gradient(
-    to right,
-    rgba(210, 166, 79, 0),
-    rgba(210, 166, 79, 0.35) 20%,
-    rgba(210, 166, 79, 0.9) 50%,
-    rgba(210, 166, 79, 0.35) 80%,
-    rgba(210, 166, 79, 0)
-  );
+}
+
+.keeper-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(210,166,79,0),
+      rgba(210,166,79,.8) 20%,
+      rgba(210,166,79,.8) 42%,
+      transparent 42%,
+      transparent 58%,
+      rgba(210,166,79,.8) 58%,
+      rgba(210,166,79,.8) 80%,
+      rgba(210,166,79,0)
+    );
 }
 
 .keeper-divider::after {
@@ -843,12 +853,14 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--gold);
-  font-size: 0.65rem;
-  line-height: 1;
-  text-shadow: 0 0 8px rgba(210, 166, 79, 0.45);
-}
 
+  color: var(--gold);
+  font-size: 0.9rem;
+
+  text-shadow:
+    0 0 4px rgba(210, 166, 79, 0.5),
+    0 0 8px rgba(210, 166, 79, 0.3);
+}
 .member-card p {
   width: 100%;
   max-width: 18ch;
