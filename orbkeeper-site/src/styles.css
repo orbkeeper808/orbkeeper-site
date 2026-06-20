@@ -604,7 +604,7 @@ p {
   position: relative;
   width: 250px;
   height: 2px;
-  margin: 4px auto 22px;
+  margin: 4px auto 32px;
 }
 
 .lore-divider::before {
@@ -665,7 +665,7 @@ p {
 
 .lore-card p {
   flex-grow: 1;
-  margin: 12px 0 0;
+  margin: 0;
 }
 .release-card li,
 .gathering-card p,
