@@ -22,7 +22,7 @@ function Lore() {
           <motion.article className="lore-card" key={item.title} custom={i} variants={slowReveal} whileHover={{ y: -8, scale: 1.015 }}>
             <span className="card-number">0{i + 1}</span>
             <h3>{item.title}</h3>
-            <div className="keeper-divider" />
+            <div className="lore-divider" />
             <p>{item.text}</p>
           </motion.article>
         ))}
