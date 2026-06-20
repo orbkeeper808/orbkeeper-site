@@ -1014,22 +1014,22 @@ p {
   }
 }
 
-.relic-card {
+.artifact-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
 }
 
-.relic-card p {
+.artifact-card p {
   flex-grow: 1;
 }
 
-.relic-card .ledger-button {
+.artifact-card .ledger-button {
   margin-top: auto;
 }
 
-.relic-mark {
+.artifact-mark {
   position: relative;
   display: grid;
   min-height: 190px;
@@ -1040,7 +1040,7 @@ p {
     #080604;
 }
 
-.relic-mark::before {
+.artifact-mark::before {
   width: 112px;
   aspect-ratio: 1;
   content: "";
@@ -1067,7 +1067,7 @@ p {
   clip-path: polygon(50% 0, 100% 34%, 82% 100%, 18% 100%, 0 34%);
 }
 
-.relic-image {
+.artifact-image {
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
@@ -1086,7 +1086,7 @@ p {
     filter 420ms ease;
 }
 
-.relic-card:hover .relic-image {
+.artifact-card:hover .artifact-image {
   transform: scale(1.03);
   filter:
     drop-shadow(0 24px 42px rgba(49, 39, 132, 0.28))
