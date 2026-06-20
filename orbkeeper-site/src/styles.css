@@ -804,7 +804,7 @@ p {
   min-width: 0;
   overflow-wrap: break-word;
   overflow: hidden;
-  min-height: 560px;
+  min-height: 540px;
 }
 
 .member-card h3 {
