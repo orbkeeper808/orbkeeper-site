@@ -40,6 +40,7 @@ function Music() {
         <div className="music-copy">
           <p className="section-eyebrow">{release.type}</p>
           <h3>{release.title}</h3>
+          <div className="keeper-divider" />
           {release.description && <p>{release.description}</p>}
         </div>
 
@@ -89,6 +90,7 @@ function Gatherings() {
       >
         <div className="gathering-empty">
           <h3>No Gatherings Announced</h3>
+          <div className="keeper-divider" />
           <p>
             The Orb remains watchful. The path to the next Rite is still unfolding. Stay vigilant, for when the time comes, the call will echo across realms, and the Circle will gather once more.
             </p>
@@ -173,6 +175,7 @@ const relicImages = [flyer1, flyer4, flyer3];
 const videoRelics = [
   {
     title: "The First Rite",
+    <div className="keeper-divider" />
     description:
       "A recovered vision from the Circle's first gathering.",
     youtubeId: "bRNYl8g2BA0",
@@ -254,6 +257,7 @@ function Merch() {
             )}
 
             <h3>{item.title}</h3>
+            <div className="keeper-divider" />
             <p>{item.description}</p>
 
             <a
