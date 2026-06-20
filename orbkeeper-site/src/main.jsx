@@ -157,14 +157,7 @@ function Band() {
 
             <h4>{role}</h4>
 
-            <div
-  style={{
-    width: "100px",
-    height: "4px",
-    background: "red",
-    margin: "15px auto",
-  }}
-/>
+            <div className="keeper-divider" />
 
             <p>{text}</p>
           </motion.article>
