@@ -804,12 +804,19 @@ p {
   padding: 22px;
 }
 
+.member-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .member-card h3 {
-  min-height: 96px;
+  min-height: 78px;
+  margin-bottom: 12px;
 }
 
 .member-card h4 {
-  min-height: 48px;
+  min-height: 52px;
+  margin-bottom: 0;
 }
 
 .keeper-divider {
@@ -818,6 +825,7 @@ p {
   height: 1px;
   margin: 18px auto 22px;
   background: rgba(210, 166, 79, 0.45);
+  flex-shrink: 0;
 }
 
 .keeper-divider::after {
@@ -827,7 +835,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 8px;
-  background: rgba(8, 6, 4, 1);
+  background: #080604;
   color: var(--gold);
   font-size: 0.65rem;
 }
