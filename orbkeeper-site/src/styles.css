@@ -665,7 +665,7 @@ p {
 
 .lore-card p {
   flex-grow: 1;
-  margin: 0;
+  margin: 12px 0 0;
 }
 .release-card li,
 .gathering-card p,
