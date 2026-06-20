@@ -1347,21 +1347,21 @@ p {
   }
 
   .hero-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 14px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+  }
 
-.hero-actions .rite-button,
-.hero-actions .ledger-button {
-  width: 160px;
-  min-width: 160px;
-  max-width: 160px;
-  box-sizing: border-box;
-  text-align: center;
-}
+  .hero-actions .rite-button,
+  .hero-actions .ledger-button {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    box-sizing: border-box;
+    text-align: center;
+  }
 
   .lore-grid,
   .member-grid,
@@ -1380,7 +1380,13 @@ p {
     min-height: auto;
   }
 
-  @media (max-width: 620px) {
+  .vision-card p {
+    text-align: center;
+    max-width: 28ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .member-card {
     min-height: auto;
     height: auto;
@@ -1398,7 +1404,6 @@ p {
   .member-card::before {
     bottom: 10px;
   }
-}
 
   .gathering-card {
     justify-items: start;
