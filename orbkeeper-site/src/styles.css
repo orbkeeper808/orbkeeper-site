@@ -642,6 +642,7 @@ p {
 .card-number {
   display: block;
   margin-bottom: 28px;
+  text-align: center;
   color: rgba(210, 166, 79, 0.58);
   font-family: var(--display);
   font-size: 2.4rem;
@@ -649,6 +650,7 @@ p {
 }
 
 .lore-card h3 {
+  margin-bottom: 14px;
   text-align: center;
 }
 .release-card h3,
