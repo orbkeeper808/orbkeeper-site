@@ -990,14 +990,14 @@ p {
 
 .vision-card h3 {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
 .vision-card p {
   text-align: center;
   max-width: 32ch;
-  margin: 18px auto 0;
+  margin: px auto 0;
   line-height: 1.7;
 }
 
