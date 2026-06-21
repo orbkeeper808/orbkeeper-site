@@ -214,6 +214,7 @@ function Media() {
       <div className="video-header">
         <p className="section-eyebrow">Recovered Vision</p>
         <h3>{video.title}</h3>
+        <div className="lore-divider" />
         <p>{video.description}</p>
       </div>
 
