@@ -706,10 +706,24 @@ p {
   text-align: left;
 }
 
+.release-copy h3 {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
 .release-copy p {
-  max-width: 76ch;
-  margin: 16px auto 0;
-  line-height: 1.75;
+  max-width: 48ch;
+  margin: 28px auto 0;
+  text-align: center;
+  line-height: 1.85;
+}
+
+.release-copy p {
+  max-width: 50ch;
+  margin: 18px auto 0;
+  text-align: center;
+  line-height: 1.8;
 }
 
 .spotify-embed {
