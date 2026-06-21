@@ -692,32 +692,27 @@ p {
   padding: 30px;
 }
 
-.release-copy {
+.music-copy {
   max-width: 860px;
   margin: 0 auto 28px;
   text-align: center;
 }
 
-.release-copy ol {
-  display: grid;
-  gap: 8px;
-  margin: 18px 0 18px;
-  padding-left: 20px;
-  text-align: left;
-}
-
-.release-copy h3 {
-  width: 100%;
+.music-copy h3 {
   margin-top: 8px;
   margin-bottom: 32px;
   text-align: center;
 }
 
-.release-copy p {
+.music-copy p {
   max-width: 50ch;
   margin: 18px auto 0;
   text-align: center;
   line-height: 1.8;
+}
+
+.music-copy .lore-divider {
+  margin: 0 auto 28px;
 }
 
 .spotify-embed {
