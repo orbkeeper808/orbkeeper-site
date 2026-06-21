@@ -1380,13 +1380,6 @@ p {
     min-height: auto;
   }
 
-  .vision-card p {
-    text-align: center;
-    max-width: 28ch;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .member-card {
     min-height: auto;
     height: auto;
