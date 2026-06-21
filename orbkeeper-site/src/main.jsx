@@ -40,6 +40,7 @@ function Music() {
         <div className="music-copy">
           <p className="section-eyebrow">{release.type}</p>
           <h3>{release.title}</h3>
+          <div className="lore-divider" />
           {release.description && <p>{release.description}</p>}
         </div>
 
