@@ -707,6 +707,7 @@ p {
 }
 
 .release-copy h3 {
+  width: 100%;
   margin-top: 8px;
   margin-bottom: 32px;
   text-align: center;
