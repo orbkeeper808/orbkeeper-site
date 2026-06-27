@@ -556,6 +556,11 @@ body:has(button:hover) .cursor-orb {
     box-shadow 700ms ease;
 }
 
+.footer-divider-wrap {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
 .relic-section:hover,
 .site-footer:hover {
   border-color: rgba(210, 166, 79, 0.42);

@@ -304,7 +304,10 @@ function Footer() {
         <span>Those who hear the call will know when the path opens again.</span>
         
       </div>
-      <div className="lore-divider" />
+
+      <div className="footer-divider-wrap">
+        <div className="lore-divider" />
+      </div>
 
       <small>© Orbkeeper</small>
     </footer>
