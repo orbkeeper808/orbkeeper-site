@@ -6,17 +6,19 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
-import flyer2 from "./assets/orbkeeper-flyer2.jpg";
 import flyer1 from "./assets/orbkeeper-flyer.jpg";
 import flyer3 from "./assets/heavy-happening-flyer.jpg";
 import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
+const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
+
+const getRune = (index) => dividerRunes[index % dividerRunes.length];
+
 function RuneLayer() {
   return (
     <div className="rune-layer" aria-hidden="true">
-
       <div className="rune rune-left">
         <span>ᛉ</span>
         <span>ᛟ</span>
@@ -32,7 +34,6 @@ function RuneLayer() {
         <span>ᚱ</span>
         <span>ᛒ</span>
       </div>
-
     </div>
   );
 }
@@ -51,7 +52,7 @@ function Lore() {
           >
             <span className="card-number">0{i + 1}</span>
             <h3>{item.title}</h3>
-            <div className="lore-divider" />
+            <div className="lore-divider" data-rune={getRune(i)} />
             <p>{item.text}</p>
           </motion.article>
         ))}
@@ -69,7 +70,7 @@ function Music() {
         <div className="music-copy">
           <p className="section-eyebrow">{release.type}</p>
           <h3>{release.title}</h3>
-          <div className="lore-divider" />
+          <div className="lore-divider" data-rune="ᚱ" />
           {release.description && <p>{release.description}</p>}
         </div>
 
@@ -184,13 +185,9 @@ function Band() {
             whileHover={{ y: -4 }}
           >
             <div className="portrait-orb">{name.slice(0, 1)}</div>
-
             <h3>{name}</h3>
-
             <h4>{role}</h4>
-
-            <div className="keeper-divider" />
-
+            <div className="keeper-divider" data-rune={getRune(i)} />
             <p>{text}</p>
           </motion.article>
         ))}
@@ -231,7 +228,7 @@ function Media() {
             </div>
 
             <h3>{title}</h3>
-            <div className="lore-divider" />
+            <div className="lore-divider" data-rune={getRune(i + 2)} />
             <p>{text}</p>
           </motion.article>
         ))}
@@ -243,7 +240,7 @@ function Media() {
             <div className="video-header">
               <p className="section-eyebrow">Recovered Vision</p>
               <h3>{video.title}</h3>
-              <div className="lore-divider" />
+              <div className="lore-divider" data-rune="ᛜ" />
               <p>{video.description}</p>
             </div>
 
@@ -276,17 +273,13 @@ function Merch() {
             whileHover={{ y: -4 }}
           >
             {item.image ? (
-              <img
-                className="artifact-image"
-                src={item.image}
-                alt={item.title}
-              />
+              <img className="artifact-image" src={item.image} alt={item.title} />
             ) : (
               <div className={`artifact-mark mark-${i}`} />
             )}
 
             <h3>{item.title}</h3>
-            <div className="keeper-divider" />
+            <div className="keeper-divider" data-rune={getRune(i + 3)} />
             <p>{item.description}</p>
 
             <a
@@ -314,12 +307,11 @@ function Footer() {
       <p>The Veil Remains Thin</p>
 
       <div className="footer-divider-wrap">
-        <div className="lore-divider" />
+        <div className="lore-divider" data-rune="ᛒ" />
       </div>
 
       <div className="footer-epilogue">
         <span>Those who hear the call will know when the path opens again.</span>
-        
       </div>
 
       <small>© Orbkeeper</small>

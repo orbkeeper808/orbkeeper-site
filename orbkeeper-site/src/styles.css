@@ -790,20 +790,20 @@ p {
 }
 
 .lore-divider::after {
-  content: "❖";
+  content: attr(data-rune);
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 
   text-shadow:
-    0 0 4px rgba(210, 166, 79, 0.5),
-    0 0 8px rgba(210, 166, 79, 0.3);
+    0 0 4px rgba(210,166,79,.5),
+    0 0 8px rgba(210,166,79,.3);
 }
-
 .card-number {
   display: block;
   margin-bottom: 22px;
@@ -1028,18 +1028,19 @@ p {
 }
 
 .keeper-divider::after {
-  content: "❖";
+  content: attr(data-rune);
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 
   text-shadow:
-    0 0 4px rgba(210, 166, 79, 0.5),
-    0 0 8px rgba(210, 166, 79, 0.3);
+    0 0 4px rgba(210,166,79,.5),
+    0 0 8px rgba(210,166,79,.3);
 }
 .member-card p {
   width: 100%;
