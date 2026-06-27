@@ -770,6 +770,14 @@ p {
   flex-shrink: 0;
 }
 
+.lore-divider {
+  position: relative;
+  width: 250px;
+  height: 2px;
+  margin: 4px auto 34px;
+  flex-shrink: 0;
+}
+
 .lore-divider::before {
   content: "";
   position: absolute;
@@ -787,22 +795,27 @@ p {
       rgba(210,166,79,0)
     );
   filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
+  transition: filter 900ms ease;
 }
 
 .lore-divider::after {
-  content: attr(data-rune);
-
+  content: "❖";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: var(--gold);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 
   text-shadow:
     0 0 4px rgba(210,166,79,.5),
     0 0 8px rgba(210,166,79,.3);
+
+  transition:
+    color 900ms ease,
+    text-shadow 900ms ease,
+    transform 900ms ease;
 }
 .card-number {
   display: block;
@@ -1025,22 +1038,27 @@ p {
       rgba(210,166,79,0)
     );
   filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
+  transition: filter 900ms ease;
 }
 
 .keeper-divider::after {
-  content: attr(data-rune);
-
+  content: "❖";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: var(--gold);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 
   text-shadow:
     0 0 4px rgba(210,166,79,.5),
     0 0 8px rgba(210,166,79,.3);
+
+  transition:
+    color 900ms ease,
+    text-shadow 900ms ease,
+    transform 900ms ease;
 }
 .member-card p {
   width: 100%;

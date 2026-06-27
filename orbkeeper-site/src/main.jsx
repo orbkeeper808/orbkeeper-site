@@ -29,9 +29,11 @@ function RuneLayer() {
       const index = Math.floor(Math.random() * runes.length);
 
       setActiveRune(`${side}-${index}`);
+      document.body.classList.add("rune-stirring");
 
       fadeTimeoutId = window.setTimeout(() => {
         setActiveRune(null);
+        document.body.classList.remove("rune-stirring");
       }, 2200);
 
       const nextDelay = 15000 + Math.random() * 30000;
@@ -43,6 +45,7 @@ function RuneLayer() {
     return () => {
       window.clearTimeout(timeoutId);
       window.clearTimeout(fadeTimeoutId);
+      document.body.classList.remove("rune-stirring");
     };
   }, [runes.length]);
 
