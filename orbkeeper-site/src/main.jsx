@@ -116,7 +116,7 @@ function Music() {
         <div className="music-copy">
           <p className="section-eyebrow">{release.type}</p>
           <h3>{release.title}</h3>
-          <div className="lore-divider" data-rune="ᛉ" />
+          <div className="lore-divider" />
           {release.description && <p>{release.description}</p>}
         </div>
 
@@ -274,7 +274,7 @@ function Media() {
             </div>
 
             <h3>{title}</h3>
-            <div className="lore-divider" data-rune={getRune(i + 2)} />
+            <div className="lore-divider" />
             <p>{text}</p>
           </motion.article>
         ))}
@@ -286,7 +286,7 @@ function Media() {
             <div className="video-header">
               <p className="section-eyebrow">Recovered Vision</p>
               <h3>{video.title}</h3>
-              <div className="lore-divider" data-rune="ᛟ" />
+              <div className="lore-divider" />
               <p>{video.description}</p>
             </div>
 
@@ -325,7 +325,7 @@ function Merch() {
             )}
 
             <h3>{item.title}</h3>
-            <div className="keeper-divider" data-rune={getRune(i + 3)} />
+            <div className="keeper-divider" />
             <p>{item.description}</p>
 
             <a
@@ -353,7 +353,7 @@ function Footer() {
       <p>The Veil Remains Thin</p>
 
       <div className="footer-divider-wrap">
-        <div className="lore-divider" data-rune="ᛜ" />
+        <div className="lore-divider" />
       </div>
 
       <div className="footer-epilogue">

@@ -813,9 +813,15 @@ p {
     0 0 8px rgba(210,166,79,.3);
 
   transition:
-    color 900ms ease,
-    text-shadow 900ms ease,
-    transform 900ms ease;
+    color 700ms ease,
+    text-shadow 700ms ease,
+    transform 700ms ease;
+}
+
+.lore-section .lore-divider::after,
+.member-card .keeper-divider::after {
+  content: attr(data-rune);
+  font-size: 0.95rem;
 }
 .card-number {
   display: block;
@@ -1056,9 +1062,15 @@ p {
     0 0 8px rgba(210,166,79,.3);
 
   transition:
-    color 900ms ease,
-    text-shadow 900ms ease,
-    transform 900ms ease;
+    color 700ms ease,
+    text-shadow 700ms ease,
+    transform 700ms ease;
+}
+
+.lore-section .lore-divider::after,
+.member-card .keeper-divider::after {
+  content: attr(data-rune);
+  font-size: 0.95rem;
 }
 .member-card p {
   width: 100%;
