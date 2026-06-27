@@ -301,16 +301,10 @@ function Footer() {
       <p>The Veil Remains Thin</p>
 
       <div className="footer-epilogue">
-        <span>The Rite has ended.</span>
-        <span>Yet the echoes endure.</span>
+        <span>Those who hear the call will know when the path opens again.</span>
+        
       </div>
-
-      <nav className="footer-links" aria-label="Orbkeeper links">
-        <a href="#music">Hear the Tsöngs</a>
-        <a href="#artifacts">Witness the Rite</a>
-        <a href="#relics">Enter the Vault</a>
-        <a href="#lore">Read the Chronicle</a>
-      </nav>
+      <div className="lore-divider" />
 
       <small>© Orbkeeper</small>
     </footer>
