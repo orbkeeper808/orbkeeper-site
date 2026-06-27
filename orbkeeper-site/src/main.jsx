@@ -294,15 +294,25 @@ function Merch() {
 function Footer() {
   return (
     <footer className="site-footer" id="contact">
+      <div className="footer-divider" aria-hidden="true" />
+
       <img src={logo} alt="ORBKEEPER logo" />
+
       <p>The Veil Remains Thin</p>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <input type="email" placeholder="keeper@example.com" aria-label="Email address" />
-        <button className="premium-button" type="submit">
-          Join the Circle
-        </button>
-      </form>
-      <small>The Circle will send word!</small>
+
+      <div className="footer-epilogue">
+        <span>The Rite has ended.</span>
+        <span>Yet the echoes endure.</span>
+      </div>
+
+      <nav className="footer-links" aria-label="Orbkeeper links">
+        <a href="#music">Hear the Tsöngs</a>
+        <a href="#artifacts">Witness the Rite</a>
+        <a href="#relics">Enter the Vault</a>
+        <a href="#lore">Read the Chronicle</a>
+      </nav>
+
+      <small>© Orbkeeper</small>
     </footer>
   );
 }
