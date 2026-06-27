@@ -13,13 +13,29 @@ import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
+function RuneLayer() {
+  return (
+    <div className="rune-layer" aria-hidden="true">
+      <span className="rune rune-one">ᚱ</span>
+      <span className="rune rune-two">ᛟ</span>
+      <span className="rune rune-three">ᚨ</span>
+      <span className="rune rune-four">ᛉ</span>
+    </div>
+  );
+}
 
 function Lore() {
   return (
     <Section id="lore" eyebrow="Lore" title="The Chronicle" className="lore-section">
       <div className="lore-grid">
         {lore.map((item, i) => (
-          <motion.article className="lore-card" key={item.title} custom={i} variants={slowReveal} whileHover={{ y: -8, scale: 1.015 }}>
+          <motion.article
+            className="lore-card premium-card"
+            key={item.title}
+            custom={i}
+            variants={slowReveal}
+            whileHover={{ y: -4 }}
+          >
             <span className="card-number">0{i + 1}</span>
             <h3>{item.title}</h3>
             <div className="lore-divider" />
@@ -70,6 +86,7 @@ function useCountdown(date) {
 
   return useMemo(() => {
     const diff = Math.max(0, new Date(date).getTime() - now.getTime());
+
     return {
       days: Math.floor(diff / 86400000),
       hours: Math.floor((diff % 86400000) / 3600000),
@@ -88,11 +105,11 @@ function Gatherings() {
         title="Gatherings Where The Veil Thins"
         className="gatherings-section"
       >
-        <div className="gathering-empty">
+        <div className="gathering-empty premium-card">
           <h3>No Gatherings Announced</h3>
           <p>
             The Orb remains watchful. The path to the next Rite is still unfolding. Stay vigilant, for when the time comes, the call will echo across realms, and the Circle will gather once more.
-            </p>
+          </p>
         </div>
       </Section>
     );
@@ -119,11 +136,11 @@ function Gatherings() {
       <div className="gathering-list">
         {gatherings.map((event, i) => (
           <motion.article
-            className="gathering-card"
+            className="gathering-card premium-card"
             key={event.place}
             custom={i}
             variants={slowReveal}
-            whileHover={{ x: 8 }}
+            whileHover={{ x: 4 }}
           >
             <time dateTime={event.date}>{event.day}</time>
             <div>
@@ -131,7 +148,7 @@ function Gatherings() {
               <p>{event.city}</p>
             </div>
 
-            <a className="rite-button small" href="#contact">
+            <a className="rite-button small premium-button" href="#contact">
               Tickets
             </a>
           </motion.article>
@@ -147,11 +164,11 @@ function Band() {
       <div className="member-grid">
         {members.map(([name, role, text], i) => (
           <motion.article
-            className="member-card"
+            className="member-card premium-card"
             key={name}
             custom={i}
             variants={slowReveal}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -4 }}
           >
             <div className="portrait-orb">{name.slice(0, 1)}</div>
 
@@ -174,8 +191,7 @@ const relicImages = [flyer1, flyer4, flyer3];
 const videoRelics = [
   {
     title: "The First Rite",
-    description:
-      "A recovered vision from the Circle's first gathering.",
+    description: "A recovered vision from the Circle's first gathering.",
     youtubeId: "bRNYl8g2BA0",
   },
 ];
@@ -191,11 +207,11 @@ function Media() {
       <div className="relic-grid">
         {relics.map(([title, text], i) => (
           <motion.article
-            className={`vision-card vision-${i + 1}`}
+            className={`vision-card vision-${i + 1} premium-card`}
             key={title}
             custom={i}
             variants={slowReveal}
-            whileHover={{ scale: 1.025 }}
+            whileHover={{ y: -4 }}
           >
             <div className="vision-image">
               {relicImages[i] && <img src={relicImages[i]} alt={title} />}
@@ -209,27 +225,27 @@ function Media() {
       </div>
 
       <div className="video-relics">
-  {videoRelics.map((video) => (
-    <div className="video-relic" key={video.title}>
-      <div className="video-header">
-        <p className="section-eyebrow">Recovered Vision</p>
-        <h3>{video.title}</h3>
-        <div className="lore-divider" />
-        <p>{video.description}</p>
-      </div>
+        {videoRelics.map((video) => (
+          <div className="video-relic premium-card" key={video.title}>
+            <div className="video-header">
+              <p className="section-eyebrow">Recovered Vision</p>
+              <h3>{video.title}</h3>
+              <div className="lore-divider" />
+              <p>{video.description}</p>
+            </div>
 
-      <div className="video-container">
-        <iframe
-          src={`https://www.youtube.com/embed/${video.youtubeId}`}
-          title={video.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+            <div className="video-container">
+              <iframe
+                src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
     </Section>
   );
 }
@@ -240,11 +256,11 @@ function Merch() {
       <div className="artifact-grid">
         {merch.map((item, i) => (
           <motion.article
-            className="artifact-card"
+            className="artifact-card premium-card"
             key={item.title}
             custom={i}
             variants={slowReveal}
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -4 }}
           >
             {item.image ? (
               <img
@@ -261,7 +277,7 @@ function Merch() {
             <p>{item.description}</p>
 
             <a
-              className="ledger-button"
+              className="ledger-button premium-button"
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -282,7 +298,9 @@ function Footer() {
       <p>The Veil Remains Thin</p>
       <form onSubmit={(event) => event.preventDefault()}>
         <input type="email" placeholder="keeper@example.com" aria-label="Email address" />
-        <button type="submit">Join the Circle</button>
+        <button className="premium-button" type="submit">
+          Join the Circle
+        </button>
       </form>
       <small>The Circle will send word.</small>
     </footer>
@@ -293,6 +311,7 @@ function App() {
   return (
     <>
       <Atmosphere />
+      <RuneLayer />
       <CursorOrb />
       <Header />
       <main>
