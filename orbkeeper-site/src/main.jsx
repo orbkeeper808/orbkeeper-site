@@ -22,6 +22,7 @@ function RuneLayer() {
 
   useEffect(() => {
     let timeoutId;
+    let fadeTimeoutId;
 
     const awakenRune = () => {
       const side = Math.random() > 0.5 ? "left" : "right";
@@ -29,9 +30,9 @@ function RuneLayer() {
 
       setActiveRune(`${side}-${index}`);
 
-      window.setTimeout(() => {
+      fadeTimeoutId = window.setTimeout(() => {
         setActiveRune(null);
-      }, 1800);
+      }, 2200);
 
       const nextDelay = 15000 + Math.random() * 30000;
       timeoutId = window.setTimeout(awakenRune, nextDelay);
@@ -39,8 +40,11 @@ function RuneLayer() {
 
     timeoutId = window.setTimeout(awakenRune, 6000);
 
-    return () => window.clearTimeout(timeoutId);
-  }, []);
+    return () => {
+      window.clearTimeout(timeoutId);
+      window.clearTimeout(fadeTimeoutId);
+    };
+  }, [runes.length]);
 
   return (
     <div className="rune-layer" aria-hidden="true">
@@ -48,7 +52,11 @@ function RuneLayer() {
         {runes.map((rune, i) => (
           <span
             key={`left-${rune}-${i}`}
-            className={activeRune === `left-${i}` ? "rune-awake" : ""}
+            className={
+              activeRune === `left-${i}`
+                ? `rune-awake rune-${i}`
+                : `rune-${i}`
+            }
           >
             {rune}
           </span>
@@ -59,7 +67,11 @@ function RuneLayer() {
         {runes.map((rune, i) => (
           <span
             key={`right-${rune}-${i}`}
-            className={activeRune === `right-${i}` ? "rune-awake" : ""}
+            className={
+              activeRune === `right-${i}`
+                ? `rune-awake rune-${i}`
+                : `rune-${i}`
+            }
           >
             {rune}
           </span>

@@ -1350,29 +1350,71 @@ p {
 
 .rune span {
   display: block;
-  opacity: 0.07;
-  filter: blur(0.15px);
+  color: rgba(210, 166, 79, 0.75);
+  opacity: 0.14;
+  filter: blur(0.1px);
 
   text-shadow:
-    0 0 4px rgba(210,166,79,.10);
+    0 0 6px rgba(210, 166, 79, 0.18);
 
   transition:
-    opacity 700ms ease,
-    transform 700ms ease,
-    filter 700ms ease,
-    text-shadow 700ms ease;
+    opacity 1400ms ease,
+    color 1800ms ease,
+    text-shadow 1800ms ease,
+    transform 1400ms ease,
+    filter 1400ms ease;
 }
 
 .rune span.rune-awake {
-  opacity: .32;
-  transform: scale(1.08);
-
+  opacity: 0.65;
+  transform: scale(1.12);
   filter: blur(0);
+}
 
+/* ᛉ */
+.rune-0.rune-awake {
+  color: #8dd6bb;
   text-shadow:
-    0 0 8px rgba(210,166,79,.45),
-    0 0 20px rgba(210,166,79,.22),
-    0 0 40px rgba(49,39,132,.18);
+    0 0 10px rgba(210, 166, 79, 0.55),
+    0 0 22px rgba(110, 225, 185, 0.38),
+    0 0 42px rgba(110, 225, 185, 0.18);
+}
+
+/* ᛟ */
+.rune-1.rune-awake {
+  color: #b19cff;
+  text-shadow:
+    0 0 10px rgba(210, 166, 79, 0.55),
+    0 0 22px rgba(157, 123, 255, 0.38),
+    0 0 42px rgba(157, 123, 255, 0.18);
+}
+
+/* ᛜ */
+.rune-2.rune-awake {
+  opacity: 0.68;
+  color: #f2d17b;
+  text-shadow:
+    0 0 12px rgba(255, 248, 223, 0.72),
+    0 0 30px rgba(210, 166, 79, 0.65),
+    0 0 62px rgba(210, 166, 79, 0.28);
+}
+
+/* ᚱ */
+.rune-3.rune-awake {
+  color: #cf8c8c;
+  text-shadow:
+    0 0 10px rgba(210, 166, 79, 0.55),
+    0 0 22px rgba(189, 79, 79, 0.38),
+    0 0 42px rgba(189, 79, 79, 0.18);
+}
+
+/* ᛒ */
+.rune-4.rune-awake {
+  color: #b8c88b;
+  text-shadow:
+    0 0 10px rgba(210, 166, 79, 0.55),
+    0 0 22px rgba(120, 165, 92, 0.38),
+    0 0 42px rgba(120, 165, 92, 0.18);
 }
 
 @keyframes grainShift {
