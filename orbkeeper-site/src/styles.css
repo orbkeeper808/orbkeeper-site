@@ -206,6 +206,37 @@ body:has(button:hover) .cursor-orb {
   box-shadow: 0 0 42px rgba(210, 166, 79, 0.46);
 }
 
+.rune {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+
+  color: rgba(210,166,79,.10);
+  font-family: var(--display);
+  font-size: clamp(22px,2vw,34px);
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 12px rgba(210,166,79,.18);
+
+  animation: runeGlow 24s ease-in-out infinite;
+}
+
+.rune-left {
+  top: 18%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.rune-right {
+  bottom: 18%;
+  right: 6%;
+  animation-delay: 12s;
+}
+
 .site-header {
   position: fixed;
   z-index: 60;

@@ -16,10 +16,23 @@ import "./styles.css";
 function RuneLayer() {
   return (
     <div className="rune-layer" aria-hidden="true">
-      <span className="rune rune-one">ᚱ</span>
-      <span className="rune rune-two">ᛟ</span>
-      <span className="rune rune-three">ᚨ</span>
-      <span className="rune rune-four">ᛉ</span>
+
+      <div className="rune rune-left">
+        <span>ᛉ</span>
+        <span>ᛟ</span>
+        <span>ᛜ</span>
+        <span>ᚱ</span>
+        <span>ᛒ</span>
+      </div>
+
+      <div className="rune rune-right">
+        <span>ᛉ</span>
+        <span>ᛟ</span>
+        <span>ᛜ</span>
+        <span>ᚱ</span>
+        <span>ᛒ</span>
+      </div>
+
     </div>
   );
 }
