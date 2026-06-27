@@ -225,6 +225,153 @@ body:has(button:hover) .cursor-orb {
   animation: runeGlow 24s ease-in-out infinite;
 }
 
+.orb-interior {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.orb-depth {
+  position: absolute;
+  inset: -10%;
+  transition: transform 900ms ease-out, opacity 1600ms ease;
+}
+
+.orb-depth-back {
+  opacity: 0.34;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(210,166,79,.14), transparent 28rem),
+    radial-gradient(circle at 20% 62%, rgba(49,39,132,.16), transparent 34rem);
+  transform:
+    translate(
+      calc(var(--orb-x) * -6px),
+      calc(var(--orb-y) * -6px)
+    );
+  animation: orbBackDrift 80s ease-in-out infinite alternate;
+}
+
+.orb-depth-mid {
+  opacity: 0.28;
+  background:
+    radial-gradient(circle at 68% 32%, rgba(255,248,223,.12), transparent 18rem),
+    radial-gradient(circle at 38% 70%, rgba(182,83,42,.13), transparent 24rem);
+  mix-blend-mode: screen;
+  transform:
+    translate(
+      calc(var(--orb-x) * 10px),
+      calc(var(--orb-y) * 10px)
+    );
+  animation: orbMidDrift 64s ease-in-out infinite alternate;
+}
+
+.orb-depth-front {
+  opacity: 0.18;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255,248,223,.07) 42%,
+      transparent 53%
+    ),
+    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.28) 42rem);
+  mix-blend-mode: screen;
+  transform:
+    translate(
+      calc(var(--orb-x) * 18px),
+      calc(var(--orb-y) * 18px)
+    );
+  animation: orbFrontDrift 52s ease-in-out infinite alternate;
+}
+
+body.orb-pulse .orb-interior {
+  opacity: 1;
+}
+
+body.orb-pulse .orb-depth-back {
+  opacity: 0.46;
+}
+
+body.orb-pulse .orb-depth-mid {
+  opacity: 0.42;
+}
+
+body.orb-pulse .orb-depth-front {
+  opacity: 0.28;
+}
+
+body.orb-pulse .hero::before,
+body.orb-pulse .relic-section,
+body.orb-pulse .site-footer {
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.42),
+    inset 0 0 0 1px rgba(7, 6, 4, 0.78),
+    inset 0 0 0 8px rgba(155, 116, 56, 0.12),
+    0 0 52px rgba(210,166,79,.16);
+}
+
+@keyframes orbBackDrift {
+  from {
+    transform:
+      translate(
+        calc(var(--orb-x) * -6px),
+        calc(var(--orb-y) * -6px)
+      )
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate(
+        calc(var(--orb-x) * -6px + 10px),
+        calc(var(--orb-y) * -6px - 8px)
+      )
+      scale(1.03);
+  }
+}
+
+@keyframes orbMidDrift {
+  from {
+    transform:
+      translate(
+        calc(var(--orb-x) * 10px),
+        calc(var(--orb-y) * 10px)
+      )
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate(
+        calc(var(--orb-x) * 10px - 14px),
+        calc(var(--orb-y) * 10px + 12px)
+      )
+      scale(1.04);
+  }
+}
+
+@keyframes orbFrontDrift {
+  from {
+    transform:
+      translate(
+        calc(var(--orb-x) * 18px),
+        calc(var(--orb-y) * 18px)
+      )
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate(
+        calc(var(--orb-x) * 18px + 18px),
+        calc(var(--orb-y) * 18px - 14px)
+      )
+      scale(1.02);
+  }
+}
+
 .rune-left {
   top: 18%;
   left: 5%;
@@ -823,6 +970,29 @@ p {
   content: attr(data-rune);
   font-size: 0.95rem;
 }
+
+body.rune-stirring .lore-divider::before,
+body.rune-stirring .keeper-divider::before,
+body.orb-pulse .lore-divider::before,
+body.orb-pulse .keeper-divider::before {
+  filter:
+    brightness(1.9)
+    drop-shadow(0 0 10px rgba(210,166,79,.95))
+    drop-shadow(0 0 28px rgba(210,166,79,.55));
+}
+
+body.rune-stirring .lore-divider::after,
+body.rune-stirring .keeper-divider::after,
+body.orb-pulse .lore-divider::after,
+body.orb-pulse .keeper-divider::after {
+  color: var(--gold-lit);
+  transform: translate(-50%, -50%) scale(1.28);
+  text-shadow:
+    0 0 12px rgba(255,248,223,1),
+    0 0 28px rgba(210,166,79,.9),
+    0 0 64px rgba(210,166,79,.48);
+}
+
 .card-number {
   display: block;
   margin-bottom: 22px;

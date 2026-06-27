@@ -12,6 +12,62 @@ import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
+
+function OrbInterior() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [pulse, setPulse] = useState(false);
+
+  useEffect(() => {
+    const handleMove = (event) => {
+      const x = (event.clientX / window.innerWidth - 0.5) * 2;
+      const y = (event.clientY / window.innerHeight - 0.5) * 2;
+      setPosition({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMove);
+
+    return () => window.removeEventListener("mousemove", handleMove);
+  }, []);
+
+  useEffect(() => {
+    let timeoutId;
+
+    const pulseOrb = () => {
+      setPulse(true);
+      document.body.classList.add("orb-pulse");
+
+      window.setTimeout(() => {
+        setPulse(false);
+        document.body.classList.remove("orb-pulse");
+      }, 2600);
+
+      timeoutId = window.setTimeout(pulseOrb, 45000 + Math.random() * 45000);
+    };
+
+    timeoutId = window.setTimeout(pulseOrb, 12000);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      document.body.classList.remove("orb-pulse");
+    };
+  }, []);
+
+  return (
+    <div
+      className={`orb-interior ${pulse ? "is-pulsing" : ""}`}
+      style={{
+        "--orb-x": `${position.x}`,
+        "--orb-y": `${position.y}`,
+      }}
+      aria-hidden="true"
+    >
+      <div className="orb-depth orb-depth-back" />
+      <div className="orb-depth orb-depth-mid" />
+      <div className="orb-depth orb-depth-front" />
+    </div>
+  );
+}
+
 const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚢ"];
 
 const getRune = (index) => dividerRunes[index % dividerRunes.length];
@@ -369,6 +425,7 @@ function App() {
   return (
     <>
       <Atmosphere />
+      <OrbInterior />
       <RuneLayer />
       <CursorOrb />
       <Header />
@@ -385,5 +442,4 @@ function App() {
     </>
   );
 }
-
 createRoot(document.getElementById("root")).render(<App />);
