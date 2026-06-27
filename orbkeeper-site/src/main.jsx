@@ -302,7 +302,7 @@ function Footer() {
           Join the Circle
         </button>
       </form>
-      <small>The Circle will send word.</small>
+      <small>The Circle will send word!</small>
     </footer>
   );
 }
