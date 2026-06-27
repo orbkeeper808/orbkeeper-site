@@ -70,7 +70,7 @@ function Music() {
         <div className="music-copy">
           <p className="section-eyebrow">{release.type}</p>
           <h3>{release.title}</h3>
-          <div className="lore-divider" data-rune="ᚱ" />
+          <div className="lore-divider" data-rune="ᛉ" />
           {release.description && <p>{release.description}</p>}
         </div>
 
@@ -240,7 +240,7 @@ function Media() {
             <div className="video-header">
               <p className="section-eyebrow">Recovered Vision</p>
               <h3>{video.title}</h3>
-              <div className="lore-divider" data-rune="ᛜ" />
+              <div className="lore-divider" data-rune="ᛟ" />
               <p>{video.description}</p>
             </div>
 
@@ -307,7 +307,7 @@ function Footer() {
       <p>The Veil Remains Thin</p>
 
       <div className="footer-divider-wrap">
-        <div className="lore-divider" data-rune="ᛒ" />
+        <div className="lore-divider" data-rune="ᛜ" />
       </div>
 
       <div className="footer-epilogue">
