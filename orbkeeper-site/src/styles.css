@@ -241,47 +241,47 @@ body:has(button:hover) .cursor-orb {
 }
 
 .orb-depth-back {
-  opacity: 0.34;
+  opacity: 0.38;
   background:
-    radial-gradient(circle at 50% 42%, rgba(210,166,79,.14), transparent 28rem),
-    radial-gradient(circle at 20% 62%, rgba(49,39,132,.16), transparent 34rem);
+    radial-gradient(circle at 50% 42%, rgba(210,166,79,.16), transparent 28rem),
+    radial-gradient(circle at 20% 62%, rgba(49,39,132,.18), transparent 34rem);
   transform:
     translate(
-      calc(var(--orb-x) * -6px),
-      calc(var(--orb-y) * -6px)
+      calc(var(--orb-x) * -18px),
+      calc(var(--orb-y) * -18px)
     );
   animation: orbBackDrift 80s ease-in-out infinite alternate;
 }
 
 .orb-depth-mid {
-  opacity: 0.28;
+  opacity: 0.34;
   background:
-    radial-gradient(circle at 68% 32%, rgba(255,248,223,.12), transparent 18rem),
-    radial-gradient(circle at 38% 70%, rgba(182,83,42,.13), transparent 24rem);
+    radial-gradient(circle at 68% 32%, rgba(255,248,223,.15), transparent 18rem),
+    radial-gradient(circle at 38% 70%, rgba(182,83,42,.16), transparent 24rem);
   mix-blend-mode: screen;
   transform:
     translate(
-      calc(var(--orb-x) * 10px),
-      calc(var(--orb-y) * 10px)
+      calc(var(--orb-x) * 34px),
+      calc(var(--orb-y) * 34px)
     );
   animation: orbMidDrift 64s ease-in-out infinite alternate;
 }
 
 .orb-depth-front {
-  opacity: 0.18;
+  opacity: 0.28;
   background:
     linear-gradient(
       115deg,
       transparent 0%,
-      rgba(255,248,223,.07) 42%,
+      rgba(255,248,223,.1) 42%,
       transparent 53%
     ),
-    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.28) 42rem);
+    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.32) 42rem);
   mix-blend-mode: screen;
   transform:
     translate(
-      calc(var(--orb-x) * 18px),
-      calc(var(--orb-y) * 18px)
+      calc(var(--orb-x) * 72px),
+      calc(var(--orb-y) * 72px)
     );
   animation: orbFrontDrift 52s ease-in-out infinite alternate;
 }
@@ -316,8 +316,8 @@ body.orb-pulse .site-footer {
   from {
     transform:
       translate(
-        calc(var(--orb-x) * -6px),
-        calc(var(--orb-y) * -6px)
+        calc(var(--orb-x) * -18px),
+        calc(var(--orb-y) * -18px)
       )
       scale(1);
   }
@@ -325,8 +325,8 @@ body.orb-pulse .site-footer {
   to {
     transform:
       translate(
-        calc(var(--orb-x) * -6px + 10px),
-        calc(var(--orb-y) * -6px - 8px)
+        calc(var(--orb-x) * -18px + 10px),
+        calc(var(--orb-y) * -18px - 8px)
       )
       scale(1.03);
   }
@@ -336,8 +336,8 @@ body.orb-pulse .site-footer {
   from {
     transform:
       translate(
-        calc(var(--orb-x) * 10px),
-        calc(var(--orb-y) * 10px)
+        calc(var(--orb-x) * 34px),
+        calc(var(--orb-y) * 34px)
       )
       scale(1);
   }
@@ -345,8 +345,8 @@ body.orb-pulse .site-footer {
   to {
     transform:
       translate(
-        calc(var(--orb-x) * 10px - 14px),
-        calc(var(--orb-y) * 10px + 12px)
+        calc(var(--orb-x) * 34px - 14px),
+        calc(var(--orb-y) * 34px + 12px)
       )
       scale(1.04);
   }
@@ -356,8 +356,8 @@ body.orb-pulse .site-footer {
   from {
     transform:
       translate(
-        calc(var(--orb-x) * 18px),
-        calc(var(--orb-y) * 18px)
+        calc(var(--orb-x) * 72px),
+        calc(var(--orb-y) * 72px)
       )
       scale(1);
   }
@@ -365,8 +365,8 @@ body.orb-pulse .site-footer {
   to {
     transform:
       translate(
-        calc(var(--orb-x) * 18px + 18px),
-        calc(var(--orb-y) * 18px - 14px)
+        calc(var(--orb-x) * 72px + 18px),
+        calc(var(--orb-y) * 72px - 14px)
       )
       scale(1.02);
   }
