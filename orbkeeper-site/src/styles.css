@@ -561,6 +561,13 @@ body:has(button:hover) .cursor-orb {
   margin-bottom: 15px;
 }
 
+.site-footer small {
+  margin-top: 18px;
+  color: rgba(244, 234, 215, 0.45);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
 .relic-section:hover,
 .site-footer:hover {
   border-color: rgba(210, 166, 79, 0.42);
