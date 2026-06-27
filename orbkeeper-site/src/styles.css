@@ -1351,7 +1351,7 @@ p {
 .rune span {
   display: block;
   color: rgba(210, 166, 79, 0.75);
-  opacity: 0.14;
+  opacity: 0.11;
   filter: blur(0.1px);
 
   text-shadow:
