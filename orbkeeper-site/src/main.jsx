@@ -12,7 +12,7 @@ import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
-const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
+const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚢ"];
 
 const getRune = (index) => dividerRunes[index % dividerRunes.length];
 
