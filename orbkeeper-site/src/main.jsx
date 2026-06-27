@@ -17,22 +17,53 @@ const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚢ"];
 const getRune = (index) => dividerRunes[index % dividerRunes.length];
 
 function RuneLayer() {
+  const runes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
+  const [activeRune, setActiveRune] = useState(null);
+
+  useEffect(() => {
+    let timeoutId;
+
+    const awakenRune = () => {
+      const side = Math.random() > 0.5 ? "left" : "right";
+      const index = Math.floor(Math.random() * runes.length);
+
+      setActiveRune(`${side}-${index}`);
+
+      window.setTimeout(() => {
+        setActiveRune(null);
+      }, 1800);
+
+      const nextDelay = 15000 + Math.random() * 30000;
+      timeoutId = window.setTimeout(awakenRune, nextDelay);
+    };
+
+    timeoutId = window.setTimeout(awakenRune, 6000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
   return (
     <div className="rune-layer" aria-hidden="true">
       <div className="rune rune-left">
-        <span>ᛉ</span>
-        <span>ᛟ</span>
-        <span>ᛜ</span>
-        <span>ᚱ</span>
-        <span>ᛒ</span>
+        {runes.map((rune, i) => (
+          <span
+            key={`left-${rune}-${i}`}
+            className={activeRune === `left-${i}` ? "rune-awake" : ""}
+          >
+            {rune}
+          </span>
+        ))}
       </div>
 
       <div className="rune rune-right">
-        <span>ᛉ</span>
-        <span>ᛟ</span>
-        <span>ᛜ</span>
-        <span>ᚱ</span>
-        <span>ᛒ</span>
+        {runes.map((rune, i) => (
+          <span
+            key={`right-${rune}-${i}`}
+            className={activeRune === `right-${i}` ? "rune-awake" : ""}
+          >
+            {rune}
+          </span>
+        ))}
       </div>
     </div>
   );
