@@ -557,8 +557,8 @@ body:has(button:hover) .cursor-orb {
 }
 
 .footer-divider-wrap {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .relic-section:hover,
