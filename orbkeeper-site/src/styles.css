@@ -1507,7 +1507,7 @@ body.orb-pulse .keeper-divider::after {
     );
 
   background-size: 260% 260%;
-  background-position: -120% -120%;
+  
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
