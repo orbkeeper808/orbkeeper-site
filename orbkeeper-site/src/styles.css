@@ -624,7 +624,7 @@ will-change: transform, opacity, filter;
 .hero-sigil {
   position: relative;
   width: min(86vw, 880px);
-  margin-top: 100px;
+  margin-top: 250px;
   padding: 0;
   background: transparent;
   border: 0;
