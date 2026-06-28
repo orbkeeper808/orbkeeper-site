@@ -1530,27 +1530,7 @@ backface-visibility: hidden;
     opacity .18s ease;
 }
 
-.premium-card:hover .lore-divider::before,
-.premium-card:hover .keeper-divider::before {
-  animation: dividerCatch 1.25s ease-out both;
-}
 
-@keyframes dividerCatch {
-  0% {
-    filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
-  }
-
-  35% {
-    filter:
-      brightness(1.45)
-      drop-shadow(0 0 7px rgba(210,166,79,.65))
-      drop-shadow(0 0 14px rgba(210,166,79,.28));
-  }
-
-  100% {
-    filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
-  }
-}
 
 @media (max-width: 900px) {
   .video-relic {
