@@ -619,6 +619,7 @@ will-change: transform, opacity, filter;
 }
 
 .sigil-ring {
+  display: none;
   position: absolute;
   inset: -40px;
   z-index: -1;
