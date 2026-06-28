@@ -1485,45 +1485,59 @@ body.orb-pulse .keeper-divider::after {
 .premium-card {
   position: relative;
   overflow: hidden;
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 35%,
+      rgba(255,248,223,.9) 48%,
+      rgba(255,248,223,.18) 52%,
+      transparent 64%
+    );
+
+  background-size: 260% 260%;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.premium-card[data-enter="left"]::before {
+  background-position: -220% 50%;
+}
+
+.premium-card[data-enter="right"]::before {
+  background-position: 220% 50%;
+}
+
+.premium-card[data-enter="top"]::before {
+  background-position: 50% -220%;
+}
+
+.premium-card[data-enter="bottom"]::before {
+  background-position: 50% 220%;
+}
+
+.premium-card:hover::before {
+  opacity: 1;
+  background-position: 50% 50%;
+
   transition:
-    border-color 700ms ease,
-    box-shadow 700ms ease;
-}
-
-.premium-card {
-  position: relative;
-  overflow: hidden;
-  transition:
-    border-color 500ms ease,
-    box-shadow 500ms ease;
-}
-
-.premium-card:hover {
-  animation: cardBorderCatch 1.25s ease-out both;
-}
-
-@keyframes cardBorderCatch {
-  0% {
-    border-color: rgba(203,185,148,.28);
-    box-shadow: inherit;
-  }
-
-  35% {
-    border-color: rgba(255,248,223,.58);
-    box-shadow:
-      0 28px 90px rgba(0,0,0,.42),
-      inset 0 0 0 1px rgba(255,248,223,.14),
-      inset 0 0 0 8px rgba(155,116,56,.10),
-      0 0 24px rgba(210,166,79,.18);
-  }
-
-  100% {
-    border-color: rgba(203,185,148,.34);
-    box-shadow:
-      0 28px 90px rgba(0,0,0,.42),
-      inset 0 0 0 1px rgba(7,6,4,.78),
-      inset 0 0 0 8px rgba(155,116,56,.08);
-  }
+    background-position 1.25s cubic-bezier(.22,.61,.36,1),
+    opacity .18s ease;
 }
 
 .premium-card:hover .lore-divider::before,
@@ -1538,9 +1552,9 @@ body.orb-pulse .keeper-divider::after {
 
   35% {
     filter:
-      brightness(1.75)
-      drop-shadow(0 0 8px rgba(210,166,79,.8))
-      drop-shadow(0 0 18px rgba(210,166,79,.35));
+      brightness(1.45)
+      drop-shadow(0 0 7px rgba(210,166,79,.65))
+      drop-shadow(0 0 14px rgba(210,166,79,.28));
   }
 
   100% {

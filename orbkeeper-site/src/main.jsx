@@ -12,6 +12,18 @@ import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
 import logo from "./assets/orbkeeper-logo-transparent.png";
 import "./styles.css";
 
+function getEntryDirection(event) {
+  const rect = event.currentTarget.getBoundingClientRect();
+
+  const x = event.clientX - rect.left - rect.width / 2;
+  const y = event.clientY - rect.top - rect.height / 2;
+
+  if (Math.abs(x) > Math.abs(y)) {
+    return x > 0 ? "right" : "left";
+  }
+
+  return y > 0 ? "bottom" : "top";
+}
 
 function OrbInterior() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -162,6 +174,9 @@ function Lore() {
             custom={i}
             variants={slowReveal}
             whileHover={{ y: -4 }}
+            onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           >
             <span className="card-number">0{i + 1}</span>
             <h3>{item.title}</h3>
@@ -233,6 +248,9 @@ function Gatherings() {
         className="gatherings-section"
       >
         <div className="gathering-empty premium-card">
+          onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           <h3>No Gatherings Announced</h3>
           <p>
             The Orb remains watchful. The path to the next Rite is still unfolding. Stay vigilant, for when the time comes, the call will echo across realms, and the Circle will gather once more.
@@ -268,6 +286,9 @@ function Gatherings() {
             custom={i}
             variants={slowReveal}
             whileHover={{ x: 4 }}
+            onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           >
             <time dateTime={event.date}>{event.day}</time>
             <div>
@@ -296,6 +317,9 @@ function Band() {
             custom={i}
             variants={slowReveal}
             whileHover={{ y: -4 }}
+            onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           >
             <div className="portrait-orb">{name.slice(0, 1)}</div>
             <h3>{name}</h3>
@@ -335,6 +359,9 @@ function Media() {
             custom={i}
             variants={slowReveal}
             whileHover={{ y: -4 }}
+            onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           >
             <div className="vision-image">
               {relicImages[i] && <img src={relicImages[i]} alt={title} />}
@@ -384,6 +411,9 @@ function Merch() {
             custom={i}
             variants={slowReveal}
             whileHover={{ y: -4 }}
+            onMouseEnter={(event) => {
+    event.currentTarget.dataset.enter = getEntryDirection(event);
+  }}
           >
             {item.image ? (
               <img className="artifact-image" src={item.image} alt={item.title} />
