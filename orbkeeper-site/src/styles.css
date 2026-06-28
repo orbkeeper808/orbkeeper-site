@@ -258,8 +258,33 @@ body:has(button:hover) .cursor-orb {
   pointer-events: none;
   overflow: hidden;
   opacity: 0.58;
+  animation: orbPerspectiveBreath 34s ease-in-out infinite;
 }
 
+/* Edge refraction */
+.orb-interior::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 0 52%,
+      rgba(255,248,223,.025) 68%,
+      rgba(210,166,79,.035) 82%,
+      rgba(7,6,4,.14) 100%
+    );
+  mix-blend-mode: screen;
+  opacity: .46;
+  transform:
+    translate(
+      calc(var(--orb-x) * -12px),
+      calc(var(--orb-y) * -12px)
+    );
+}
+
+/* Fixed inner light source */
 .orb-interior::after {
   position: absolute;
   inset: 0;
@@ -296,8 +321,8 @@ body:has(button:hover) .cursor-orb {
 .orb-depth-back {
   opacity: 0.24;
   transform: translate(
-    calc(var(--orb-x) * -24px),
-    calc(var(--orb-y) * -24px)
+    calc(var(--orb-x) * 24px),
+    calc(var(--orb-y) * 24px)
   );
 }
 
@@ -313,8 +338,8 @@ body:has(button:hover) .cursor-orb {
   opacity: 0.2;
   mix-blend-mode: screen;
   transform: translate(
-    calc(var(--orb-x) * 58px),
-    calc(var(--orb-y) * 58px)
+    calc(var(--orb-x) * -58px),
+    calc(var(--orb-y) * -58px)
   );
 }
 
@@ -369,13 +394,74 @@ body:has(button:hover) .cursor-orb {
 
   transform:
     translate(
-      calc(var(--orb-x) * 72px),
-      calc(var(--orb-y) * 72px)
+      calc(var(--orb-x) * -72px),
+      calc(var(--orb-y) * -72px)
     )
-    rotate(calc(var(--orb-x) * .7deg));
+    rotate(calc(var(--orb-x) * -.7deg));
 
   animation: causticBreathe 52s ease-in-out infinite alternate;
   will-change: transform, opacity, filter;
+}
+
+/* Tiny chromatic refraction */
+.orb-caustics::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: inherit;
+  opacity: .28;
+  mix-blend-mode: screen;
+  filter: blur(.4px);
+  transform: translate(1px, -1px);
+}
+
+.orb-inclusions {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orb-inclusions span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,248,223,.48);
+  box-shadow:
+    0 0 8px rgba(255,248,223,.36),
+    0 0 18px rgba(210,166,79,.22);
+  opacity: 0;
+  animation: inclusionGlint 80s ease-in-out infinite;
+}
+
+.orb-inclusions span:nth-child(1) {
+  top: 28%;
+  left: 22%;
+  animation-delay: 12s;
+}
+
+.orb-inclusions span:nth-child(2) {
+  top: 62%;
+  left: 74%;
+  animation-delay: 38s;
+}
+
+.orb-inclusions span:nth-child(3) {
+  top: 46%;
+  left: 51%;
+  animation-delay: 67s;
+}
+
+@keyframes orbPerspectiveBreath {
+  0%, 100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.006;
+  }
 }
 
 @keyframes orbCoreBreath {
@@ -402,6 +488,26 @@ body:has(button:hover) .cursor-orb {
   }
 }
 
+@keyframes inclusionGlint {
+  0%, 92%, 100% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  94% {
+    opacity: .28;
+    transform: scale(1.25);
+  }
+
+  96% {
+    opacity: .08;
+  }
+
+  98% {
+    opacity: .2;
+  }
+}
+
 @keyframes orbBackDrift {
   from {
     transform: translate(0, 0) scale(1);
@@ -409,16 +515,6 @@ body:has(button:hover) .cursor-orb {
 
   to {
     transform: translate(18px, -14px) scale(1.03);
-  }
-}
-
-@keyframes orbMidDrift {
-  from {
-    transform: translate(0, 0) scale(1);
-  }
-
-  to {
-    transform: translate(-28px, 24px) scale(1.04);
   }
 }
 

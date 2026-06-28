@@ -70,6 +70,12 @@ function OrbInterior() {
       </div>
 
       <div className="orb-caustics" />
+      
+      <div className="orb-inclusions" aria-hidden="true">
+       <span />
+       <span />
+        <span />
+      </div>
     </div>
     
   );
