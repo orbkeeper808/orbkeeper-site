@@ -65,14 +65,10 @@ function OrbInterior() {
         <div className="orb-depth-inner" />
       </div>
 
-      <div className="orb-depth orb-depth-mid">
-        <div className="orb-depth-inner" />
-      </div>
-
       <div className="orb-depth orb-depth-front">
         <div className="orb-depth-inner" />
       </div>
-      
+
       <div className="orb-caustics" />
     </div>
     

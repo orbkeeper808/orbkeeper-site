@@ -257,7 +257,7 @@ body:has(button:hover) .cursor-orb {
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
-  opacity: 0.9;
+  opacity: 0.58;
 }
 
 .orb-interior::after {
@@ -265,25 +265,23 @@ body:has(button:hover) .cursor-orb {
   inset: 0;
   content: "";
   pointer-events: none;
-
   background:
     radial-gradient(
       circle at 50% 50%,
-      rgba(255,248,223,.16),
-      rgba(210,166,79,.08) 10rem,
-      rgba(49,39,132,.06) 22rem,
+      rgba(255,248,223,.08),
+      rgba(210,166,79,.04) 10rem,
+      rgba(49,39,132,.035) 22rem,
       transparent 38rem
     );
-
-  opacity: 0.46;
+  opacity: 0.28;
   mix-blend-mode: screen;
-  animation: orbCoreBreath 18s ease-in-out infinite;
+  animation: orbCoreBreath 24s ease-in-out infinite;
 }
 
 .orb-depth {
   position: absolute;
   inset: -18%;
-  transition: transform 120ms linear;
+  transition: transform 80ms linear;
   will-change: transform;
 }
 
@@ -296,44 +294,27 @@ body:has(button:hover) .cursor-orb {
 }
 
 .orb-depth-back {
-  opacity: 0.42;
+  opacity: 0.24;
   transform: translate(
-    calc(var(--orb-x) * -45px),
-    calc(var(--orb-y) * -45px)
+    calc(var(--orb-x) * -24px),
+    calc(var(--orb-y) * -24px)
   );
 }
 
 .orb-depth-back .orb-depth-inner {
   background:
-    radial-gradient(circle at 50% 42%, rgba(210,166,79,.2), transparent 28rem),
-    radial-gradient(circle at 20% 62%, rgba(49,39,132,.22), transparent 34rem);
+    radial-gradient(circle at 50% 42%, rgba(210,166,79,.12), transparent 28rem),
+    radial-gradient(circle at 20% 62%, rgba(49,39,132,.12), transparent 34rem);
   animation-name: orbBackDrift;
-  animation-duration: 80s;
-}
-
-.orb-depth-mid {
-  opacity: 0.38;
-  mix-blend-mode: screen;
-  transform: translate(
-    calc(var(--orb-x) * 85px),
-    calc(var(--orb-y) * 85px)
-  );
-}
-
-.orb-depth-mid .orb-depth-inner {
-  background:
-    radial-gradient(circle at 68% 32%, rgba(255,248,223,.2), transparent 18rem),
-    radial-gradient(circle at 38% 70%, rgba(182,83,42,.2), transparent 24rem);
-  animation-name: orbMidDrift;
-  animation-duration: 64s;
+  animation-duration: 90s;
 }
 
 .orb-depth-front {
-  opacity: 0.42;
+  opacity: 0.2;
   mix-blend-mode: screen;
   transform: translate(
-    calc(var(--orb-x) * 150px),
-    calc(var(--orb-y) * 150px)
+    calc(var(--orb-x) * 58px),
+    calc(var(--orb-y) * 58px)
   );
 }
 
@@ -342,39 +323,12 @@ body:has(button:hover) .cursor-orb {
     linear-gradient(
       115deg,
       transparent 0%,
-      rgba(255,248,223,.24) 42%,
+      rgba(255,248,223,.11) 42%,
       transparent 53%
     ),
-    radial-gradient(circle at 72% 28%, rgba(210,166,79,.14), transparent 16rem),
-    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.36) 42rem);
-
+    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.22) 42rem);
   animation-name: orbFrontDrift;
-  animation-duration: 52s;
-}
-body.orb-pulse .orb-interior {
-  opacity: 1;
-}
-
-body.orb-pulse .orb-depth-back {
-  opacity: 0.46;
-}
-
-body.orb-pulse .orb-depth-mid {
-  opacity: 0.42;
-}
-
-body.orb-pulse .orb-depth-front {
-  opacity: 0.28;
-}
-
-body.orb-pulse .hero::before,
-body.orb-pulse .relic-section,
-body.orb-pulse .site-footer {
-  box-shadow:
-    0 28px 90px rgba(0, 0, 0, 0.42),
-    inset 0 0 0 1px rgba(7, 6, 4, 0.78),
-    inset 0 0 0 8px rgba(155, 116, 56, 0.12),
-    0 0 52px rgba(210,166,79,.16);
+  animation-duration: 70s;
 }
 
 .orb-caustics {
@@ -382,8 +336,7 @@ body.orb-pulse .site-footer {
   inset: -20%;
   z-index: 1;
   pointer-events: none;
-
-  opacity: 0.22;
+  opacity: 0.1;
   mix-blend-mode: screen;
 
   --light-x: 50%;
@@ -392,61 +345,60 @@ body.orb-pulse .site-footer {
   background:
     radial-gradient(
       circle at var(--light-x) var(--light-y),
-      rgba(255,248,223,.18),
-      rgba(210,166,79,.08) 12rem,
+      rgba(255,248,223,.08),
+      rgba(210,166,79,.035) 12rem,
       transparent 30rem
     ),
-
     conic-gradient(
       from 18deg at var(--light-x) var(--light-y),
       transparent 0deg,
       transparent 12deg,
-      rgba(255,248,223,.16) 12.6deg,
+      rgba(255,248,223,.075) 12.6deg,
       transparent 13.2deg,
       transparent 45deg,
-      rgba(210,166,79,.12) 45.7deg,
+      rgba(210,166,79,.06) 45.7deg,
       transparent 46.4deg,
       transparent 88deg,
-      rgba(255,248,223,.1) 88.6deg,
+      rgba(255,248,223,.05) 88.6deg,
       transparent 89.2deg,
       transparent 132deg,
-      rgba(210,166,79,.08) 132.6deg,
+      rgba(210,166,79,.04) 132.6deg,
       transparent 133.2deg,
       transparent 360deg
     );
 
   transform:
     translate(
-      calc(var(--orb-x) * 130px),
-      calc(var(--orb-y) * 130px)
+      calc(var(--orb-x) * 72px),
+      calc(var(--orb-y) * 72px)
     )
-    rotate(calc(var(--orb-x) * 1.2deg));
+    rotate(calc(var(--orb-x) * .7deg));
 
-  animation: causticBreathe 38s ease-in-out infinite alternate;
+  animation: causticBreathe 52s ease-in-out infinite alternate;
   will-change: transform, opacity, filter;
-}
-
-@keyframes causticBreathe {
-  from {
-    opacity: 0.12;
-    filter: blur(0.15px);
-  }
-
-  to {
-    opacity: 0.28;
-    filter: blur(0.55px);
-  }
 }
 
 @keyframes orbCoreBreath {
   0%, 100% {
-    opacity: 0.36;
+    opacity: 0.22;
     transform: scale(1);
   }
 
   50% {
-    opacity: 0.58;
-    transform: scale(1.035);
+    opacity: 0.34;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes causticBreathe {
+  from {
+    opacity: 0.06;
+    filter: blur(0.25px);
+  }
+
+  to {
+    opacity: 0.14;
+    filter: blur(0.8px);
   }
 }
 
