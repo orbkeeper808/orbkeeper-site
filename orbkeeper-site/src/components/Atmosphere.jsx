@@ -28,8 +28,12 @@ export function CursorOrb() {
   const [pos, setPos] = useState({ x: -100, y: -100 });
 
   useEffect(() => {
-    const onMove = (event) => setPos({ x: event.clientX, y: event.clientY });
+    const onMove = (event) => {
+      setPos({ x: event.clientX, y: event.clientY });
+    };
+
     window.addEventListener("pointermove", onMove);
+
     return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
@@ -37,7 +41,7 @@ export function CursorOrb() {
     <motion.div
       className="cursor-orb"
       animate={{ x: pos.x - 18, y: pos.y - 18 }}
-      transition={{ type: "spring", stiffness: 900, damping: 34, mass: 0.15 }}
+      transition={{ duration: 0 }}
       aria-hidden="true"
     />
   );
