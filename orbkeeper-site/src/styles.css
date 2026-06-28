@@ -363,39 +363,34 @@ body.orb-pulse .site-footer {
   z-index: 1;
   pointer-events: none;
 
-  opacity: 0.18;
+  opacity: 0.2;
   mix-blend-mode: screen;
 
-  background:
-    linear-gradient(
-      112deg,
-      transparent 0%,
-      transparent 43%,
-      rgba(255, 248, 223, 0.13) 43.4%,
-      transparent 44.2%,
-      transparent 100%
-    ),
-    linear-gradient(
-      38deg,
-      transparent 0%,
-      transparent 61%,
-      rgba(210, 166, 79, 0.1) 61.3%,
-      transparent 62%,
-      transparent 100%
-    ),
-    linear-gradient(
-      154deg,
-      transparent 0%,
-      transparent 28%,
-      rgba(255, 248, 223, 0.08) 28.25%,
-      transparent 29%,
-      transparent 100%
-    );
+  --light-x: 62%;
+  --light-y: 24%;
 
-  background-size:
-    160% 160%,
-    140% 140%,
-    180% 180%;
+  background:
+    radial-gradient(
+      circle at var(--light-x) var(--light-y),
+      rgba(255,248,223,.22),
+      rgba(210,166,79,.08) 12rem,
+      transparent 28rem
+    ),
+
+    conic-gradient(
+      from 22deg at var(--light-x) var(--light-y),
+      transparent 0deg,
+      transparent 18deg,
+      rgba(255,248,223,.13) 19deg,
+      transparent 20deg,
+      transparent 47deg,
+      rgba(210,166,79,.1) 48deg,
+      transparent 49deg,
+      transparent 91deg,
+      rgba(255,248,223,.08) 92deg,
+      transparent 93deg,
+      transparent 360deg
+    );
 
   transform:
     translate(
@@ -411,18 +406,12 @@ body.orb-pulse .site-footer {
 @keyframes causticDrift {
   from {
     opacity: 0.08;
-    background-position:
-      0% 0%,
-      20% 40%,
-      60% 10%;
+    filter: blur(0.1px);
   }
 
   to {
-    opacity: 0.22;
-    background-position:
-      12% -8%,
-      10% 52%,
-      72% 2%;
+    opacity: 0.24;
+    filter: blur(0.45px);
   }
 }
 
