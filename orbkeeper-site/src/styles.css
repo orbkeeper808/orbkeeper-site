@@ -378,7 +378,7 @@ body:has(button:hover) .cursor-orb {
   z-index: 1;
   pointer-events: none;
 
-  opacity: 0.16;
+  opacity: 0.055;
   mix-blend-mode: screen;
 
   background:
@@ -414,8 +414,8 @@ body:has(button:hover) .cursor-orb {
 
   transform:
     translate(
-      calc(var(--orb-x) * -72px),
-      calc(var(--orb-y) * -72px)
+      calc(var(--orb-x) * -24px),
+      calc(var(--orb-y) * -24px)
     )
     rotate(calc(var(--orb-x) * -0.7deg));
 
