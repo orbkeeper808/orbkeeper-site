@@ -1485,7 +1485,6 @@ body.orb-pulse .keeper-divider::after {
 .premium-card {
   position: relative;
   overflow: hidden;
-  transform: translateZ(0);
 }
 
 .premium-card::before {
@@ -1501,12 +1500,13 @@ body.orb-pulse .keeper-divider::after {
     linear-gradient(
       115deg,
       transparent 35%,
-      rgba(255,248,223,.9) 48%,
+      rgba(255,248,223,.8) 48%,
       rgba(255,248,223,.18) 52%,
       transparent 64%
     );
 
   background-size: 260% 260%;
+  background-position: -220% -220%;
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -1515,41 +1515,37 @@ body.orb-pulse .keeper-divider::after {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 
-will-change: background-position, opacity;
-transform: translateZ(0);
-backface-visibility: hidden;
-}
-
-.premium-card[data-enter="left"]::before {
-  background-position: -220% 50%;
-}
-
-.premium-card[data-enter="right"]::before {
-  background-position: 220% 50%;
-}
-
-.premium-card[data-enter="top"]::before {
-  background-position: 50% -220%;
-}
-
-.premium-card[data-enter="bottom"]::before {
-  background-position: 50% 220%;
+  transition:
+    background-position 1.15s cubic-bezier(.22,.61,.36,1),
+    opacity .18s ease;
 }
 
 .premium-card:hover::before {
   opacity: 1;
-  background-position: 50% 50%;
-
-  transition:
-    background-position 1.25s cubic-bezier(.22,.61,.36,1),
-    opacity .18s ease;
+  background-position: 220% 220%;
 }
 
 .premium-card:hover .lore-divider::before,
 .premium-card:hover .keeper-divider::before {
-  animation: dividerCatch 1.25s ease-out both;
+  animation: dividerCatch 1.15s ease-out both;
 }
 
+@keyframes dividerCatch {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
+  }
+
+  35% {
+    filter:
+      brightness(1.45)
+      drop-shadow(0 0 7px rgba(210,166,79,.65))
+      drop-shadow(0 0 14px rgba(210,166,79,.28));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
+  }
+}
 @keyframes dividerCatch {
   0% {
     filter: drop-shadow(0 0 3px rgba(210,166,79,.4));
