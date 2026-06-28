@@ -282,8 +282,8 @@ body:has(button:hover) .cursor-orb {
 
 .orb-depth {
   position: absolute;
-  inset: -18%;
-  transition: transform 120ms linear;
+  inset: -22%;
+  transition: transform 900ms cubic-bezier(.22,.61,.36,1);
   will-change: transform;
 }
 
@@ -298,8 +298,8 @@ body:has(button:hover) .cursor-orb {
 .orb-depth-back {
   opacity: 0.24;
   transform: translate(
-    calc(var(--orb-x) * -24px),
-    calc(var(--orb-y) * -24px)
+    calc(var(--orb-x) * -36px),
+    calc(var(--orb-y) * -36px)
   );
 }
 
@@ -315,8 +315,8 @@ body:has(button:hover) .cursor-orb {
   opacity: 0.2;
   mix-blend-mode: screen;
   transform: translate(
-    calc(var(--orb-x) * -58px),
-    calc(var(--orb-y) * -58px)
+    calc(var(--orb-x) * -82px),
+    calc(var(--orb-y) * -82px)
   );
 }
 
@@ -390,15 +390,17 @@ background:
     transparent 42rem
   );
 
-  transform:
-    translate(
-      calc(var(--orb-x) * -30px),
-      calc(var(--orb-y) * -30px)
-    )
-    rotate(calc(var(--orb-x) * -.25deg));
+transition: transform 1200ms cubic-bezier(.22,.61,.36,1);
 
-  animation: causticBreathe 52s ease-in-out infinite alternate;
-  will-change: transform, opacity, filter;
+transform:
+  translate(
+    calc(var(--orb-x) * -44px),
+    calc(var(--orb-y) * -44px)
+  )
+  rotate(calc(var(--orb-x) * -.35deg));
+
+animation: causticBreathe 52s ease-in-out infinite alternate;
+will-change: transform, opacity, filter;
 }
 
 @keyframes orbCoreBreath {
