@@ -73,11 +73,37 @@ body::before {
   z-index: -5;
   pointer-events: none;
   content: "";
+
   background:
-    linear-gradient(rgba(255, 248, 223, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 248, 223, 0.035) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, black, transparent 86%);
+    radial-gradient(
+      circle at 18% 24%,
+      rgba(255,248,223,.035),
+      transparent 12rem
+    ),
+
+    radial-gradient(
+      circle at 78% 68%,
+      rgba(210,166,79,.03),
+      transparent 18rem
+    ),
+
+    linear-gradient(
+      62deg,
+      transparent 46%,
+      rgba(255,248,223,.025) 49%,
+      transparent 52%
+    ),
+
+    linear-gradient(
+      128deg,
+      transparent 32%,
+      rgba(210,166,79,.018) 34%,
+      transparent 37%
+    );
+
+  opacity: .75;
+
+  filter: blur(.2px);
 }
 
 body::after {
