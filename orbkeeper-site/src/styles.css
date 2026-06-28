@@ -322,15 +322,23 @@ body:has(button:hover) .cursor-orb {
 
 .orb-depth-front .orb-depth-inner {
   background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      rgba(255,248,223,.11) 42%,
-      transparent 53%
-    ),
-    radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.22) 42rem);
-  animation-name: orbFrontDrift;
-  animation-duration: 70s;
+  radial-gradient(
+    ellipse at 34% 28%,
+    rgba(255,248,223,.08),
+    transparent 18rem
+  ),
+
+  radial-gradient(
+    ellipse at 68% 70%,
+    rgba(210,166,79,.035),
+    transparent 22rem
+  ),
+
+  radial-gradient(
+    circle at 50% 50%,
+    transparent 0 24rem,
+    rgba(7,6,4,.22) 42rem
+  );
 }
 
 .orb-caustics {
