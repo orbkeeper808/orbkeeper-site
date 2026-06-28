@@ -1498,15 +1498,17 @@ body.orb-pulse .keeper-divider::after {
   opacity: 0;
 
   background:
-    linear-gradient(
-      115deg,
-      transparent 35%,
-      rgba(255,248,223,.9) 48%,
-      rgba(255,248,223,.18) 52%,
-      transparent 64%
-    );
+  linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255,248,223,.08) 48%,
+    rgba(255,248,223,.95) 50%,
+    rgba(255,248,223,.08) 52%,
+    transparent 58%
+  );
 
   background-size: 260% 260%;
+  background-position: -120% -120%;
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -1522,11 +1524,11 @@ backface-visibility: hidden;
 
 .premium-card:hover::before {
   opacity: 1;
-  background-position: 50% 50%;
+  background-position: 120% 120%;
 
   transition:
-    background-position 1.25s cubic-bezier(.22,.61,.36,1),
-    opacity .18s ease;
+    background-position .9s cubic-bezier(.22,.61,.36,1),
+    opacity .12s ease;
 }
 
 .premium-card:hover .lore-divider::before,
