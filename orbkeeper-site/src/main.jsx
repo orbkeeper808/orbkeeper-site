@@ -16,7 +16,6 @@ import "./styles.css";
 function OrbInterior() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [pulse, setPulse] = useState(false);
-  const [activeGlint, setActiveGlint] = useState(null);
 
   useEffect(() => {
     const handleMove = (event) => {
@@ -43,7 +42,10 @@ function OrbInterior() {
         document.body.classList.remove("orb-pulse");
       }, 2600);
 
-      timeoutId = window.setTimeout(pulseOrb, 45000 + Math.random() * 45000);
+      timeoutId = window.setTimeout(
+        pulseOrb,
+        45000 + Math.random() * 45000
+      );
     };
 
     timeoutId = window.setTimeout(pulseOrb, 12000);
@@ -52,31 +54,6 @@ function OrbInterior() {
       window.clearTimeout(timeoutId);
       window.clearTimeout(fadeTimeoutId);
       document.body.classList.remove("orb-pulse");
-    };
-  }, []);
-
-  useEffect(() => {
-    let timeoutId;
-    let fadeTimeoutId;
-
-    const awakenGlint = () => {
-      const index = Math.floor(Math.random() * 5);
-
-      setActiveGlint(index);
-
-      fadeTimeoutId = window.setTimeout(() => {
-        setActiveGlint(null);
-      }, 1800);
-
-      const nextDelay = 25000 + Math.random() * 65000;
-      timeoutId = window.setTimeout(awakenGlint, nextDelay);
-    };
-
-    timeoutId = window.setTimeout(awakenGlint, 14000);
-
-    return () => {
-      window.clearTimeout(timeoutId);
-      window.clearTimeout(fadeTimeoutId);
     };
   }, []);
 
@@ -98,15 +75,6 @@ function OrbInterior() {
       </div>
 
       <div className="orb-caustics" />
-
-      <div className="orb-inclusions" aria-hidden="true">
-        {[0, 1, 2, 3, 4].map((item) => (
-          <span
-            key={item}
-            className={activeGlint === item ? "glint-awake" : ""}
-          />
-        ))}
-      </div>
     </div>
   );
 }

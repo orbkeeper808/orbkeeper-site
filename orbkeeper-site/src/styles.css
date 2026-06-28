@@ -258,33 +258,6 @@ body:has(button:hover) .cursor-orb {
   pointer-events: none;
   overflow: hidden;
   opacity: 0.58;
-  animation: orbPerspectiveBreath 34s ease-in-out infinite;
-}
-
-/* Edge refraction */
-.orb-interior::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle at center,
-      transparent 0 48%,
-      rgba(255,248,223,.04) 66%,
-      rgba(210,166,79,.065) 82%,
-      rgba(7,6,4,.24) 100%
-    );
-
-  mix-blend-mode: screen;
-  opacity: .7;
-
-  transform:
-    translate(
-      calc(var(--orb-x) * -18px),
-      calc(var(--orb-y) * -18px)
-    );
 }
 
 .orb-interior::after {
@@ -294,35 +267,23 @@ body:has(button:hover) .cursor-orb {
   pointer-events: none;
 
   background:
-
     radial-gradient(
-      circle at 46% 44%,
-      rgba(255,248,223,.045),
-      transparent 14rem
-    ),
-
-    radial-gradient(
-      circle at 57% 55%,
-      rgba(210,166,79,.03),
-      transparent 18rem
-    ),
-
-    radial-gradient(
-      circle at 52% 48%,
-      rgba(49,39,132,.028),
-      transparent 24rem
+      circle at 50% 50%,
+      rgba(255,248,223,.08),
+      rgba(210,166,79,.04) 10rem,
+      rgba(49,39,132,.035) 22rem,
+      transparent 38rem
     );
 
-  opacity: .22;
+  opacity: 0.28;
   mix-blend-mode: screen;
-
-  animation: orbCoreBreath 30s ease-in-out infinite;
+  animation: orbCoreBreath 24s ease-in-out infinite;
 }
 
 .orb-depth {
   position: absolute;
   inset: -18%;
-  transition: transform 80ms linear;
+  transition: transform 120ms linear;
   will-change: transform;
 }
 
@@ -337,8 +298,8 @@ body:has(button:hover) .cursor-orb {
 .orb-depth-back {
   opacity: 0.24;
   transform: translate(
-    calc(var(--orb-x) * 24px),
-    calc(var(--orb-y) * 24px)
+    calc(var(--orb-x) * -24px),
+    calc(var(--orb-y) * -24px)
   );
 }
 
@@ -354,8 +315,8 @@ body:has(button:hover) .cursor-orb {
   opacity: 0.2;
   mix-blend-mode: screen;
   transform: translate(
-    calc(var(--orb-x) * -58px),
-    calc(var(--orb-y) * -58px)
+    calc(var(--orb-x) * 58px),
+    calc(var(--orb-y) * 58px)
   );
 }
 
@@ -378,190 +339,69 @@ body:has(button:hover) .cursor-orb {
   z-index: 1;
   pointer-events: none;
 
-  opacity: 0.055;
+  opacity: 0.1;
   mix-blend-mode: screen;
 
-  background:
-    linear-gradient(
-      112deg,
-      transparent 0%,
-      transparent 43%,
-      rgba(255,248,223,.12) 43.4%,
-      transparent 44.2%,
-      transparent 100%
-    ),
-    linear-gradient(
-      38deg,
-      transparent 0%,
-      transparent 61%,
-      rgba(210,166,79,.09) 61.3%,
-      transparent 62%,
-      transparent 100%
-    ),
-    linear-gradient(
-      154deg,
-      transparent 0%,
-      transparent 28%,
-      rgba(255,248,223,.07) 28.25%,
-      transparent 29%,
-      transparent 100%
-    );
+  --light-x: 50%;
+  --light-y: 50%;
 
-  background-size:
-    160% 160%,
-    140% 140%,
-    180% 180%;
+  background:
+    radial-gradient(
+      circle at var(--light-x) var(--light-y),
+      rgba(255,248,223,.08),
+      rgba(210,166,79,.035) 12rem,
+      transparent 30rem
+    ),
+    conic-gradient(
+      from 18deg at var(--light-x) var(--light-y),
+      transparent 0deg,
+      transparent 12deg,
+      rgba(255,248,223,.075) 12.6deg,
+      transparent 13.2deg,
+      transparent 45deg,
+      rgba(210,166,79,.06) 45.7deg,
+      transparent 46.4deg,
+      transparent 88deg,
+      rgba(255,248,223,.05) 88.6deg,
+      transparent 89.2deg,
+      transparent 132deg,
+      rgba(210,166,79,.04) 132.6deg,
+      transparent 133.2deg,
+      transparent 360deg
+    );
 
   transform:
     translate(
-      calc(var(--orb-x) * -24px),
-      calc(var(--orb-y) * -24px)
+      calc(var(--orb-x) * 72px),
+      calc(var(--orb-y) * 72px)
     )
-    rotate(calc(var(--orb-x) * -0.7deg));
+    rotate(calc(var(--orb-x) * .7deg));
 
-  animation: causticDrift 52s ease-in-out infinite alternate;
-  will-change: transform, opacity, background-position;
-}
-
-/* Tiny chromatic refraction */
-.orb-caustics::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-
-  background: inherit;
-  opacity: .48;
-  mix-blend-mode: screen;
-  filter: blur(.25px);
-
-  transform: translate(2px, -2px);
-}
-
-.orb-inclusions {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.orb-inclusions span {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(255,248,223,.48);
-
-  box-shadow:
-    0 0 8px rgba(255,248,223,.36),
-    0 0 18px rgba(210,166,79,.22);
-
-  opacity: 0;
-
-  transition:
-    opacity 900ms ease,
-    transform 900ms ease,
-    box-shadow 900ms ease;
-}
-
-.orb-inclusions span.glint-awake {
-  opacity: .42;
-
-  transform: scale(1.7);
-
-  box-shadow:
-    0 0 10px rgba(255,248,223,.65),
-    0 0 26px rgba(210,166,79,.38),
-    0 0 48px rgba(210,166,79,.18);
-}
-
-.orb-inclusions span:nth-child(1) {
-  top: 28%;
-  left: 22%;
-  animation-delay: 12s;
-}
-
-.orb-inclusions span:nth-child(2) {
-  top: 62%;
-  left: 74%;
-  animation-delay: 38s;
-}
-
-.orb-inclusions span:nth-child(3) {
-  top: 46%;
-  left: 51%;
-  animation-delay: 67s;
-}
-
-.orb-inclusions span:nth-child(4) {
-  top: 34%;
-  left: 84%;
-}
-
-.orb-inclusions span:nth-child(5) {
-  top: 76%;
-  left: 38%;
-}
-
-@keyframes orbPerspectiveBreath {
-  0%, 100% {
-    scale: 1;
-  }
-
-  50% {
-    scale: 1.006;
-  }
+  animation: causticBreathe 52s ease-in-out infinite alternate;
+  will-change: transform, opacity, filter;
 }
 
 @keyframes orbCoreBreath {
-
-  0%,100%{
-      opacity:.20;
-      transform:scale(1);
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(1);
   }
 
-  50%{
-      opacity:.28;
-      transform:scale(1.004);
+  50% {
+    opacity: 0.34;
+    transform: scale(1.02);
   }
-
 }
 
-@keyframes causticDrift {
+@keyframes causticBreathe {
   from {
-    opacity: 0.07;
-    background-position:
-      0% 0%,
-      20% 40%,
-      60% 10%;
+    opacity: 0.06;
+    filter: blur(0.25px);
   }
 
   to {
-    opacity: 0.18;
-    background-position:
-      12% -8%,
-      10% 52%,
-      72% 2%;
-  }
-}
-
-@keyframes inclusionGlint {
-  0%, 92%, 100% {
-    opacity: 0;
-    transform: scale(.8);
-  }
-
-  94% {
-    opacity: .28;
-    transform: scale(1.25);
-  }
-
-  96% {
-    opacity: .08;
-  }
-
-  98% {
-    opacity: .2;
+    opacity: 0.14;
+    filter: blur(0.8px);
   }
 }
 
