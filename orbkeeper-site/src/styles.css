@@ -363,54 +363,66 @@ body.orb-pulse .site-footer {
   z-index: 1;
   pointer-events: none;
 
-  opacity: 0.22;
+  opacity: 0.18;
   mix-blend-mode: screen;
 
   background:
     linear-gradient(
       112deg,
       transparent 0%,
-      transparent 34%,
-      rgba(255, 248, 223, 0.16) 36%,
-      transparent 39%,
+      transparent 43%,
+      rgba(255, 248, 223, 0.13) 43.4%,
+      transparent 44.2%,
       transparent 100%
     ),
     linear-gradient(
       38deg,
       transparent 0%,
-      transparent 58%,
-      rgba(210, 166, 79, 0.12) 60%,
-      transparent 63%,
+      transparent 61%,
+      rgba(210, 166, 79, 0.1) 61.3%,
+      transparent 62%,
       transparent 100%
     ),
-    radial-gradient(
-      circle at 68% 32%,
-      rgba(255, 248, 223, 0.08),
-      transparent 18rem
+    linear-gradient(
+      154deg,
+      transparent 0%,
+      transparent 28%,
+      rgba(255, 248, 223, 0.08) 28.25%,
+      transparent 29%,
+      transparent 100%
     );
+
+  background-size:
+    160% 160%,
+    140% 140%,
+    180% 180%;
 
   transform:
     translate(
-      calc(var(--orb-x) * 110px),
-      calc(var(--orb-y) * 110px)
+      calc(var(--orb-x) * 120px),
+      calc(var(--orb-y) * 120px)
     )
-    rotate(
-      calc(var(--orb-x) * 1deg)
-    );
+    rotate(calc(var(--orb-x) * 1.5deg));
 
-  animation: causticDrift 38s ease-in-out infinite alternate;
-  will-change: transform, opacity;
+  animation: causticDrift 42s ease-in-out infinite alternate;
+  will-change: transform, opacity, background-position;
 }
 
 @keyframes causticDrift {
   from {
-    opacity: 0.14;
-    background-position: 0% 0%, 0% 0%, center;
+    opacity: 0.08;
+    background-position:
+      0% 0%,
+      20% 40%,
+      60% 10%;
   }
 
   to {
-    opacity: 0.28;
-    background-position: 8% -6%, -5% 7%, center;
+    opacity: 0.22;
+    background-position:
+      12% -8%,
+      10% 52%,
+      72% 2%;
   }
 }
 
