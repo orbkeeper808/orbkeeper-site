@@ -159,7 +159,7 @@ img {
 
 .smoke {
   position: fixed;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none;
   width: 62vw;
   height: 62vw;
@@ -254,7 +254,7 @@ body:has(button:hover) .cursor-orb {
 .orb-interior {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
   opacity: 0.9;
@@ -355,6 +355,63 @@ body.orb-pulse .site-footer {
     inset 0 0 0 1px rgba(7, 6, 4, 0.78),
     inset 0 0 0 8px rgba(155, 116, 56, 0.12),
     0 0 52px rgba(210,166,79,.16);
+}
+
+.orb-caustics {
+  position: absolute;
+  inset: -20%;
+  z-index: 1;
+  pointer-events: none;
+
+  opacity: 0.22;
+  mix-blend-mode: screen;
+
+  background:
+    linear-gradient(
+      112deg,
+      transparent 0%,
+      transparent 34%,
+      rgba(255, 248, 223, 0.16) 36%,
+      transparent 39%,
+      transparent 100%
+    ),
+    linear-gradient(
+      38deg,
+      transparent 0%,
+      transparent 58%,
+      rgba(210, 166, 79, 0.12) 60%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 68% 32%,
+      rgba(255, 248, 223, 0.08),
+      transparent 18rem
+    );
+
+  transform:
+    translate(
+      calc(var(--orb-x) * 110px),
+      calc(var(--orb-y) * 110px)
+    )
+    rotate(
+      calc(var(--orb-x) * 1deg)
+    );
+
+  animation: causticDrift 38s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+@keyframes causticDrift {
+  from {
+    opacity: 0.14;
+    background-position: 0% 0%, 0% 0%, center;
+  }
+
+  to {
+    opacity: 0.28;
+    background-position: 8% -6%, -5% 7%, center;
+  }
 }
 
 @keyframes orbBackDrift {
