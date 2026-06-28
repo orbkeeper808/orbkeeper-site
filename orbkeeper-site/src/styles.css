@@ -609,13 +609,14 @@ will-change: transform, opacity, filter;
   position: relative;
   width: min(86vw, 880px);
   margin-top: 34px;
-  padding: clamp(4px, 1vw, 10px);
+  padding: 0;
   background: transparent;
   border: 0;
-  box-shadow:
-    0 42px 110px rgba(0, 0, 0, 0.48),
-    0 0 86px rgba(210, 166, 79, 0.18);
-  filter: drop-shadow(0 0 34px rgba(210, 166, 79, 0.18)) drop-shadow(0 26px 38px rgba(0, 0, 0, 0.62));
+  box-shadow: none;
+
+  filter:
+    drop-shadow(0 0 30px rgba(210,166,79,.16))
+    drop-shadow(0 12px 26px rgba(0,0,0,.28));
 }
 
 .sigil-ring {
