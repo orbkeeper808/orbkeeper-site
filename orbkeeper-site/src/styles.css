@@ -629,7 +629,7 @@ will-change: transform, opacity, filter;
   background: transparent;
   border: 0;
   box-shadow: none;
-  transform: translateY(75px);
+  transform: translateY(-4px);
 
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
