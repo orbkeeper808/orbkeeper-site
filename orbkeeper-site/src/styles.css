@@ -1482,6 +1482,40 @@ body.orb-pulse .keeper-divider::after {
   border: 1px solid rgba(210, 166, 79, 0.3);
 }
 
+.premium-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 44%,
+      rgba(255,248,223,.08) 48%,
+      rgba(255,248,223,.34) 50%,
+      rgba(255,248,223,.08) 52%,
+      transparent 56%
+    );
+
+  transform: translateX(-170%);
+}
+
+.premium-card:hover::after {
+  opacity: 1;
+  transform: translateX(170%);
+
+  transition:
+    transform 1.4s cubic-bezier(.22,.61,.36,1),
+    opacity .25s ease;
+}
+
 @media (max-width: 900px) {
   .video-relic {
     grid-template-columns: 1fr;
