@@ -572,12 +572,18 @@ will-change: transform, opacity, filter;
   inset: 0;
   z-index: -4;
   background:
-    linear-gradient(to bottom, rgba(7, 6, 4, 0.1), rgba(7, 6, 4, 0.72) 72%, #070604),
-    radial-gradient(circle at 54% 34%, rgba(244, 234, 215, 0.38), transparent 18rem),
-    url("./assets/orbkeeper-flyer2.jpg") center 43% / min(92vw, 860px) auto no-repeat;
-  filter: saturate(0.82) contrast(1.08) brightness(0.54);
-  opacity: 0.58;
-  animation: landscapeDrift 34s ease-in-out infinite alternate;
+    linear-gradient(to bottom, rgba(7, 6, 4, 0.16), rgba(7, 6, 4, 0.78) 74%, #070604),
+    radial-gradient(circle at 54% 34%, rgba(244, 234, 215, 0.28), transparent 20rem),
+    url("./assets/orbkeeper-flyer2.jpg") center 43% / min(98vw, 920px) auto no-repeat;
+
+  filter:
+    saturate(0.48)
+    contrast(1.02)
+    brightness(0.42)
+    blur(0.25px);
+
+  opacity: 0.38;
+  animation: landscapeDrift 70s ease-in-out infinite alternate;
   transform-origin: center center;
 }
 
@@ -585,9 +591,19 @@ will-change: transform, opacity, filter;
   position: absolute;
   inset: 0;
   content: "";
+
   background:
-    linear-gradient(90deg, #070604 0%, transparent 28%, transparent 72%, #070604 100%),
-    radial-gradient(circle at 50% 48%, transparent 0 18rem, rgba(7, 6, 4, 0.74) 42rem);
+    radial-gradient(
+      circle at center,
+      transparent 0 22rem,
+      rgba(7, 6, 4, 0.22) 34rem,
+      rgba(7, 6, 4, 0.68) 52rem
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(7, 6, 4, 0.08),
+      rgba(7, 6, 4, 0.62)
+    );
 }
 
 .orb-light {
@@ -617,6 +633,15 @@ will-change: transform, opacity, filter;
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
     drop-shadow(0 12px 26px rgba(0,0,0,.28));
+}
+
+.hero-sigil img {
+  width: 100%;
+  filter:
+    contrast(1.08)
+    saturate(.82)
+    drop-shadow(0 0 24px rgba(210,166,79,.18))
+    drop-shadow(0 18px 34px rgba(0,0,0,.36));
 }
 
 .sigil-ring {
