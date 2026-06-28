@@ -350,33 +350,45 @@ body:has(button:hover) .cursor-orb {
   opacity: 0.1;
   mix-blend-mode: screen;
 
-  background:
-    radial-gradient(
-      circle at 62% 34%,
-      rgba(255,248,223,.055),
-      rgba(210,166,79,.028) 7rem,
-      transparent 15rem
-    ),
+background:
+  radial-gradient(
+    circle at 62% 34%,
+    rgba(255,248,223,.055),
+    rgba(210,166,79,.028) 7rem,
+    transparent 15rem
+  ),
 
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(255,248,223,.075),
-      rgba(210,166,79,.035) 14rem,
-      transparent 34rem
-    ),
+  radial-gradient(
+    circle at 50% 50%,
+    rgba(255,248,223,.075),
+    rgba(210,166,79,.035) 14rem,
+    transparent 34rem
+  ),
 
-    radial-gradient(
-      ellipse at 42% 38%,
-      rgba(255,248,223,.05),
-      transparent 18rem
-    ),
+  radial-gradient(
+    ellipse at 42% 38%,
+    rgba(255,248,223,.05),
+    transparent 18rem
+  ),
 
-    radial-gradient(
-      circle at 50% 50%,
-      transparent 0 26rem,
-      rgba(255,248,223,.035) 32rem,
-      transparent 42rem
-    );
+  conic-gradient(
+    from 12deg at 50% 50%,
+    transparent 0deg,
+    transparent 72deg,
+    rgba(255,248,223,.028) 72.4deg,
+    transparent 73deg,
+    transparent 192deg,
+    rgba(210,166,79,.022) 192.5deg,
+    transparent 193deg,
+    transparent 360deg
+  ),
+
+  radial-gradient(
+    circle at 50% 50%,
+    transparent 0 26rem,
+    rgba(255,248,223,.035) 32rem,
+    transparent 42rem
+  );
 
   transform:
     translate(
