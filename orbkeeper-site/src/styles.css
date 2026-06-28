@@ -347,11 +347,19 @@ body:has(button:hover) .cursor-orb {
 
   background:
     radial-gradient(
+      circle at 64% 36%,
+      rgba(255,248,223,.055),
+      rgba(210,166,79,.028) 6rem,
+      transparent 14rem
+    ),
+
+    radial-gradient(
       circle at var(--light-x) var(--light-y),
       rgba(255,248,223,.08),
       rgba(210,166,79,.035) 12rem,
       transparent 30rem
     ),
+
     conic-gradient(
       from 18deg at var(--light-x) var(--light-y),
       transparent 0deg,
@@ -372,15 +380,14 @@ body:has(button:hover) .cursor-orb {
 
   transform:
     translate(
-      calc(var(--orb-x) * -24px),
-      calc(var(--orb-y) * -24px)
+      calc(var(--orb-x) * -30px),
+      calc(var(--orb-y) * -30px)
     )
-    rotate(calc(var(--orb-x) * .7deg));
+    rotate(calc(var(--orb-x) * -.35deg));
 
   animation: causticBreathe 52s ease-in-out infinite alternate;
   will-change: transform, opacity, filter;
 }
-
 @keyframes orbCoreBreath {
   0%, 100% {
     opacity: 0.22;
