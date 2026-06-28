@@ -1485,6 +1485,7 @@ body.orb-pulse .keeper-divider::after {
 .premium-card {
   position: relative;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 .premium-card::before {
@@ -1513,6 +1514,10 @@ body.orb-pulse .keeper-divider::after {
 
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+
+will-change: background-position, opacity;
+transform: translateZ(0);
+backface-visibility: hidden;
 }
 
 .premium-card[data-enter="left"]::before {
