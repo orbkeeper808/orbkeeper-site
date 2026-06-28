@@ -1522,43 +1522,15 @@ backface-visibility: hidden;
 }
 
 .premium-card:hover::before {
-  animation: borderReflectionDouble 1.65s cubic-bezier(.22,.61,.36,1) both;
+  opacity: 1;
+  background-position: 50% 50%;
+
+  transition:
+    background-position 1.25s cubic-bezier(.22,.61,.36,1),
+    opacity .18s ease;
 }
 
-@keyframes borderReflectionDouble {
-  0% {
-    opacity: 0;
-    background-position: -120% -120%;
-  }
 
-  8% {
-    opacity: 1;
-  }
-
-  45% {
-    opacity: 1;
-    background-position: 120% 120%;
-  }
-
-  55% {
-    opacity: 0;
-    background-position: 120% 120%;
-  }
-
-  56% {
-    opacity: 0;
-    background-position: -120% -120%;
-  }
-
-  64% {
-    opacity: .85;
-  }
-
-  100% {
-    opacity: 0;
-    background-position: 0% 0%;
-  }
-}
 
 @media (max-width: 900px) {
   .video-relic {
