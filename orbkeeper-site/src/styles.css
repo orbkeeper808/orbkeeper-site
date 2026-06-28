@@ -283,7 +283,7 @@ body:has(button:hover) .cursor-orb {
 }
 
 .orb-depth-front {
-  opacity: 0.34;
+  opacity: 0.42;
   mix-blend-mode: screen;
   transform: translate(
     calc(var(--orb-x) * 150px),
@@ -296,10 +296,12 @@ body:has(button:hover) .cursor-orb {
     linear-gradient(
       115deg,
       transparent 0%,
-      rgba(255,248,223,.16) 42%,
+      rgba(255,248,223,.24) 42%,
       transparent 53%
     ),
+    radial-gradient(circle at 72% 28%, rgba(210,166,79,.14), transparent 16rem),
     radial-gradient(circle at 50% 50%, transparent 0 24rem, rgba(7,6,4,.36) 42rem);
+
   animation-name: orbFrontDrift;
   animation-duration: 52s;
 }
