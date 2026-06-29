@@ -484,13 +484,13 @@ will-change: transform, opacity, filter;
   /* gentle drift */
   85% {
     opacity: .62;
-    transform: translateY(-40px) scale(1.05);
+    transform: translateY(-60px) scale(1.05);
   }
 
   /* disappears */
   100% {
     opacity: 0;
-    transform: translateY(-60px) scale(.98);
+    transform: translateY(-80px) scale(.98);
     filter: blur(.6px);
   }
 }
