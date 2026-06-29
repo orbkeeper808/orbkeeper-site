@@ -619,6 +619,7 @@ will-change: transform, opacity, filter;
   min-height: 100svh;
   place-items: center;
   padding: 138px 22px 72px;
+  padding-bottom: clamp(70px, 10vw, 120px);
   overflow: hidden;
   isolation: isolate;
 }
