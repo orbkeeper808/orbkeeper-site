@@ -1500,16 +1500,17 @@ body.orb-pulse .keeper-divider::after {
 }
 
 .artifact-card h3 {
-  min-height: 86px;
+  min-height: 96px;
+  margin-bottom: 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0;
 }
 
 .artifact-card .keeper-divider {
-  margin: 0 auto 22px;
+  margin: 10px auto 30px;
 }
 
 .artifact-card p {
@@ -1520,8 +1521,9 @@ body.orb-pulse .keeper-divider::after {
 }
 
 .artifact-card .ledger-button {
+  justify-self: center;
   align-self: end;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .premium-card {
