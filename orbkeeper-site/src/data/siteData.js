@@ -51,8 +51,9 @@ export const releases = [
 
 export const gatherings = [
   {
-    date: "2024-06-21",
-    venue: "The Orbkeeper Gathering",
+    day: "June 21",
+    date: "2027-06-21",
+    place: "Paia Bay Coffee Bar",
     city : "Paia",
   },
 ];
