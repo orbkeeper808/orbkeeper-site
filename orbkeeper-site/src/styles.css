@@ -2152,8 +2152,9 @@ backface-visibility: hidden;
   }
 
   .member-card::before {
-    bottom: 10px;
-  }
+  inset: 0;
+  border-radius: inherit;
+}
 
   .gathering-card {
     justify-items: start;
