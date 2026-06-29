@@ -457,23 +457,23 @@ function App() {
 
         <Lore />
 
-        <GutterRune {...runes[1]} index={0} activeRune={activeRune} />
+        <GutterRune {...runes[0]} index={0} activeRune={activeRune} />
 
         <Music />
 
-        <GutterRune {...runes[2]} index={1} activeRune={activeRune} />
+        <GutterRune {...runes[1]} index={1} activeRune={activeRune} />
 
         <Gatherings />
 
-        <GutterRune {...runes[3]} index={2} activeRune={activeRune} />
+        <GutterRune {...runes[2]} index={2} activeRune={activeRune} />
 
         <Band />
 
-        <GutterRune {...runes[4]} index={3} activeRune={activeRune} />
+        <GutterRune {...runes[3]} index={3} activeRune={activeRune} />
 
         <Media />
 
-        <GutterRune {...runes[0]} index={4} activeRune={activeRune} />
+        <GutterRune {...runes[4]} index={4} activeRune={activeRune} />
 
         <Merch />
       </main>
