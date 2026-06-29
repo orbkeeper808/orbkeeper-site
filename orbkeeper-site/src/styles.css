@@ -1771,8 +1771,12 @@ backface-visibility: hidden;
 
 /* Individual Rune Animation */
 
-.rune span {
+.rune-button {
+  all: unset;
   display: block;
+  cursor: none;
+  pointer-events: none;
+
   color: rgba(210, 166, 79, 0.75);
   opacity: 0;
   filter: blur(0.1px);
@@ -1788,7 +1792,8 @@ backface-visibility: hidden;
     filter 1400ms ease;
 }
 
-.rune span.rune-awake {
+.rune-button.rune-awake {
+  pointer-events: auto;
   opacity: 0.65;
   transform: scale(1.12);
   filter: blur(0);
