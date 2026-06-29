@@ -49,7 +49,14 @@ export const releases = [
   },
 ];
 
-export const gatherings = [];
+export const gatherings = [
+
+  date: "2024-06-21",
+  venue: "The Orbkeeper Gathering",
+  city : "Paia",
+  state: "HI",
+  link: "https://www.orbkeeper.com/gatherings/2024-06-21",
+];
 
 export const members = [
   ["Archanis", "Warden of the Primordial Light", "A scholar of forgotten realms whose mastery of ancient light magicks guides the Keepers through the veil."],
