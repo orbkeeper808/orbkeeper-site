@@ -2087,9 +2087,14 @@ backface-visibility: hidden;
     border-radius: 18px;
   }
 
-    .rune-field {
-    display: none;
-  }
+  .rune-layer {
+  outline: 2px solid red;
+}
+
+.rune-button {
+  opacity: 1 !important;
+  color: red !important;
+}
 
   .rune-layer {
     position: absolute;
