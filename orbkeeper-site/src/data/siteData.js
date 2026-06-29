@@ -50,12 +50,16 @@ export const releases = [
 ];
 
 export const gatherings = [
-  {
-    day: "June 21",
-    date: "2027-06-21",
-    place: "Paia Bay Coffee Bar",
-    city : "Paia, Maui",
-  },
+  // Add upcoming Rites here.
+  // Leave the array empty to display the "No Gatherings" card.
+  //
+  // {
+  //   day: "AUG 14",
+  //   date: "2026-08-14",
+  //   place: "Request Music",
+  //   city: "Wailuku, Maui",
+  // }
+  
 ];
 
 export const members = [
