@@ -171,6 +171,7 @@ function Lore() {
             <span className="card-number">0{i + 1}</span>
             <h3>{item.title}</h3>
             <div className="lore-divider" data-rune={getRune(i)} />
+              <span className="divider-shine" />
             <p>{item.text}</p>
           </motion.article>
         ))}

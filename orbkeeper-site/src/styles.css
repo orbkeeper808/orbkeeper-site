@@ -1394,6 +1394,39 @@ p {
     transform 700ms ease;
 }
 
+.lore-divider,
+.keeper-divider {
+  overflow: hidden;
+}
+
+.divider-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 35%,
+      rgba(255,248,223,.9) 48%,
+      rgba(255,248,223,.18) 52%,
+      transparent 64%
+    );
+
+  background-size: 260% 260%;
+  background-position: -150% -150%;
+}
+
+.premium-card:hover .divider-shine {
+  opacity: 1;
+  background-position: 120% 120%;
+
+  transition:
+    background-position .9s cubic-bezier(.22,.61,.36,1),
+    opacity .18s ease;
+}
+
 .lore-section .lore-divider::after,
 .member-card .keeper-divider::after {
   content: attr(data-rune);
