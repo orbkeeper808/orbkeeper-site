@@ -482,7 +482,7 @@ will-change: transform, opacity, filter;
   /* gentle drift */
   85% {
     opacity: .62;
-    transform: translateY(-12px) scale(1.05);
+    transform: translateY(-40px) scale(1.05);
   }
 
   /* disappears */

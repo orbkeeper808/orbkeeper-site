@@ -128,18 +128,22 @@ function useRuneAwakening() {
       setActiveRune(index);
       document.body.classList.add("rune-stirring");
 
-      fadeTimeoutId = window.setTimeout(() => {
+    fadeTimeoutId = window.setTimeout(() => {
   setActiveRune(null);
   document.body.classList.remove("rune-stirring");
-}, 5000);
+}, 6500);
 
-timeoutId = window.setTimeout(awakenRune, 6500);
-    };
+timeoutId = window.setTimeout(
+  awakenRune,
+  10000 + Math.random() * 15000
+);
 
-    timeoutId = window.setTimeout(
-      awakenRune,
-      6000 + Math.random() * 10000
-    );
+};
+
+timeoutId = window.setTimeout(
+  awakenRune,
+  4000 + Math.random() * 6000
+);
 
     return () => {
       window.clearTimeout(timeoutId);
@@ -451,27 +455,25 @@ function App() {
       <main>
         <Hero />
 
-        <GutterRune {...runes[0]} index={0} activeRune={activeRune} />
-
         <Lore />
 
-        <GutterRune {...runes[1]} index={1} activeRune={activeRune} />
+        <GutterRune {...runes[1]} index={0} activeRune={activeRune} />
 
         <Music />
 
-        <GutterRune {...runes[2]} index={2} activeRune={activeRune} />
+        <GutterRune {...runes[2]} index={1} activeRune={activeRune} />
 
         <Gatherings />
 
-        <GutterRune {...runes[3]} index={3} activeRune={activeRune} />
+        <GutterRune {...runes[3]} index={2} activeRune={activeRune} />
 
         <Band />
 
-        <GutterRune {...runes[4]} index={4} activeRune={activeRune} />
+        <GutterRune {...runes[4]} index={3} activeRune={activeRune} />
 
         <Media />
 
-        <GutterRune {...runes[0]} index={0} activeRune={activeRune} />
+        <GutterRune {...runes[0]} index={4} activeRune={activeRune} />
 
         <Merch />
       </main>
