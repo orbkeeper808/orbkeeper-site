@@ -232,6 +232,21 @@ body:has(button:hover) .cursor-orb {
   box-shadow: 0 0 42px rgba(210, 166, 79, 0.46);
 }
 
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+iframe {
+  cursor: none !important;
+}
+
 .rune {
   position: absolute;
   display: flex;
