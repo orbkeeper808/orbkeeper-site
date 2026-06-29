@@ -88,7 +88,7 @@ function RuneLayer() {
   const runes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
   const [activeRune, setActiveRune] = useState(null);
 
-  const hiddenRelicLink = "https://vault.orbkeeper.com";
+  const hiddenRelicLink = "https://vault.orbkeeper.com/products/veilwalkers";
 
   const handleRuneClick = (runeId) => {
     if (activeRune !== runeId) return;
