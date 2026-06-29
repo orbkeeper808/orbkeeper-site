@@ -224,13 +224,6 @@ img {
     box-shadow 240ms ease;
 }
 
-body:has(a:hover) .cursor-orb,
-body:has(button:hover) .cursor-orb {
-  width: 48px;
-  height: 48px;
-  border-color: rgba(210, 166, 79, 0.82);
-  box-shadow: 0 0 42px rgba(210, 166, 79, 0.46);
-}
 
 *,
 *::before,
