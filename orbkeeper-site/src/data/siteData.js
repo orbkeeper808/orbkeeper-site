@@ -1,6 +1,7 @@
 import fabreanShirt from "../assets/merch/The Fabrean Vestment.png";
 import ustovianShirt from "../assets/merch/The Ustovian Vestment.png";
-
+import keeperHat from "../assets/merch/keeper hat.png";
+import keeperSatchel from "../assets/merch/keeper satchel.png";
 
 
 
@@ -88,4 +89,19 @@ export const merch = [
     image: fabreanShirt,
     link: "https://vault.orbkeeper.com/products/the-febrean-vestment",
   },
+  {
+    title: "Mark of The Keepers Satchel",
+    description:
+      "Bearing the Mark of the Keepers. Favored by travelers, seekers, and Keepers alike.",
+    image: keeperSatchel,
+    link: "https://vault.orbkeeper.com/products/mark-of-the-keepers-satchel",
+  },
+  {
+    title: "Mark of The Keepers Worn Cap",
+    description:
+      "Bearing the Mark of the Keepers. Time has softened its appearance, though the symbol remains unchanged.",
+    image: keeperHat,
+    link: "https://vault.orbkeeper.com/products/mark-of-the-keepers-worn-cap",
+  }
+  
 ];
