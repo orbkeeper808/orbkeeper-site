@@ -1523,7 +1523,9 @@ body.orb-pulse .keeper-divider::after {
 .artifact-card .ledger-button {
   justify-self: center;
   align-self: end;
-  margin-top: 28px;
+  display: inline-flex;
+  width: fit-content;
+  margin: 28px auto 0;
 }
 
 .premium-card {
