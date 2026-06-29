@@ -2087,6 +2087,39 @@ backface-visibility: hidden;
     border-radius: 18px;
   }
 
+    .rune-field {
+    display: none;
+  }
+
+    .rune-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .rune {
+    position: absolute;
+    transform: none;
+    font-size: 0.95rem;
+    gap: 18px;
+  }
+
+  .rune-left {
+    top: 22%;
+    left: 18px;
+  }
+
+  .rune-right {
+    top: 54%;
+    right: 18px;
+  }
+
+  .rune-button:nth-child(2),
+  .rune-button:nth-child(4) {
+    display: none;
+  }
+
   .hero {
     overflow: hidden;
   }
