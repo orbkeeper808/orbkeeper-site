@@ -158,28 +158,6 @@ img {
   animation: grainShift 18s steps(6) infinite;
 }
 
-body.rune-stirring .lore-divider::before,
-body.rune-stirring .keeper-divider::before,
-body.orb-pulse .lore-divider::before,
-body.orb-pulse .keeper-divider::before {
-  filter:
-    brightness(1.9)
-    drop-shadow(0 0 10px rgba(210,166,79,.95))
-    drop-shadow(0 0 28px rgba(210,166,79,.55));
-}
-
-body.rune-stirring .lore-divider::after,
-body.rune-stirring .keeper-divider::after,
-body.orb-pulse .lore-divider::after,
-body.orb-pulse .keeper-divider::after {
-  color: var(--gold-lit);
-  transform: translate(-50%, -50%) scale(1.28);
-  text-shadow:
-    0 0 12px rgba(255,248,223,1),
-    0 0 28px rgba(210,166,79,.9),
-    0 0 64px rgba(210,166,79,.48);
-}
-
 .smoke {
   position: fixed;
   z-index: 0;
@@ -1652,7 +1630,16 @@ backface-visibility: hidden;
     opacity .18s ease;
 }
 
-
+.premium-card:hover .lore-divider::before,
+.premium-card:hover .keeper-divider::before,
+.premium-card:hover .lore-divider::after,
+.premium-card:hover .keeper-divider::after {
+  transition:
+    filter .35s ease .18s,
+    color .35s ease .18s,
+    transform .35s ease .18s,
+    text-shadow .35s ease .18s;
+}
 
 @media (max-width: 900px) {
   .video-relic {
