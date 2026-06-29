@@ -54,7 +54,7 @@ export const gatherings = [
     day: "June 21",
     date: "2027-06-21",
     place: "Paia Bay Coffee Bar",
-    city : "Paia",
+    city : "Paia, Maui",
   },
 ];
 
