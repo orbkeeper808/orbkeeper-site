@@ -473,6 +473,9 @@ function App() {
         <GutterRune {...runes[4]} index={4} activeRune={activeRune} />
 
         <Media />
+
+        <GutterRune {...runes[0]} index={0} activeRune={activeRune} />
+
         <Merch />
       </main>
 
