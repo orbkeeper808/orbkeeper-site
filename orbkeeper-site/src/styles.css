@@ -1635,32 +1635,20 @@ backface-visibility: hidden;
 .premium-card:hover .lore-divider::before,
 .premium-card:hover .keeper-divider::before {
   filter:
-    brightness(1.35)
-    drop-shadow(0 0 5px rgba(210,166,79,.30))
-    drop-shadow(0 0 12px rgba(210,166,79,.16));
+    brightness(1.9)
+    drop-shadow(0 0 10px rgba(210,166,79,.95))
+    drop-shadow(0 0 28px rgba(210,166,79,.55)) !important;
 }
 
 .lore-card:hover .lore-divider::after,
 .member-card:hover .keeper-divider::after,
 .premium-card:hover .lore-divider::after,
 .premium-card:hover .keeper-divider::after {
-  color: rgba(255,248,223,.86);
-    text-shadow:
-    0 0 3px rgba(255,248,223,.22),
-    0 0 6px rgba(210,166,79,.12);
-}
-
-.lore-divider::before,
-.keeper-divider::before {
-  transition: filter .25s ease .15s;
-}
-
-.lore-divider::after,
-.keeper-divider::after {
-  transition:
-    color .25s ease .15s,
-    text-shadow .25s ease .15s,
-    transform .25s ease .15s;
+  color: var(--gold-lit) !important;
+  text-shadow:
+    0 0 12px rgba(255,248,223,1),
+    0 0 28px rgba(210,166,79,.9),
+    0 0 64px rgba(210,166,79,.48) !important;
 }
 
 @media (max-width: 900px) {
