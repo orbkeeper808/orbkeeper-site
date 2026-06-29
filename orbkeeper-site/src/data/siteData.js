@@ -50,12 +50,11 @@ export const releases = [
 ];
 
 export const gatherings = [
-
-  date: "2024-06-21",
-  venue: "The Orbkeeper Gathering",
-  city : "Paia",
-  state: "HI",
-  link: "https://www.orbkeeper.com/gatherings/2024-06-21",
+  {
+    date: "2024-06-21",
+    venue: "The Orbkeeper Gathering",
+    city : "Paia",
+  },
 ];
 
 export const members = [
