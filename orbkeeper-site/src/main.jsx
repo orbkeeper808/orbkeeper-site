@@ -128,15 +128,12 @@ function useRuneAwakening() {
       setActiveRune(index);
       document.body.classList.add("rune-stirring");
 
-      fadeTimeoutId = window.setTimeout(() => {
-        setActiveRune(null);
-        document.body.classList.remove("rune-stirring");
-      }, 5000);
+     fadeTimeoutId = window.setTimeout(() => {
+  setActiveRune(null);
+  document.body.classList.remove("rune-stirring");
+}, 5000);
 
-      timeoutId = window.setTimeout(
-        awakenRune,
-        20000 + Math.random() * 30000
-      );
+timeoutId = window.setTimeout(awakenRune, 6500);
     };
 
     timeoutId = window.setTimeout(
