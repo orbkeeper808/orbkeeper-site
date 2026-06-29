@@ -2054,7 +2054,6 @@ backface-visibility: hidden;
   .gutter-rune.rune-awake {
     transform: translateY(-6px) scale(1.08);
   }
-}
 
   .hero {
     overflow: hidden;
