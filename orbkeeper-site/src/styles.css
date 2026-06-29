@@ -240,6 +240,11 @@ iframe {
   cursor: none !important;
 }
 
+.spotify-embed,
+.video-container {
+  cursor: none !important;
+}
+
 .rune {
   position: absolute;
   display: flex;
