@@ -2117,12 +2117,6 @@ backface-visibility: hidden;
     font-size: 1rem;
   }
 
-  /* Hide everything except one rune from each side */
-
-  .rune-button:not(.rune-1):not(.rune-3) {
-    display: none;
-  }
-
   .hero {
     overflow: hidden;
   }
