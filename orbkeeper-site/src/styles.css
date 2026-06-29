@@ -490,7 +490,7 @@ will-change: transform, opacity, filter;
   /* disappears */
   100% {
     opacity: 0;
-    transform: translateY(-120px) scale(.98);
+    transform: translateY(-100px) scale(.98);
     filter: blur(.6px);
   }
 }
