@@ -88,6 +88,14 @@ function RuneLayer() {
   const runes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
   const [activeRune, setActiveRune] = useState(null);
 
+  const hiddenRelicLink = "https://vault.orbkeeper.com";
+
+  const handleRuneClick = (runeId) => {
+    if (activeRune !== runeId) return;
+
+    window.open(hiddenRelicLink, "_blank", "noopener,noreferrer");
+  };
+
   useEffect(() => {
     let timeoutId;
     let fadeTimeoutId;
@@ -120,33 +128,47 @@ function RuneLayer() {
   return (
     <div className="rune-layer" aria-hidden="true">
       <div className="rune rune-left">
-        {runes.map((rune, i) => (
-          <span
-            key={`left-${rune}-${i}`}
-            className={
-              activeRune === `left-${i}`
-                ? `rune-awake rune-${i}`
-                : `rune-${i}`
-            }
-          >
-            {rune}
-          </span>
-        ))}
+        {runes.map((rune, i) => {
+          const runeId = `left-${i}`;
+
+          return (
+            <button
+              type="button"
+              key={`left-${rune}-${i}`}
+              className={
+                activeRune === runeId
+                  ? `rune-button rune-awake rune-${i}`
+                  : `rune-button rune-${i}`
+              }
+              onClick={() => handleRuneClick(runeId)}
+              aria-label="Open hidden relic"
+            >
+              {rune}
+            </button>
+          );
+        })}
       </div>
 
       <div className="rune rune-right">
-        {runes.map((rune, i) => (
-          <span
-            key={`right-${rune}-${i}`}
-            className={
-              activeRune === `right-${i}`
-                ? `rune-awake rune-${i}`
-                : `rune-${i}`
-            }
-          >
-            {rune}
-          </span>
-        ))}
+        {runes.map((rune, i) => {
+          const runeId = `right-${i}`;
+
+          return (
+            <button
+              type="button"
+              key={`right-${rune}-${i}`}
+              className={
+                activeRune === runeId
+                  ? `rune-button rune-awake rune-${i}`
+                  : `rune-button rune-${i}`
+              }
+              onClick={() => handleRuneClick(runeId)}
+              aria-label="Open hidden relic"
+            >
+              {rune}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
