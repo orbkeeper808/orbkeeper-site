@@ -443,14 +443,14 @@ will-change: transform, opacity, filter;
   /* sleeping */
   0% {
     opacity: 0;
-    transform: translateY(18px) scale(.88);
+    transform: translateY(8px) scale(.88);
     filter: blur(1.5px);
   }
 
   /* ember */
   6% {
     opacity: .08;
-    transform: translateY(12px) scale(.92);
+    transform: translateY(6px) scale(.92);
   }
 
   /* spark */
@@ -484,13 +484,13 @@ will-change: transform, opacity, filter;
   /* gentle drift */
   85% {
     opacity: .62;
-    transform: translateY(-60px) scale(1.05);
+    transform: translateY(-80px) scale(1.05);
   }
 
   /* disappears */
   100% {
     opacity: 0;
-    transform: translateY(-80px) scale(.98);
+    transform: translateY(-100px) scale(.98);
     filter: blur(.6px);
   }
 }
