@@ -2091,32 +2091,30 @@ backface-visibility: hidden;
     display: none;
   }
 
-    .rune-layer {
+  .rune-layer {
     position: absolute;
     inset: 0;
-    z-index: 3;
-    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 18vh 0 18vh;
   }
 
-  .rune {
-    position: absolute;
-    transform: none;
-    font-size: 0.95rem;
-    gap: 18px;
-  }
-
-  .rune-left {
-    top: 22%;
-    left: 18px;
-  }
-
+  .rune-left,
   .rune-right {
-    top: 54%;
-    right: 18px;
+    position: static;
+    display: contents;
   }
 
-  .rune-button:nth-child(2),
-  .rune-button:nth-child(4) {
+  .rune-button {
+    font-size: 1rem;
+  }
+
+  /* Hide everything except one rune from each side */
+
+  .rune-button:not(.rune-1):not(.rune-3) {
     display: none;
   }
 
