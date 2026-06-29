@@ -84,27 +84,48 @@ const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚢ"];
 
 const getRune = (index) => dividerRunes[index % dividerRunes.length];
 
-function RuneLayer() {
-  const runes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ"];
-  const [activeRune, setActiveRune] = useState(null);
+const runes = [
+  { rune: "ᛉ", runeIndex: 0 },
+  { rune: "ᛟ", runeIndex: 1 },
+  { rune: "ᛜ", runeIndex: 2 },
+  { rune: "ᚱ", runeIndex: 3 },
+  { rune: "ᛒ", runeIndex: 4 },
+];
 
+function GutterRune({ rune, runeIndex, index, activeRune }) {
   const hiddenRelicLink = "https://vault.orbkeeper.com/products/veilwalkers";
+  const isAwake = activeRune === index;
 
-  const handleRuneClick = (runeId) => {
-    if (activeRune !== runeId) return;
+  return (
+    <div className="gutter-rune-wrap" aria-hidden="true">
+      <button
+        type="button"
+        className={`gutter-rune rune-${runeIndex} ${
+          isAwake ? "rune-awake" : ""
+        }`}
+        onClick={() => {
+          if (!isAwake) return;
+          window.open(hiddenRelicLink, "_blank", "noopener,noreferrer");
+        }}
+        aria-label="Open hidden relic"
+      >
+        {rune}
+      </button>
+    </div>
+  );
+}
 
-    window.open(hiddenRelicLink, "_blank", "noopener,noreferrer");
-  };
+function useRuneAwakening() {
+  const [activeRune, setActiveRune] = useState(null);
 
   useEffect(() => {
     let timeoutId;
     let fadeTimeoutId;
 
     const awakenRune = () => {
-      const side = Math.random() > 0.5 ? "left" : "right";
       const index = Math.floor(Math.random() * runes.length);
 
-      setActiveRune(`${side}-${index}`);
+      setActiveRune(index);
       document.body.classList.add("rune-stirring");
 
       fadeTimeoutId = window.setTimeout(() => {
@@ -112,8 +133,10 @@ function RuneLayer() {
         document.body.classList.remove("rune-stirring");
       }, 2200);
 
-      const nextDelay = 15000 + Math.random() * 30000;
-      timeoutId = window.setTimeout(awakenRune, nextDelay);
+      timeoutId = window.setTimeout(
+        awakenRune,
+        15000 + Math.random() * 30000
+      );
     };
 
     timeoutId = window.setTimeout(awakenRune, 6000);
@@ -123,55 +146,9 @@ function RuneLayer() {
       window.clearTimeout(fadeTimeoutId);
       document.body.classList.remove("rune-stirring");
     };
-  }, [runes.length]);
+  }, []);
 
-  return (
-    <div className="rune-layer" aria-hidden="true">
-      <div className="rune rune-left">
-        {runes.map((rune, i) => {
-          const runeId = `left-${i}`;
-
-          return (
-            <button
-              type="button"
-              key={`left-${rune}-${i}`}
-              className={
-                activeRune === runeId
-                  ? `rune-button rune-awake rune-${i}`
-                  : `rune-button rune-${i}`
-              }
-              onClick={() => handleRuneClick(runeId)}
-              aria-label="Open hidden relic"
-            >
-              {rune}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="rune rune-right">
-        {runes.map((rune, i) => {
-          const runeId = `right-${i}`;
-
-          return (
-            <button
-              type="button"
-              key={`right-${rune}-${i}`}
-              className={
-                activeRune === runeId
-                  ? `rune-button rune-awake rune-${i}`
-                  : `rune-button rune-${i}`
-              }
-              onClick={() => handleRuneClick(runeId)}
-              aria-label="Open hidden relic"
-            >
-              {rune}
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
+  return activeRune;
 }
 
 function Lore() {
@@ -462,24 +439,43 @@ function Footer() {
 }
 
 function App() {
+  const activeRune = useRuneAwakening();
+
   return (
     <>
       <Atmosphere />
       <OrbInterior />
-      <RuneLayer />
       <CursorOrb />
       <Header />
+
       <main>
         <Hero />
+
+        <GutterRune {...runes[0]} index={0} activeRune={activeRune} />
+
         <Lore />
+
+        <GutterRune {...runes[1]} index={1} activeRune={activeRune} />
+
         <Music />
+
+        <GutterRune {...runes[2]} index={2} activeRune={activeRune} />
+
         <Gatherings />
+
+        <GutterRune {...runes[3]} index={3} activeRune={activeRune} />
+
         <Band />
+
+        <GutterRune {...runes[4]} index={4} activeRune={activeRune} />
+
         <Media />
         <Merch />
       </main>
+
       <Footer />
     </>
   );
 }
+
 createRoot(document.getElementById("root")).render(<App />);
