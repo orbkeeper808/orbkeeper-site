@@ -45,15 +45,6 @@
   --eyebrow: "IMFellEnglishSC", serif;
 }
 
-/* DEBUG */
-.gutter-rune {
-  color: red !important;
-  opacity: 1 !important;
-  filter: none !important;
-  text-shadow:
-    0 0 8px red,
-    0 0 18px red !important;
-}
 
 * {
   box-sizing: border-box;
@@ -2156,14 +2147,4 @@ backface-visibility: hidden;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* DEBUG */
-.gutter-rune {
-  color: red !important;
-  opacity: 1 !important;
-  filter: none !important;
-  text-shadow:
-    0 0 8px red,
-    0 0 18px red !important;
 }
