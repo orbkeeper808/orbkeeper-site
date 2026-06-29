@@ -1635,21 +1635,21 @@ backface-visibility: hidden;
 .premium-card:hover .lore-divider::before,
 .premium-card:hover .keeper-divider::before {
   filter:
-    brightness(1.9)
-    drop-shadow(0 0 10px rgba(210,166,79,.95))
-    drop-shadow(0 0 28px rgba(210,166,79,.55)) !important;
+    brightness(1.18)
+    drop-shadow(0 0 3px rgba(210,166,79,.22))
+    drop-shadow(0 0 8px rgba(210,166,79,.12));
 }
 
 .lore-card:hover .lore-divider::after,
 .member-card:hover .keeper-divider::after,
-.premium-card:hover .lore-divider::after,
-.premium-card:hover .keeper-divider::after {
-  color: var(--gold-lit) !important;
-  transform: translate(-50%, -50%) scale(1.28) !important;
+.premium-card:hover .keeper-divider::after,
+.premium-card:hover .lore-divider::after {
+  color: rgba(255,248,223,.92);
+  transform: translate(-50%, -50%) scale(1.08);
+
   text-shadow:
-    0 0 12px rgba(255,248,223,1),
-    0 0 28px rgba(210,166,79,.9),
-    0 0 64px rgba(210,166,79,.48) !important;
+    0 0 4px rgba(255,248,223,.45),
+    0 0 10px rgba(210,166,79,.28);
 }
 
 @media (max-width: 900px) {
