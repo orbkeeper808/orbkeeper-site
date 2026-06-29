@@ -218,6 +218,7 @@ img {
   box-shadow: 0 0 28px rgba(210, 166, 79, 0.38);
   mix-blend-mode: screen;
   transition:
+    opacity 180ms ease,  
     width 240ms ease,
     height 240ms ease,
     border-color 240ms ease,
@@ -240,9 +241,9 @@ iframe {
   cursor: none !important;
 }
 
-.spotify-embed,
-.video-container {
-  cursor: none !important;
+body:has(.spotify-embed:hover) .cursor-orb,
+body:has(.video-container:hover) .cursor-orb {
+  opacity: 0;
 }
 
 .rune {
