@@ -1226,9 +1226,18 @@ p {
   margin: 0 auto;
   padding: 28px;
 
-  border: 1px solid rgba(210, 166, 79, 0.32);
-  border-radius: 24px;
+  position: relative;
   overflow: hidden;
+
+  border: 1px solid rgba(210, 166, 79, 0.32);
+  border-radius: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(24, 19, 13, 0.88),
+      rgba(7, 6, 4, 0.92)
+    );
 }
 
 .music-card .spotify-section {
