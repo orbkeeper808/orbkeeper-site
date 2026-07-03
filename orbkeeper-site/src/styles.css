@@ -723,7 +723,6 @@ will-change: transform, opacity, filter;
   place-items: center;
   width: min(96vw, 880px);
   margin-top: 190px;
-  transform: translateY(-28px);
 }
 
 .hero-orb-lock .orb-light {
@@ -1219,6 +1218,18 @@ p {
   display: block;
   min-height: auto;
   padding: 30px;
+}
+
+#music .section-header {
+  text-align: center;
+  align-items: center;
+}
+
+#music .section-eyebrow,
+#music .section-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .music-copy {
