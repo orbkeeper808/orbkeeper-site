@@ -6,10 +6,10 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Section, slowReveal } from "./components/Section";
 import { gatherings, lore, members, merch, releases, relics } from "./data/siteData";
-import flyer1 from "./assets/orbkeeper-flyer.jpg";
-import flyer3 from "./assets/heavy-happening-flyer.jpg";
-import flyer4 from "./assets/psychedelic-doom-flyer.jpg";
-import logo from "./assets/orbkeeper-logo-transparent.png";
+import flyer1 from "./assets/orbkeeper-flyer.webp";
+import flyer3 from "./assets/heavy-happening-flyer.webp";
+import flyer4 from "./assets/psychedelic-doom-flyer.webp";
+import logo from "./assets/orbkeeper-logo-transparent.webp";
 import "./styles.css";
 
 
