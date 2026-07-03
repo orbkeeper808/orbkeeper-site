@@ -1231,19 +1231,22 @@ p {
 
 .music-card {
   width: 100%;
-  max-width: 1120px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 28px;
+  padding: 40px 32px;
 }
 
 .music-card .spotify-section {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  display: flex;
+  flex-direction: column;
   gap: 32px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .music-card .music-copy {
+  max-width: 62ch;
   text-align: center;
 }
 
@@ -1253,42 +1256,9 @@ p {
 }
 
 .music-card .spotify-embed {
+  width: 100%;
   overflow: hidden;
-  border-radius: 16px;
-}
-
-.music-copy {
-  max-width: 860px;
-  margin: 0 auto 28px;
-  text-align: center;
-}
-
-.music-copy h3 {
-  margin-top: 8px;
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-.music-copy p {
-  max-width: 60ch;
-  margin: 18px auto 0;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.music-copy .lore-divider {
-  margin: 0 auto 28px;
-}
-
-.spotify-embed {
-  margin-top: 36px;
-  overflow: hidden;
-  border: 1px solid rgba(210, 166, 79, 0.22);
-  border-radius: 14px;
-  background:
-    linear-gradient(145deg, rgba(203, 185, 148, 0.08), rgba(7, 6, 4, 0.28)),
-    rgba(12, 10, 7, 0.62);
-  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.34);
+  border-radius: 0;
 }
 
 .spotify-embed iframe {
