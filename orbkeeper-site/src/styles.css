@@ -1033,6 +1033,7 @@ p {
 .lore-card,
 .release-card,
 .gathering-card,
+.gathering-empty,
 .member-card,
 .vision-card,
 .artifact-card,
@@ -1055,6 +1056,7 @@ p {
 .lore-card:hover,
 .release-card:hover,
 .gathering-card:hover,
+.gathering-empty:hover,
 .member-card:hover,
 .vision-card:hover,
 .artifact-card:hover,
@@ -1069,6 +1071,8 @@ p {
 
 .lore-card::before,
 .release-card::before,
+.gathering-card::before,
+.gathering-empty::before,
 .member-card::before,
 .vision-card::before,
 .artifact-card::before,
@@ -1085,6 +1089,8 @@ p {
 
 .lore-card:hover::before,
 .release-card:hover::before,
+.gathering-card:hover::before,
+.gathering-empty:hover::before,
 .member-card:hover::before,
 .vision-card:hover::before,
 .artifact-card:hover::before,
