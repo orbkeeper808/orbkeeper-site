@@ -1036,7 +1036,8 @@ p {
 .member-card,
 .vision-card,
 .artifact-card,
-.video-relic {
+.video-relic,
+.music-card {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(244, 234, 215, 0.18);
@@ -1057,7 +1058,8 @@ p {
 .member-card:hover,
 .vision-card:hover,
 .artifact-card:hover,
-.video-relic:hover {
+.video-relic:hover,
+.music-card:hover {
   transform: translateY(-4px);
   border-color: rgba(210, 166, 79, 0.46);
   box-shadow:
@@ -1069,7 +1071,8 @@ p {
 .release-card::before,
 .member-card::before,
 .vision-card::before,
-.artifact-card::before {
+.artifact-card::before,
+.music-card::before {
   position: absolute;
   inset: 10px;
   pointer-events: none;
@@ -1084,11 +1087,11 @@ p {
 .release-card:hover::before,
 .member-card:hover::before,
 .vision-card:hover::before,
-.artifact-card:hover::before {
+.artifact-card:hover::before,
+.music-card:hover::before {
   border-color: rgba(210, 166, 79, 0.34);
   box-shadow: inset 0 0 24px rgba(210, 166, 79, 0.055);
 }
-
 .lore-card {
   min-height: 300px;
   padding: 28px;
@@ -1225,19 +1228,6 @@ p {
   max-width: 1120px;
   margin: 0 auto;
   padding: 28px;
-
-  position: relative;
-  overflow: hidden;
-
-  border: 1px solid rgba(210, 166, 79, 0.32);
-  border-radius: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(24, 19, 13, 0.88),
-      rgba(7, 6, 4, 0.92)
-    );
 }
 
 .music-card .spotify-section {
