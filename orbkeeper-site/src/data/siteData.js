@@ -59,13 +59,6 @@ export const gatherings = [
   //   place: "Request Music",
   //   city: "Wailuku, Maui",
   // }
-
-  {
-    day: "AUG 14",
-    date: "2026-08-14",
-    place: "Request Music",
-    city: "Wailuku, Maui",
-  }
 ];
 
 export const members = [
