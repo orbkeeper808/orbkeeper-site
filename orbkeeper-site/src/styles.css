@@ -710,11 +710,31 @@ will-change: transform, opacity, filter;
   background: transparent;
   border: 0;
   box-shadow: none;
-  transform: translateY(92px);
+  transform:none;
 
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
     drop-shadow(0 12px 26px rgba(0,0,0,.28));
+}
+
+.hero-orb-lock {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(96vw, 880px);
+  margin-top: 190px;
+}
+
+.hero-orb-lock .orb-light {
+  position: absolute;
+  width: min(82vw, 760px);
+  z-index: -3;
+}
+
+.hero-orb-lock .hero-sigil {
+  width: min(86vw, 880px);
+  margin-top: 0;
+  transform: none;
 }
 
 .hero-sigil img {
