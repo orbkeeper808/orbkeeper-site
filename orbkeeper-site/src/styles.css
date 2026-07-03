@@ -1220,18 +1220,22 @@ p {
   padding: 30px;
 }
 
-#music .section-header {
+#music > .section-inner,
+#music .section-header,
+#music .section-heading {
   width: 100%;
   max-width: none;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 #music .section-eyebrow,
 #music .section-title,
 #music h2 {
+  width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
