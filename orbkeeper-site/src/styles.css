@@ -655,7 +655,7 @@ will-change: transform, opacity, filter;
   background:
     linear-gradient(to bottom, rgba(7, 6, 4, 0.16), rgba(7, 6, 4, 0.78) 74%, #070604),
     radial-gradient(circle at 54% 34%, rgba(244, 234, 215, 0.28), transparent 20rem),
-    url("./assets/orbkeeper-flyer2.jpg") center 43% / min(98vw, 920px) auto no-repeat;
+    ;
 
   filter:
     saturate(0.48)

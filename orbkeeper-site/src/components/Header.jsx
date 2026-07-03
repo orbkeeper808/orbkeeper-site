@@ -1,4 +1,4 @@
-import logo from "../assets/orbkeeper-logo-transparent.png";
+import logo from "../assets/orbkeeper-logo-transparent.webp";
 
 export function Header() {
   return (
