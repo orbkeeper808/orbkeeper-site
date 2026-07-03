@@ -710,7 +710,7 @@ will-change: transform, opacity, filter;
   background: transparent;
   border: 0;
   box-shadow: none;
-  transform: -100px;
+  transform: 0px;
 
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
@@ -723,6 +723,7 @@ will-change: transform, opacity, filter;
   place-items: center;
   width: min(96vw, 880px);
   margin-top: 190px;
+  transform: translateY(-28px);
 }
 
 .hero-orb-lock .orb-light {
