@@ -705,12 +705,12 @@ will-change: transform, opacity, filter;
 .hero-sigil {
   position: relative;
   width: min(86vw, 880px);
-  margin-top: 190px;
+  margin-top: 0px;
   padding: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
-  transform: translateY(-4px);
+  transform: translateY(92px);
 
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
@@ -1612,13 +1612,16 @@ p {
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
 
   -webkit-mask-composite: xor;
           mask-composite: exclude;
 
-will-change: background-position, opacity;
-transform: translateZ(0);
-backface-visibility: hidden;
+  will-change: background-position, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .premium-card:hover::before {
