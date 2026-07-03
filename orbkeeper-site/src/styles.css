@@ -710,7 +710,7 @@ will-change: transform, opacity, filter;
   background: transparent;
   border: 0;
   box-shadow: none;
-  transform: -25px;
+  transform: -100px;
 
   filter:
     drop-shadow(0 0 30px rgba(210,166,79,.16))
