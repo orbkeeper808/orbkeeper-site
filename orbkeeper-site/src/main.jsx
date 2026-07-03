@@ -80,7 +80,7 @@ function OrbInterior() {
   );
 }
 
-const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚢ"];
+const dividerRunes = ["ᛉ", "ᛟ", "ᛜ", "ᚱ", "ᛒ", "ᚠ"];
 
 const getRune = (index) => dividerRunes[index % dividerRunes.length];
 
