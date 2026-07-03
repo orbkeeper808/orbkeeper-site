@@ -1221,12 +1221,17 @@ p {
 }
 
 #music .section-header {
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   align-items: center;
 }
 
 #music .section-eyebrow,
-#music .section-title {
+#music .section-title,
+#music h2 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
