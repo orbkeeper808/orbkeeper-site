@@ -26,7 +26,7 @@ export function Hero() {
   <motion.div
     className="hero-sigil"
     initial={{ opacity: 0, scale: 0.86, filter: "blur(18px) brightness(0.7)" }}
-    animate={{ opacity: 1, scale: 1, y:-12, filter: "blur(0px) brightness(1)" }}
+    animate={{ opacity: 1, scale: 1, y:-18, filter: "blur(0px) brightness(1)" }}
     transition={{ duration: 1.45, ease: [0.19, 1, 0.22, 1] }}
   >
     <div className="sigil-ring" />
