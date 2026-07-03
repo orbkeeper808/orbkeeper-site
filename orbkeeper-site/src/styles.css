@@ -1225,6 +1225,10 @@ p {
   max-width: 1120px;
   margin: 0 auto;
   padding: 28px;
+
+  border: 1px solid rgba(210, 166, 79, 0.32);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .music-card .spotify-section {
