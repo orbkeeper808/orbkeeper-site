@@ -324,7 +324,7 @@ const relicImages = [flyer1, flyer4, flyer3];
 const videoRelics = [
   {
     title: "The First Rite",
-    description: "A recovered vision from the Circle's first gathering.",
+    description: "A recovered vision from the first invocation and the Circle's first gathering.",
     youtubeId: "bRNYl8g2BA0",
   },
 ];
