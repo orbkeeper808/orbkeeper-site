@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "../assets/orbkeeper-logo-transparent.png";
+import logo from "../assets/orbkeeper-logo-transparent.webp";
 import { phrases } from "../data/siteData";
 
 export function Hero() {
