@@ -434,7 +434,7 @@ function Footer() {
       </div>
 
       <div className="footer-epilogue">
-        <span>Those who hear the call will know when the path opens again.</span>
+        <span>The night belongs to those who build it.</span>
       </div>
 
       <small>© Orbkeeper</small>
