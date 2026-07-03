@@ -1220,6 +1220,33 @@ p {
   padding: 30px;
 }
 
+.music-card {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.music-card .spotify-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.music-card .music-copy {
+  text-align: center;
+}
+
+.music-card .music-copy .lore-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.music-card .spotify-embed {
+  overflow: hidden;
+  border-radius: 16px;
+}
 
 .music-copy {
   max-width: 860px;
@@ -2190,6 +2217,17 @@ p {
 
   .countdown div {
     min-height: 82px;
+  }
+}
+
+@media (max-width: 800px) {
+  .music-card {
+    padding: 18px;
+  }
+
+  .music-card .spotify-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 

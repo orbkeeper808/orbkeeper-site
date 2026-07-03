@@ -184,7 +184,7 @@ function Music() {
 
   return (
     <Section id="music" eyebrow="Resonances" title="Tsöngs of the Rite">
-      <div className="music-card">
+      <div className="music-card premium-card">
         <div className="spotify-section">
           <div className="music-copy">
             <p className="section-eyebrow">{release.type}</p>
