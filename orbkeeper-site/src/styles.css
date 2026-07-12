@@ -318,8 +318,6 @@ body:has(.video-container:hover) .cursor-orb {
 .orb-depth {
   position: absolute;
   inset: -22%;
-  transition: transform 900ms cubic-bezier(.22,.61,.36,1);
-  will-change: transform;
 }
 
 .orb-depth-inner {
@@ -332,10 +330,6 @@ body:has(.video-container:hover) .cursor-orb {
 
 .orb-depth-back {
   opacity: 0.24;
-  transform: translate(
-    calc(var(--orb-x) * -36px),
-    calc(var(--orb-y) * -36px)
-  );
 }
 
 .orb-depth-back .orb-depth-inner {
@@ -349,10 +343,6 @@ body:has(.video-container:hover) .cursor-orb {
 .orb-depth-front {
   opacity: 0.2;
   mix-blend-mode: screen;
-  transform: translate(
-    calc(var(--orb-x) * -82px),
-    calc(var(--orb-y) * -82px)
-  );
 }
 
 .orb-depth-front .orb-depth-inner {
@@ -425,17 +415,7 @@ background:
     transparent 42rem
   );
 
-transition: transform 1200ms cubic-bezier(.22,.61,.36,1);
-
-transform:
-  translate(
-    calc(var(--orb-x) * -44px),
-    calc(var(--orb-y) * -44px)
-  )
-  rotate(calc(var(--orb-x) * -.35deg));
-
-animation: causticBreathe 52s ease-in-out infinite alternate;
-will-change: transform, opacity, filter;
+will-change: opacity, filter;
 }
 
 @keyframes runeAwakenDrift {
