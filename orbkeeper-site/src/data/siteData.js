@@ -64,7 +64,7 @@ export const gatherings = [
   date: "2026-10-22",
   place: "Paia Bay Coffee Bar",
   city: "Paia, Maui"
-}
+},
 {
   day: "OCT 25",
   date: "2026-10-25",
