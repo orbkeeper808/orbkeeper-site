@@ -59,6 +59,18 @@ export const gatherings = [
   //   place: "Request Music",
   //   city: "Wailuku, Maui",
   // }
+{
+  day: "OCT 22",
+  date: "2026-10-22",
+  place: "Paia Bay Coffee Bar",
+  city: "Paia, Maui"
+}
+{
+  day: "OCT 25",
+  date: "2026-10-25",
+  place: "Maui Comic-Con, UH Maui College",
+  city: "Kahului, Maui"
+}
 ];
 
 export const members = [
